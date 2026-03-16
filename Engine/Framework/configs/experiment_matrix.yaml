@@ -1,0 +1,29 @@
+random_scales: small,medium,large
+no_random: false
+no_panyu: false
+random_collaborative_task_ratio: 0.0
+disable_collaborative_tasks: false
+disable_auto_collaborative_dispatch: false
+processed_dir: Map Resource/processed/panyu
+
+panyu_task_mode: uniform_nodes
+panyu_vehicles: 10
+panyu_tasks: 120
+panyu_horizon: 360
+seed: 7
+
+panyu_battery_capacity: 120.0
+panyu_load_capacity: 80.0
+panyu_speed: 1.5
+panyu_energy_per_km: 1.0
+panyu_task_max_weight: 30.0
+panyu_task_ttl_min: 25
+panyu_task_ttl_max: 80
+panyu_collaborative_task_ratio: 0.0
+panyu_collaborative_weight_min_scale: 1.1
+panyu_collaborative_weight_max_scale: 1.6
+panyu_station_piles: 2
+panyu_station_rate: 6.0
+
+export_logs: false
+out: Framework/output/experiment_matrix

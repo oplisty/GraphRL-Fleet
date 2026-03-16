@@ -1,0 +1,170 @@
+{
+  "pbf_file": "Map Resource/panyu.osm.pbf",
+  "relation": {
+    "id": 3287618,
+    "name": "番禺区",
+    "name_en": "Panyu District",
+    "admin_level": "6",
+    "boundary": "administrative"
+  },
+  "bbox": {
+    "min_lat": 22.858513,
+    "min_lon": 113.243972,
+    "max_lat": 23.082811,
+    "max_lon": 113.569794
+  },
+  "boundary_nodes": {
+    "way_count": 31,
+    "node_count": 507,
+    "node_found_in_file": 507
+  },
+  "stats": {
+    "total_nodes_in_bbox": 468001,
+    "total_ways_intersect_bbox": 66120,
+    "road_way_count": 30510,
+    "road_node_count_in_bbox": 161718,
+    "road_edge_count_approx": 177949,
+    "road_total_length_km_approx": 7415.466,
+    "charging_station_node_count": 53,
+    "charging_station_way_count": 4
+  },
+  "road_count_by_type_all": {
+    "secondary": 1868,
+    "motorway_link": 692,
+    "tertiary": 3136,
+    "residential": 4185,
+    "motorway": 556,
+    "unclassified": 3019,
+    "trunk": 665,
+    "trunk_link": 438,
+    "primary": 1222,
+    "primary_link": 441,
+    "service": 5295,
+    "track": 600,
+    "secondary_link": 637,
+    "living_street": 327,
+    "pedestrian": 220,
+    "footway": 4695,
+    "path": 285,
+    "steps": 832,
+    "construction": 250,
+    "tertiary_link": 494,
+    "cycleway": 359,
+    "services": 7,
+    "proposed": 236,
+    "busway": 4,
+    "raceway": 37,
+    "bridleway": 1,
+    "elevator": 2,
+    "ladder": 1,
+    "bus_stop": 6
+  },
+  "road_length_by_type_km_all": {
+    "secondary": 615.239,
+    "motorway_link": 170.718,
+    "tertiary": 986.21,
+    "residential": 1231.398,
+    "motorway": 393.74,
+    "unclassified": 1082.189,
+    "trunk": 258.857,
+    "trunk_link": 67.175,
+    "primary": 390.402,
+    "primary_link": 50.321,
+    "service": 916.668,
+    "track": 142.635,
+    "secondary_link": 65.025,
+    "living_street": 55.539,
+    "pedestrian": 47.137,
+    "footway": 420.92,
+    "path": 35.378,
+    "steps": 23.645,
+    "construction": 81.43,
+    "tertiary_link": 36.221,
+    "cycleway": 103.623,
+    "services": 7.692,
+    "proposed": 220.47,
+    "busway": 0.205,
+    "raceway": 12.079,
+    "bridleway": 0.237,
+    "elevator": 0.025,
+    "ladder": 0.002,
+    "bus_stop": 0.284
+  },
+  "top_road_types": [
+    {
+      "highway": "service",
+      "way_count": 5295,
+      "length_km": 916.668
+    },
+    {
+      "highway": "footway",
+      "way_count": 4695,
+      "length_km": 420.92
+    },
+    {
+      "highway": "residential",
+      "way_count": 4185,
+      "length_km": 1231.398
+    },
+    {
+      "highway": "tertiary",
+      "way_count": 3136,
+      "length_km": 986.21
+    },
+    {
+      "highway": "unclassified",
+      "way_count": 3019,
+      "length_km": 1082.189
+    },
+    {
+      "highway": "secondary",
+      "way_count": 1868,
+      "length_km": 615.239
+    },
+    {
+      "highway": "primary",
+      "way_count": 1222,
+      "length_km": 390.402
+    },
+    {
+      "highway": "steps",
+      "way_count": 832,
+      "length_km": 23.645
+    },
+    {
+      "highway": "motorway_link",
+      "way_count": 692,
+      "length_km": 170.718
+    },
+    {
+      "highway": "trunk",
+      "way_count": 665,
+      "length_km": 258.857
+    },
+    {
+      "highway": "secondary_link",
+      "way_count": 637,
+      "length_km": 65.025
+    },
+    {
+      "highway": "track",
+      "way_count": 600,
+      "length_km": 142.635
+    },
+    {
+      "highway": "motorway",
+      "way_count": 556,
+      "length_km": 393.74
+    },
+    {
+      "highway": "tertiary_link",
+      "way_count": 494,
+      "length_km": 36.221
+    },
+    {
+      "highway": "primary_link",
+      "way_count": 441,
+      "length_km": 50.321
+    }
+  ]
+}

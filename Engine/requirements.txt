@@ -1,0 +1,9 @@
+pyyaml>=6.0
+pandas>=2.0
+pyarrow>=14.0
+fastparquet>=2024.2.0
+pyrosm>=0.6.2
+geopandas>=0.14
+shapely>=2.0
+pyproj>=3.6
+osmium>=3.7

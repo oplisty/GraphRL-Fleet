@@ -1,0 +1,6 @@
+scale: small
+scheduler: nearest
+collaborative_task_ratio: 0.0
+disable_collaborative_tasks: false
+disable_auto_collaborative_dispatch: false
+out: Framework/output/baseline

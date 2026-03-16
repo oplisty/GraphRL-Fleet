@@ -1,0 +1,13 @@
+{
+  "source_pbf": "Map Resource/panyu.osm.pbf",
+  "network_type": "driving",
+  "depot_node": 1347774990,
+  "node_count": 131276,
+  "edge_count": 142593,
+  "station_count": 57,
+  "station_defaults": {
+    "num_piles": 2,
+    "charge_rate": 6.0
+  },
+  "keep_directed": false
+}
