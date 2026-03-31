@@ -11,6 +11,7 @@ interface ControlPanelProps {
   onPause: () => void;
   onStop: () => void;
   onReset: () => void;
+  onOfflineReplay?: () => void;
   onSpeedChange: (speed: number) => void;
   onStrategyChange: (strategy: SchedulingStrategy) => void;
   onScaleChange: (scale: ProblemScale) => void;
@@ -74,6 +75,7 @@ const ControlPanel: React.FC<ControlPanelProps> = ({
   onPause,
   onStop,
   onReset,
+  onOfflineReplay,
   onSpeedChange,
   onStrategyChange,
   onScaleChange,
@@ -131,6 +133,16 @@ const ControlPanel: React.FC<ControlPanelProps> = ({
             重置
           </button>
         </div>
+
+        {onOfflineReplay && (
+          <button
+            onClick={onOfflineReplay}
+            className="w-full py-2 px-4 mt-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium flex items-center justify-center gap-2 transition-colors"
+          >
+            <span>🧠</span>
+            离线求解并回放
+          </button>
+        )}
 
         {/* 模拟速度 */}
         <div>

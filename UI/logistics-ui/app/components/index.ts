@@ -6,3 +6,4 @@ export { default as ChargingStationPanel } from './ChargingStationPanel';
 export { default as ControlPanel } from './ControlPanel';
 export { default as StatisticsPanel } from './StatisticsPanel';
 export { default as EventLog } from './EventLog';
+export { default as AMapRealtimeMap } from './AMapRealtimeMap';

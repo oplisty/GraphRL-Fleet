@@ -1,0 +1,11 @@
+INFO:     Started server process [5554]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:54305 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:54307 - "WebSocket /ws" [accepted]
+INFO:     connection open
+/var/folders/ld/tpjvhyy55mzbm54z0pjy_w680000gn/T/tmpmkaydsf7: line 3:  5554 Killed: 9               python -m Framework.api.server
+
+ERROR conda.cli.main_run:execute(127): `conda run python -m Framework.api.server` failed. (See above for error)

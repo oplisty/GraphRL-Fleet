@@ -73,52 +73,137 @@ logistics-ui/
 └── README.md
 ```
 
-## 🚀 快速开始
+## 🚀 快速开始（从 git clone 到可复现）
 
-### 安装依赖
+本节用于指导组员从零开始复现，默认系统为 macOS/Linux。
+
+### 1. 克隆仓库
 
 ```bash
+git clone <你的仓库地址>
+cd Data-Structure-HW
+```
+
+### 2. 准备 Engine Python 环境
+
+建议使用 Conda，并确保在 Engine 目录安装依赖。
+
+```bash
+conda create -n DSHW python=3.10 -y
+conda activate DSHW
+cd Engine
+pip install -r requirements.txt
+```
+
+说明：
+
+- 若使用真实番禺 processed 地图，常见还需要 parquet 依赖（pyarrow 或 fastparquet）。
+- 若本机缺包，可执行：
+
+```bash
+conda install -n DSHW -y -c conda-forge fastapi uvicorn websockets pyproj shapely fastparquet
+```
+
+### 3. 准备 UI 依赖
+
+打开第二个终端：
+
+```bash
+cd Data-Structure-HW/UI/logistics-ui
 npm install
 ```
 
-### 启动开发服务器
+### 4. 配置 UI 环境变量（关键）
 
-```bash
-npm run dev
-```
-
-访问 http://localhost:3000 查看应用。
-
-### 对接 Engine 实时后端（新增）
-
-在 UI 目录创建 `.env.local`：
+在 UI 目录创建 .env.local 文件（该文件默认不会被 git 提交）：
 
 ```bash
 NEXT_PUBLIC_USE_ENGINE_BACKEND=1
 NEXT_PUBLIC_API_URL=http://127.0.0.1:8000
 NEXT_PUBLIC_AMAP_KEY=你的高德Web端JSAPI Key
-# 可选（若控制台开启了安全密钥）
+# 可选（高德控制台开启安全密钥时需要）
 NEXT_PUBLIC_AMAP_SECURITY_CODE=你的高德安全密钥
-# 可选：地图中心和映射范围
-NEXT_PUBLIC_MAP_CENTER_LNG=113.2644
-NEXT_PUBLIC_MAP_CENTER_LAT=23.1291
-NEXT_PUBLIC_MAP_SPAN_DEGREE=0.2
+
+# 可选：地图显示范围
+NEXT_PUBLIC_MAP_CENTER_LNG=113.3845
+NEXT_PUBLIC_MAP_CENTER_LAT=22.9377
+NEXT_PUBLIC_MAP_SPAN_DEGREE=0.08
 ```
 
-启动 Engine 实时服务（在仓库 `Engine/` 目录）：
+说明：
+
+- NEXT_PUBLIC_AMAP_KEY 不配置时，页面会回退到 Canvas 视图。
+- 若配置了 AMap Key，页面会使用高德底图叠加仿真图层。
+
+### 5. 启动 Engine 服务（终端 1）
+
+在 Engine 目录执行：
 
 ```bash
-/opt/miniconda3/envs/test/bin/python -m uvicorn Framework.api.server:app --host 127.0.0.1 --port 8000
+cd Data-Structure-HW/Engine
+conda run -n DSHW python -m Framework.api.server
 ```
 
-再启动 UI：
+看到以下日志说明后端启动成功：
+
+- Application startup complete
+- Uvicorn running on http://0.0.0.0:8000
+
+### 6. 启动 UI 服务（终端 2）
+
+在 UI 目录执行：
 
 ```bash
+cd Data-Structure-HW/UI/logistics-ui
 npm run dev
 ```
 
-此时主页面会通过 REST + WebSocket 实时接收 Engine 状态。
-当配置 `NEXT_PUBLIC_AMAP_KEY` 后，地图区域会自动切换到“高德底图 + 仿真图层实时叠加”；未配置时自动回退到原 Canvas 视图。
+浏览器访问：
+
+- http://localhost:3000
+
+### 7. 联调验证清单（确认真的复现成功）
+
+在页面按以下步骤检查：
+
+1. 点击“开始”，仿真时间开始增长。
+2. 车辆状态、任务状态、统计数据持续刷新。
+3. 地图模式：
+	- 配置了 AMap Key：显示高德底图。
+	- 未配置 AMap Key：显示 Canvas 地图。
+4. 若使用远端 Engine，浏览器控制台不应出现持续 WebSocket 连接失败。
+
+### 8. 多人协作复现注意事项（最容易踩坑）
+
+1. .env.local 不会被 git 提交：每个同学都要自己创建。
+2. AMap Key 可能有域名/IP 白名单：同学机器若不在白名单会无法加载地图。
+3. 后端地址必须可达：
+	- 本机访问：NEXT_PUBLIC_API_URL=http://127.0.0.1:8000
+	- 局域网访问：NEXT_PUBLIC_API_URL=http://你的局域网IP:8000
+4. 若同一台机器端口被占用，需先释放 3000 或 8000 端口。
+
+### 9. 常见问题排查
+
+#### Q1：点击“开始”没反应
+
+- 检查 Engine 是否启动成功并监听 8000。
+- 检查 .env.local 中 NEXT_PUBLIC_API_URL 是否正确。
+- 检查浏览器控制台是否有 WebSocket 错误。
+
+#### Q2：朋友 git 下来运行不了
+
+- 通常是没有本地 .env.local 或 AMap Key 白名单未放行。
+- 让对方按本 README 第 4 步重新配置。
+
+#### Q3：后端启动即退出
+
+- 多数是 Python 环境或依赖不完整。
+- 重新确认 Conda 环境和 Engine/requirements.txt 安装是否成功。
+
+#### Q4：地图不显示，只看到空白区域
+
+- 优先检查 NEXT_PUBLIC_AMAP_KEY 与 NEXT_PUBLIC_AMAP_SECURITY_CODE。
+- 暂时移除 AMap Key 可回退到 Canvas 模式，确认主流程先跑通。
 
 ### 构建生产版本
 

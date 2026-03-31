@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { SimulationState, SchedulingStrategy, ProblemScale, Node, Edge } from './types';
 import { SimulationEngine, ProblemScales, getSimulationEngine } from './core/simulation';
 import {
+  AMapRealtimeMap,
   MapCanvas,
   VehiclePanel,
   TaskPanel,
@@ -140,6 +141,11 @@ export default function Home() {
   const { user, login, logout } = useAuth();
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showLeaderboard, setShowLeaderboard] = useState(false);
+
+  // 离线日志记录与回放状态
+  const [showOfflineModal, setShowOfflineModal] = useState(false);
+  const [offlineLogText, setOfflineLogText] = useState("");
+  const offlineTimeRef = useRef<NodeJS.Timeout | null>(null);
 
   // 游戏结束时提交成绩
   const gameEndSubmittedRef = useRef(false);
@@ -372,6 +378,42 @@ export default function Home() {
     console.log('Node clicked:', nodeId);
   }, []);
 
+  const handleOfflineReplay = useCallback(() => {
+    setShowOfflineModal(true);
+  }, []);
+
+  const handlePlayOffline = useCallback(() => {
+    try {
+      const logs = JSON.parse(offlineLogText);
+      if (!Array.isArray(logs) || logs.length === 0) {
+        alert("无效的离线日志格式，需要为数组");
+        return;
+      }
+      setShowOfflineModal(false);
+      
+      let i = 0;
+      if (offlineTimeRef.current) clearInterval(offlineTimeRef.current);
+      
+      if (remoteSimulationIdRef.current) {
+        apiClient.stopSimulation(remoteSimulationIdRef.current);
+        setRemoteSimulationId(null);
+      }
+      
+      // 以稍快的速度回放，达到高帧率
+      offlineTimeRef.current = setInterval(() => {
+        if (i < logs.length) {
+          // 这里如果是单纯的回放，可以根据日志更新 state，注意补充必要的图结构等防御
+          setState((prev) => normalizeRemoteState(logs[i], prev ?? buildDefaultState()));
+          i++;
+        } else {
+          if (offlineTimeRef.current) clearInterval(offlineTimeRef.current);
+        }
+      }, 50); // 更短间隔，更高帧率
+    } catch(e) {
+      alert("解析失败，请检查复制的内容: " + String(e));
+    }
+  }, [offlineLogText]);
+
   // 加载状态
   if (!isInitialized || !state) {
     return (
@@ -441,6 +483,7 @@ export default function Home() {
               onPause={handlePause}
               onStop={handleStop}
               onReset={handleReset}
+              onOfflineReplay={handleOfflineReplay}
               onSpeedChange={handleSpeedChange}
               onStrategyChange={handleStrategyChange}
               onScaleChange={handleScaleChange}
@@ -456,13 +499,13 @@ export default function Home() {
 
           {/* 中间 - 地图 */}
           <div className="flex-1">
-            <MapCanvas
-              state={state}
-              width={800}
-              height={600}
-              onNodeClick={handleNodeClick}
-              selectedVehicleId={selectedVehicleId}
-            />
+            <div className="w-full h-[600px] relative rounded-xl overflow-hidden border border-gray-800 bg-gray-900/50 shadow-2xl backdrop-blur-sm">
+              <AMapRealtimeMap
+                state={state}
+                onNodeClick={handleNodeClick}
+                selectedVehicleId={selectedVehicleId}
+              />
+            </div>
             
             {/* 快速信息条 */}
             <div className="mt-4 grid grid-cols-5 gap-3">
@@ -609,6 +652,40 @@ export default function Home() {
           onClose={() => setShowLeaderboard(false)}
           isModal={true}
         />
+      )}
+
+      {/* 离线回放模态框 */}
+      {showOfflineModal && (
+        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-[100]">
+          <div className="bg-gray-900 border border-gray-700 rounded-xl p-6 w-[600px] shadow-2xl">
+            <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+              <span>🧠</span> 离线求解日志回放
+            </h2>
+            <p className="text-gray-400 text-sm mb-4">
+              请将算法离线求解得出的状态日志 (JSON格式的数组) 粘贴到下方，系统将自动高帧率进行展示，不再穿墙。
+            </p>
+            <textarea
+              className="w-full h-64 bg-gray-950 border border-gray-700 rounded-lg p-3 text-gray-300 font-mono text-sm focus:outline-none focus:border-blue-500 transition-colors mb-4"
+              placeholder='[ { "status": "running", "currentTime": 0, "vehicles": [...], ... }, ... ]'
+              value={offlineLogText}
+              onChange={(e) => setOfflineLogText(e.target.value)}
+            />
+            <div className="flex justify-end gap-3">
+              <button
+                onClick={() => setShowOfflineModal(false)}
+                className="px-4 py-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800 transition-colors"
+              >
+                取消
+              </button>
+              <button
+                onClick={handlePlayOffline}
+                className="px-4 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-medium transition-colors"
+              >
+                开始回放
+              </button>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

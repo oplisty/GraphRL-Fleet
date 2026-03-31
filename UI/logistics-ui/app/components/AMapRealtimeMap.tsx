@@ -2,6 +2,7 @@
 
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { SimulationState } from '../types';
+import { wgs84togcj02 } from '../utils/geo';
 
 interface AMapRealtimeMapProps {
   state: SimulationState;
@@ -134,7 +135,7 @@ function buildProjection(state: SimulationState, center: LngLat, spanDegree: num
   }
 
   if (isLikelyLngLat(minX, maxX, minY, maxY)) {
-    const toLngLat = (x: number, y: number): LngLat => [x, y];
+    const toLngLat = (x: number, y: number): LngLat => wgs84togcj02(x, y);
     const bboxPoints: LngLat[] = [
       [minX, minY],
       [minX, maxY],

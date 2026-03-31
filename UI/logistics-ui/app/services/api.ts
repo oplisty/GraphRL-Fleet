@@ -13,8 +13,8 @@ import {
 
 // API 配置
 const API_CONFIG = {
-  // Python后端地址，开发时可以是本地地址
-  BASE_URL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000',
+  // Python后端地址，动态适配局域网访问
+  BASE_URL: process.env.NEXT_PUBLIC_API_URL || (typeof window !== 'undefined' ? `http://${window.location.hostname}:8000` : 'http://localhost:8000'),
   // API 版本
   VERSION: 'v1',
   // 超时时间（毫秒）

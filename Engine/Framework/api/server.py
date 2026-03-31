@@ -314,6 +314,18 @@ def _build_ui_state(session: SimulationSession) -> dict[str, Any]:
     vehicles: list[dict[str, Any]] = []
     for vehicle in env.vehicles.values():
         node = env.graph.nodes[vehicle.current_node]
+        v_x, v_y = node.x, node.y
+        if vehicle.route_index < len(vehicle.route) - 1:
+            u = vehicle.route[vehicle.route_index]
+            v = vehicle.route[vehicle.route_index + 1]
+            u_node = env.graph.nodes[u]
+            v_node = env.graph.nodes[v]
+            edge_dist = env.graph.edge_distance(u, v) or 1e-9
+            progress = 1.0 - (vehicle.distance_to_next / edge_dist)
+            progress = max(0.0, min(1.0, progress))
+            v_x = u_node.x + (v_node.x - u_node.x) * progress
+            v_y = u_node.y + (v_node.y - u_node.y) * progress
+
         assigned_tasks = []
         if vehicle.assigned_task is not None:
             assigned_tasks = [str(vehicle.assigned_task)]
@@ -328,7 +340,7 @@ def _build_ui_state(session: SimulationSession) -> dict[str, Any]:
             {
                 "id": f"vehicle_{vehicle.id}",
                 "name": f"车辆 {vehicle.id + 1}",
-                "position": {"x": node.x, "y": node.y},
+                "position": {"x": v_x, "y": v_y},
                 "currentNodeId": str(vehicle.current_node),
                 "targetNodeId": str(vehicle.target_node) if vehicle.target_node is not None else None,
                 "battery": round(vehicle.battery, 4),
@@ -338,7 +350,7 @@ def _build_ui_state(session: SimulationSession) -> dict[str, Any]:
                 "maxLoad": vehicle.load_capacity,
                 "status": _vehicle_status_for_ui(vehicle.status.value),
                 "speed": vehicle.speed,
-                "path": [str(node_id) for node_id in vehicle.route],
+                "path": [str(node_id) for node_id in vehicle.route[vehicle.route_index + 1:]],
                 "pathProgress": 0,
                 "assignedTasks": assigned_tasks,
                 "completedTasks": completed_tasks,
