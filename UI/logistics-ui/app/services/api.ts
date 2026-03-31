@@ -69,6 +69,23 @@ export interface GurobiSolveRequest {
   timeLimit?: number; // 求解时间限制（秒）
 }
 
+export interface OfflineSolveRequest {
+  scale: SimulationConfig['scale'];
+  maxSimulationTime: number;
+  solver?: 'gurobi' | 'cplex';
+  chargeMode?: 'linear' | 'piecewise';
+  timeLimit?: number;
+}
+
+export interface OfflineSolveResponse {
+  simulationId: string;
+  summaryJson: string;
+  summaryCsv: string;
+  routeCsv: string;
+  objective: number;
+  status: string;
+}
+
 // Gurobi 求解响应
 export interface GurobiSolveResponse {
   optimalScore: number;
@@ -185,6 +202,12 @@ class ApiClient {
     request: GurobiSolveRequest
   ): Promise<ApiResponse<GurobiSolveResponse>> {
     return this.request('/solver/gurobi', 'POST', request);
+  }
+
+  async startOfflineSolve(
+    request: OfflineSolveRequest
+  ): Promise<ApiResponse<OfflineSolveResponse>> {
+    return this.request('/solver/offline/start', 'POST', request);
   }
 
   // 获取Gurobi求解状态（长时间运行时）

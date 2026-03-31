@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import asyncio
+import json
 import os
 import time
 import uuid
@@ -10,12 +11,24 @@ from typing import Any
 
 from fastapi import FastAPI, HTTPException, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
+from importlib import util as importlib_util
 from pydantic import BaseModel, ConfigDict, Field
 
-from Framework.core import Environment, SimulationConfig, Vehicle, preset_scenario
+from Framework.core import (
+    ChargingStation,
+    Depot,
+    Environment,
+    Graph,
+    Node,
+    PathFinder,
+    SimulationConfig,
+    Task,
+    Vehicle,
+    preset_scenario,
+)
 from Framework.examples.run_baseline import build_environment as build_random_environment
 from Framework.generator import generate_real_tasks, load_real_map_from_processed
-from Framework.scheduler import HeaviestTaskScheduler, NearestTaskScheduler
+from Framework.scheduler import HeaviestTaskScheduler, NearestTaskScheduler, OfflineRouteScheduler
 
 
 app = FastAPI(title="Engine Realtime API", version="1.0.0")
@@ -43,6 +56,14 @@ class SimulationStartRequest(BaseModel):
     maxSimulationTime: int = 240
     enableCollaboration: bool = False
     randomSeed: int | None = None
+
+
+class OfflineSolveRequest(BaseModel):
+    scale: ProblemScaleModel = Field(default_factory=ProblemScaleModel)
+    maxSimulationTime: int = 240
+    solver: str = "gurobi"
+    chargeMode: str = "piecewise"
+    timeLimit: int = 120
 
 
 @dataclass
@@ -85,6 +106,518 @@ def _parse_env_bbox() -> tuple[float, float, float, float]:
 
 
 PANYU_BBOX = _parse_env_bbox()
+
+
+def _load_offline_milp_module():
+    engine_root = Path(__file__).resolve().parents[3]
+    module_path = engine_root / "policy" / "offline" / "god_view_milp.py"
+    if not module_path.exists():
+        raise RuntimeError(f"offline milp module not found: {module_path}")
+
+    spec = importlib_util.spec_from_file_location("policy_offline_god_view_milp", module_path)
+    if spec is None or spec.loader is None:
+        raise RuntimeError("failed to load offline milp module spec")
+
+    module = importlib_util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def _serialize_graph_for_milp(graph: Graph) -> dict[str, Any]:
+    return {
+        "nodes": [
+            {
+                "id": int(node.id),
+                "x": float(node.x),
+                "y": float(node.y),
+                "node_type": node.node_type,
+            }
+            for node in graph.nodes.values()
+        ],
+        "edges": [
+            {
+                "u": int(from_id),
+                "v": int(edge.to),
+                "distance": float(edge.distance),
+                "travel_time": float(edge.travel_time),
+                "bidirectional": False,
+            }
+            for from_id, edge_list in graph.adj.items()
+            for edge in edge_list
+        ],
+    }
+
+
+def _build_engine_constrained_offline_instance(module: Any, scale_id: str, max_simulation_time: int):
+    processed_dir = Path(__file__).resolve().parents[2] / "Map Resource" / "processed" / "panyu"
+    if not processed_dir.exists():
+        return module.build_tiny_demo_instance()
+
+    scenario = preset_scenario(scale_id if scale_id in {"small", "medium", "large"} else "small")
+    scenario.horizon = max_simulation_time
+    scenario.collaborative_task_ratio = 0.0
+
+    map_bundle = load_real_map_from_processed(
+        processed_dir=processed_dir,
+        station_num_piles=max(1, scenario.station_num_piles),
+        station_charge_rate=scenario.station_charge_rate,
+        bbox=PANYU_BBOX,
+    )
+    tasks = generate_real_tasks(
+        scenario,
+        candidate_node_ids=map_bundle.task_candidate_nodes,
+        mode="uniform_nodes",
+    )
+
+    pathfinder = PathFinder(map_bundle.graph)
+    depot_node = map_bundle.depot.node_id
+    semantic_to_graph: dict[str, int] = {"DEPOT": int(depot_node)}
+
+    offline_tasks: list[Any] = []
+    for task in tasks:
+        node = map_bundle.graph.nodes[task.origin_node]
+        semantic_to_graph[f"T_{int(task.id)}"] = int(task.origin_node)
+        offline_tasks.append(
+            module.Task(
+                id=int(task.id),
+                x=float(node.x),
+                y=float(node.y),
+                demand=float(task.weight),
+                release=float(task.release_time),
+                deadline=float(task.deadline),
+            )
+        )
+
+    offline_stations: list[Any] = []
+    shortest_distances: dict[str, float] = {}
+    semantic_nodes: dict[str, int] = {"DEPOT_START": depot_node, "DEPOT_END": depot_node}
+
+    for station in map_bundle.stations.values():
+        node = map_bundle.graph.nodes[station.node_id]
+        semantic_to_graph[f"S_{int(station.id)}"] = int(station.node_id)
+        semantic_nodes[f"S_{int(station.id)}"] = int(station.node_id)
+        offline_stations.append(
+            module.Station(
+                id=int(station.id),
+                x=float(node.x),
+                y=float(node.y),
+            )
+        )
+
+    for task in tasks:
+        semantic_nodes[f"T_{int(task.id)}"] = int(task.origin_node)
+
+    semantic_items = list(semantic_nodes.items())
+    for from_semantic, from_graph in semantic_items:
+        for to_semantic, to_graph in semantic_items:
+            if from_semantic == to_semantic:
+                continue
+            if from_semantic == "DEPOT_END":
+                continue
+            if to_semantic == "DEPOT_START":
+                continue
+            distance = pathfinder.shortest_distance(from_graph, to_graph)
+            if distance == float("inf"):
+                continue
+            shortest_distances[f"{from_semantic}->{to_semantic}"] = float(distance)
+
+    graph_data = _serialize_graph_for_milp(map_bundle.graph)
+    graph_data["semantic_to_graph"] = semantic_to_graph
+    graph_data["shortest_distances"] = shortest_distances
+
+    return module.OfflineInstance(
+        num_vehicles=scenario.num_vehicles,
+        vehicle_capacity=scenario.vehicle_load_capacity,
+        battery_capacity=scenario.vehicle_battery_capacity,
+        horizon=float(scenario.horizon),
+        depot_x=float(map_bundle.graph.nodes[depot_node].x),
+        depot_y=float(map_bundle.graph.nodes[depot_node].y),
+        tasks=offline_tasks,
+        stations=offline_stations,
+        max_station_visits_per_station=1,
+        speed_levels=(scenario.vehicle_speed,),
+        energy_base_per_km=float(scenario.vehicle_energy_per_km),
+        energy_speed_coeff=0.0,
+        energy_load_coeff=0.0,
+        linear_charge_rate=float(scenario.station_charge_rate),
+        piecewise_segments=((float(scenario.vehicle_battery_capacity), float(scenario.station_charge_rate)),),
+        graph_data=graph_data,
+    )
+
+
+def _build_offline_plan_csv_from_result(payload: dict[str, Any], out_plan_csv: Path) -> Path:
+    routes: dict[str, list[str]] = payload["result"]["routes"]
+    instance_tasks = payload.get("instance", {}).get("tasks", [])
+    release_map = {
+        int(item.get("id")): int(float(item.get("release", 0)))
+        for item in instance_tasks
+        if item.get("id") is not None
+    }
+
+    rows: list[dict[str, int]] = []
+    for vehicle_key, route in routes.items():
+        vehicle_id = int(vehicle_key)
+        for node in route:
+            if not isinstance(node, str) or not node.startswith("T_"):
+                continue
+            task_id = int(node.split("_", 1)[1])
+            rows.append(
+                {
+                    "task_id": task_id,
+                    "vehicle_id": vehicle_id,
+                    "release_time": release_map.get(task_id, 0),
+                }
+            )
+
+    out_plan_csv.parent.mkdir(parents=True, exist_ok=True)
+    import csv
+
+    with out_plan_csv.open("w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=["task_id", "vehicle_id", "release_time"])
+        writer.writeheader()
+        writer.writerows(rows)
+    return out_plan_csv
+
+
+def _build_graph_from_offline_instance(instance: Any) -> tuple[Graph, dict[int, int], dict[int, int], dict[str, Any]]:
+    graph_data = getattr(instance, "graph_data", None) or {}
+    raw_nodes = graph_data.get("nodes") or []
+    raw_edges = graph_data.get("edges") or []
+    semantic_to_graph = graph_data.get("semantic_to_graph") or {}
+
+    if raw_nodes and raw_edges and semantic_to_graph:
+        graph = Graph()
+        for raw_node in raw_nodes:
+            graph.add_node(
+                Node(
+                    id=int(raw_node["id"]),
+                    x=float(raw_node["x"]),
+                    y=float(raw_node["y"]),
+                    node_type=str(raw_node.get("node_type", "road")),
+                )
+            )
+
+        for raw_edge in raw_edges:
+            graph.add_edge(
+                int(raw_edge["u"]),
+                int(raw_edge["v"]),
+                distance=float(raw_edge["distance"]),
+                travel_time=float(raw_edge.get("travel_time", raw_edge["distance"])),
+                bidirectional=bool(raw_edge.get("bidirectional", True)),
+            )
+
+        depot_node_id = int(semantic_to_graph["DEPOT"])
+        station_node_map = {
+            int(station.id): int(semantic_to_graph[f"S_{int(station.id)}"])
+            for station in instance.stations
+            if f"S_{int(station.id)}" in semantic_to_graph
+        }
+        task_node_map = {
+            int(task.id): int(semantic_to_graph[f"T_{int(task.id)}"])
+            for task in instance.tasks
+            if f"T_{int(task.id)}" in semantic_to_graph
+        }
+        replay_meta = {
+            "semantic_to_graph": semantic_to_graph,
+            "depot_node_id": depot_node_id,
+        }
+        return graph, task_node_map, station_node_map, replay_meta
+
+    graph = Graph()
+    depot_node_id = 0
+    graph.add_node(Node(id=depot_node_id, x=float(instance.depot_x), y=float(instance.depot_y), node_type="depot"))
+
+    station_node_map: dict[int, int] = {}
+    next_node_id = 1
+    for station in instance.stations:
+        node_id = next_node_id
+        next_node_id += 1
+        station_node_map[int(station.id)] = node_id
+        graph.add_node(Node(id=node_id, x=float(station.x), y=float(station.y), node_type="station"))
+
+    task_node_map: dict[int, int] = {}
+    for task in instance.tasks:
+        node_id = next_node_id
+        next_node_id += 1
+        task_node_map[int(task.id)] = node_id
+        graph.add_node(Node(id=node_id, x=float(task.x), y=float(task.y), node_type="task_point"))
+
+    node_ids = list(graph.nodes.keys())
+    for i, from_id in enumerate(node_ids):
+        from_node = graph.nodes[from_id]
+        for to_id in node_ids[i + 1 :]:
+            to_node = graph.nodes[to_id]
+            distance = ((from_node.x - to_node.x) ** 2 + (from_node.y - to_node.y) ** 2) ** 0.5
+            graph.add_edge(from_id, to_id, distance=distance, travel_time=distance, bidirectional=True)
+
+    replay_meta = {
+        "semantic_to_graph": {"DEPOT": depot_node_id, **{f"S_{sid}": nid for sid, nid in station_node_map.items()}, **{f"T_{tid}": nid for tid, nid in task_node_map.items()}},
+        "depot_node_id": depot_node_id,
+    }
+    return graph, task_node_map, station_node_map, replay_meta
+
+
+def _build_offline_replay_environment(instance: Any, max_simulation_time: int, offline_payload: dict[str, Any]) -> Environment:
+    graph, task_node_map, station_node_map, replay_meta = _build_graph_from_offline_instance(instance)
+    depot = Depot(id=0, node_id=int(replay_meta["depot_node_id"]))
+
+    tasks = [
+        Task(
+            id=int(task.id),
+            release_time=int(float(task.release)),
+            deadline=int(float(task.deadline)),
+            origin_node=task_node_map[int(task.id)],
+            weight=float(task.demand),
+        )
+        for task in instance.tasks
+    ]
+
+    charge_rate = float(
+        max((seg[1] for seg in getattr(instance, "piecewise_segments", []) if len(seg) >= 2), default=0.0)
+        or getattr(instance, "linear_charge_rate", 3.0)
+    )
+    station_num_piles = max(1, int(getattr(instance, "max_station_visits_per_station", 1)))
+    stations = [
+        ChargingStation(
+            id=int(station.id),
+            node_id=station_node_map[int(station.id)],
+            num_piles=station_num_piles,
+            charge_rate=charge_rate,
+        )
+        for station in instance.stations
+    ]
+
+    speed_levels = tuple(float(level) for level in getattr(instance, "speed_levels", (1.0,)))
+    vehicle_speed = speed_levels[len(speed_levels) // 2]
+    energy_per_km = float(getattr(instance, "energy_base_per_km", 1.0))
+    vehicles = [
+        Vehicle(
+            id=vehicle_id,
+            vehicle_type="offline_milp_ev",
+            current_node=depot.node_id,
+            battery=float(instance.battery_capacity),
+            battery_capacity=float(instance.battery_capacity),
+            load_capacity=float(instance.vehicle_capacity),
+            speed=vehicle_speed,
+            energy_per_km=energy_per_km,
+        )
+        for vehicle_id in range(int(instance.num_vehicles))
+    ]
+
+    sim_config = SimulationConfig(
+        end_time=min(max_simulation_time, int(float(instance.horizon))),
+        enable_collaborative_tasks=False,
+        auto_collaborative_dispatch=False,
+    )
+
+    env = Environment(
+        graph=graph,
+        depot=depot,
+        vehicles=vehicles,
+        tasks=tasks,
+        stations=stations,
+        config=sim_config,
+        scheduler=None,
+    )
+    env.end_time = sim_config.end_time
+    env.config.end_time = sim_config.end_time
+
+    engine_root = Path(__file__).resolve().parents[3]
+    offline_output_dir = engine_root / "policy" / "offline" / "output"
+    plan_csv = _build_offline_plan_csv_from_result(offline_payload, offline_output_dir / "engine_plan.csv")
+
+    release_map = {
+        int(task.id): int(float(task.release))
+        for task in instance.tasks
+    }
+    routes = offline_payload.get("result", {}).get("routes", {})
+    env.scheduler = OfflineRouteScheduler.from_semantic_routes(
+        routes=routes,
+        task_node_map=task_node_map,
+        station_node_map=station_node_map,
+        release_map=release_map,
+        depot_node_id=depot.node_id,
+    )
+    env.offline_plan_csv = str(plan_csv)
+    env.offline_replay_meta = replay_meta
+    return env
+
+
+def _resolve_semantic_graph_node_id(
+    semantic_node: str,
+    semantic_to_graph: dict[str, int],
+    depot_node_id: int,
+) -> int | None:
+    if semantic_node in {"DEPOT_START", "DEPOT_END", "DEPOT"}:
+        return depot_node_id
+    if semantic_node.startswith("T_"):
+        task_id = semantic_node.split("_", 1)[1]
+        return semantic_to_graph.get(f"T_{task_id}")
+    if semantic_node.startswith("S_"):
+        parts = semantic_node.split("_")
+        if len(parts) >= 2:
+            return semantic_to_graph.get(f"S_{parts[1]}")
+    return semantic_to_graph.get(semantic_node)
+
+
+def _build_offline_route_comparison(
+    offline_payload: dict[str, Any],
+    env: Environment,
+) -> dict[str, Any]:
+    replay_meta = getattr(env, "offline_replay_meta", {}) or {}
+    semantic_to_graph = replay_meta.get("semantic_to_graph", {}) or {}
+    depot_node_id = int(replay_meta.get("depot_node_id", env.depot.node_id))
+    routes: dict[str, list[str]] = offline_payload.get("result", {}).get("routes", {})
+    pathfinder = PathFinder(env.graph)
+
+    vehicle_routes: list[dict[str, Any]] = []
+    flat_rows: list[dict[str, Any]] = []
+
+    for vehicle_key, semantic_route in sorted(routes.items(), key=lambda item: int(item[0])):
+        vehicle_id = int(vehicle_key)
+        semantic_stops: list[dict[str, Any]] = []
+        engine_node_route: list[int] = []
+        engine_segments: list[dict[str, Any]] = []
+
+        prev_semantic: str | None = None
+        prev_graph_node_id: int | None = None
+
+        for seq, semantic_node in enumerate(semantic_route):
+            graph_node_id = _resolve_semantic_graph_node_id(
+                semantic_node=semantic_node,
+                semantic_to_graph=semantic_to_graph,
+                depot_node_id=depot_node_id,
+            )
+            semantic_stop = {
+                "vehicle_id": vehicle_id,
+                "seq": seq,
+                "semantic_node": semantic_node,
+                "graph_node_id": graph_node_id,
+            }
+            semantic_stops.append(semantic_stop)
+            flat_rows.append(
+                {
+                    "vehicle_id": vehicle_id,
+                    "record_type": "semantic_stop",
+                    "seq": seq,
+                    "semantic_node": semantic_node,
+                    "graph_node_id": graph_node_id if graph_node_id is not None else "",
+                    "engine_node_id": "",
+                    "segment_from": "",
+                    "segment_to": "",
+                }
+            )
+
+            if graph_node_id is None:
+                prev_semantic = semantic_node
+                prev_graph_node_id = None
+                continue
+
+            if prev_graph_node_id is None:
+                if not engine_node_route:
+                    engine_node_route.append(graph_node_id)
+                prev_semantic = semantic_node
+                prev_graph_node_id = graph_node_id
+                continue
+
+            if prev_graph_node_id == graph_node_id:
+                segment_path = [graph_node_id]
+            else:
+                segment_path = pathfinder.shortest_path(prev_graph_node_id, graph_node_id)
+
+            if segment_path:
+                if not engine_node_route:
+                    engine_node_route.extend(segment_path)
+                elif engine_node_route[-1] == segment_path[0]:
+                    engine_node_route.extend(segment_path[1:])
+                else:
+                    engine_node_route.extend(segment_path)
+
+            engine_segments.append(
+                {
+                    "from_semantic_node": prev_semantic,
+                    "to_semantic_node": semantic_node,
+                    "node_path": segment_path,
+                }
+            )
+            prev_semantic = semantic_node
+            prev_graph_node_id = graph_node_id
+
+        for node_seq, node_id in enumerate(engine_node_route):
+            flat_rows.append(
+                {
+                    "vehicle_id": vehicle_id,
+                    "record_type": "engine_node",
+                    "seq": node_seq,
+                    "semantic_node": "",
+                    "graph_node_id": node_id,
+                    "engine_node_id": node_id,
+                    "segment_from": "",
+                    "segment_to": "",
+                }
+            )
+
+        for seg_idx, segment in enumerate(engine_segments):
+            flat_rows.append(
+                {
+                    "vehicle_id": vehicle_id,
+                    "record_type": "engine_segment",
+                    "seq": seg_idx,
+                    "semantic_node": "",
+                    "graph_node_id": "",
+                    "engine_node_id": json.dumps(segment["node_path"], ensure_ascii=False),
+                    "segment_from": segment["from_semantic_node"],
+                    "segment_to": segment["to_semantic_node"],
+                }
+            )
+
+        vehicle_routes.append(
+            {
+                "vehicle_id": vehicle_id,
+                "milp_semantic_route": [item["semantic_node"] for item in semantic_stops],
+                "semantic_stops": semantic_stops,
+                "engine_node_route": engine_node_route,
+                "engine_segments": engine_segments,
+            }
+        )
+
+    return {
+        "vehicle_routes": vehicle_routes,
+        "flat_rows": flat_rows,
+    }
+
+
+def _write_offline_route_comparison_exports(
+    summary_json_path: Path,
+    route_csv_path: Path,
+    offline_payload: dict[str, Any],
+    env: Environment,
+) -> dict[str, Any]:
+    comparison = _build_offline_route_comparison(offline_payload=offline_payload, env=env)
+    payload = dict(offline_payload)
+    payload["replay_compare"] = comparison
+    summary_json_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    import csv
+
+    with route_csv_path.open("w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(
+            f,
+            fieldnames=[
+                "vehicle_id",
+                "record_type",
+                "seq",
+                "semantic_node",
+                "graph_node_id",
+                "engine_node_id",
+                "segment_from",
+                "segment_to",
+            ],
+        )
+        writer.writeheader()
+        writer.writerows(comparison["flat_rows"])
+
+    return comparison
 
 
 def _map_strategy(strategy: str) -> str:
@@ -481,6 +1014,87 @@ async def _run_session_loop(session: SimulationSession) -> None:
 @app.get("/api/v1/health")
 async def health() -> dict[str, Any]:
     return {"status": "ok", "version": "1.0.0"}
+
+
+@app.post("/api/v1/solver/offline/start")
+async def start_offline_solver(req: OfflineSolveRequest) -> dict[str, Any]:
+    try:
+        scale_id = req.scale.id if req.scale and req.scale.id else "small"
+        module = _load_offline_milp_module()
+        instance = _build_engine_constrained_offline_instance(
+            module=module,
+            scale_id=scale_id,
+            max_simulation_time=req.maxSimulationTime,
+        )
+        engine = module.GodViewMILP(instance, solver=req.solver, charge_mode=req.chargeMode)
+        result = engine.solve(time_limit_sec=req.timeLimit)
+
+        engine_root = Path(__file__).resolve().parents[3]
+        out_dir = engine_root / "policy" / "offline" / "output"
+        json_path, summary_csv, route_csv = engine.save_result(result, out_dir=out_dir, prefix="god_view_milp")
+        payload = json.loads(json_path.read_text(encoding="utf-8"))
+
+        env = _build_offline_replay_environment(
+            instance=instance,
+            max_simulation_time=req.maxSimulationTime,
+            offline_payload=payload,
+        )
+        comparison = _write_offline_route_comparison_exports(
+            summary_json_path=json_path,
+            route_csv_path=route_csv,
+            offline_payload=payload,
+            env=env,
+        )
+        payload = json.loads(json_path.read_text(encoding="utf-8"))
+
+        simulation_id = str(uuid.uuid4())
+        config_payload = {
+            "scale": {
+                "id": scale_id,
+                "name": req.scale.name or scale_id,
+                "description": (req.scale.description or "") + "（离线求解回放）",
+                "vehicleCount": len(env.vehicles),
+                "nodeCount": len(env.graph.nodes),
+                "chargingStationCount": len(env.stations),
+                "taskGenerationRate": 1,
+                "mapSize": 100,
+            },
+            "strategy": "offline_optimal",
+            "simulationSpeed": 1.0,
+            "maxSimulationTime": req.maxSimulationTime,
+            "enableCollaboration": False,
+            "offlineSolve": {
+                "solver": req.solver,
+                "chargeMode": req.chargeMode,
+                "timeLimit": req.timeLimit,
+                "summaryJson": str(json_path),
+                "summaryCsv": str(summary_csv),
+                "routeCsv": str(route_csv),
+                "compareVehicleCount": len(comparison.get("vehicle_routes", [])),
+            },
+        }
+
+        session = SimulationSession(
+            simulation_id=simulation_id,
+            env=env,
+            config_payload=config_payload,
+            scheduler_name="offline_plan",
+            simulation_speed=1.0,
+            status="paused",
+        )
+        session.loop_task = asyncio.create_task(_run_session_loop(session))
+        SESSIONS[simulation_id] = session
+
+        return {
+            "simulationId": simulation_id,
+            "summaryJson": str(json_path),
+            "summaryCsv": str(summary_csv),
+            "routeCsv": str(route_csv),
+            "objective": payload["result"]["objective"],
+            "status": payload["result"]["status"],
+        }
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=f"offline solve failed: {exc}") from exc
 
 
 @app.post("/api/v1/simulation/start")

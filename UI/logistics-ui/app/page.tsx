@@ -136,6 +136,7 @@ export default function Home() {
   const [selectedVehicleId, setSelectedVehicleId] = useState<string | undefined>();
   const [activeTab, setActiveTab] = useState<'vehicles' | 'tasks' | 'stations'>('vehicles');
   const [isInitialized, setIsInitialized] = useState(false);
+  const [offlineSolving, setOfflineSolving] = useState(false);
 
   // 登录状态
   const { user, login, logout } = useAuth();
@@ -378,41 +379,39 @@ export default function Home() {
     console.log('Node clicked:', nodeId);
   }, []);
 
-  const handleOfflineReplay = useCallback(() => {
-    setShowOfflineModal(true);
-  }, []);
+  const handleOfflineSolve = useCallback(async () => {
+    if (!USE_REMOTE_ENGINE || !state || offlineSolving) return;
 
-  const handlePlayOffline = useCallback(() => {
     try {
-      const logs = JSON.parse(offlineLogText);
-      if (!Array.isArray(logs) || logs.length === 0) {
-        alert("无效的离线日志格式，需要为数组");
-        return;
-      }
-      setShowOfflineModal(false);
-      
-      let i = 0;
-      if (offlineTimeRef.current) clearInterval(offlineTimeRef.current);
-      
-      if (remoteSimulationIdRef.current) {
-        apiClient.stopSimulation(remoteSimulationIdRef.current);
+      setOfflineSolving(true);
+
+      if (remoteSimulationId) {
+        await apiClient.stopSimulation(remoteSimulationId);
+        realtimeConnection.send('unsubscribe', { simulationId: remoteSimulationId });
         setRemoteSimulationId(null);
       }
-      
-      // 以稍快的速度回放，达到高帧率
-      offlineTimeRef.current = setInterval(() => {
-        if (i < logs.length) {
-          // 这里如果是单纯的回放，可以根据日志更新 state，注意补充必要的图结构等防御
-          setState((prev) => normalizeRemoteState(logs[i], prev ?? buildDefaultState()));
-          i++;
-        } else {
-          if (offlineTimeRef.current) clearInterval(offlineTimeRef.current);
-        }
-      }, 50); // 更短间隔，更高帧率
-    } catch(e) {
-      alert("解析失败，请检查复制的内容: " + String(e));
+
+      const solved = await apiClient.startOfflineSolve({
+        scale: state.config.scale,
+        maxSimulationTime: state.config.maxSimulationTime,
+        solver: 'gurobi',
+        chargeMode: 'piecewise',
+        timeLimit: 120,
+      });
+
+      if (!solved.success || !solved.data?.simulationId) {
+        console.error('Failed to start offline solve:', solved.error);
+        return;
+      }
+
+      const simulationId = solved.data.simulationId;
+      setRemoteSimulationId(simulationId);
+      realtimeConnection.send('subscribe', { simulationId });
+      await apiClient.resumeSimulation(simulationId);
+    } finally {
+      setOfflineSolving(false);
     }
-  }, [offlineLogText]);
+  }, [offlineSolving, remoteSimulationId, state]);
 
   // 加载状态
   if (!isInitialized || !state) {
@@ -488,6 +487,8 @@ export default function Home() {
               onStrategyChange={handleStrategyChange}
               onScaleChange={handleScaleChange}
               onCollaborationChange={handleCollaborationChange}
+              onOfflineSolve={handleOfflineSolve}
+              offlineSolving={offlineSolving}
             />
             <StatisticsPanel
               statistics={state.statistics}
