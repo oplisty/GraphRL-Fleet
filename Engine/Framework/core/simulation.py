@@ -435,6 +435,7 @@ class Environment:
             task.mark_released()
             self.pending_task_ids.add(task_id)
             self.logger.log_task_event(self.current_time, task, "released")
+            self.logger.log_event(self.current_time, "task_released", {"task_id": task.id})
             self._future_index += 1
 
     def _expire_tasks(self) -> None:
@@ -523,6 +524,11 @@ class Environment:
                     station.charging_slots[i] = None
                     vehicle.finish_charging()
                     self.logger.log_vehicle_event(self.current_time, vehicle, "charge_finish")
+                    self.logger.log_event(
+                        self.current_time,
+                        "vehicle_finished_charging",
+                        {"vehicle_id": vehicle.id, "station_id": station.id},
+                    )
                     self._resume_vehicle_after_charging(vehicle)
 
             for i, slot in enumerate(station.charging_slots):
@@ -541,6 +547,7 @@ class Environment:
         if vehicle.assigned_task is None:
             vehicle.status = VehicleStatus.IDLE
             vehicle.clear_route()
+            self.logger.log_event(self.current_time, "vehicle_became_idle", {"vehicle_id": vehicle.id, "reason": "missing_task"})
             return
 
         task = self.tasks[vehicle.assigned_task]
@@ -548,6 +555,7 @@ class Environment:
             vehicle.clear_task_assignment()
             vehicle.status = VehicleStatus.IDLE
             vehicle.clear_route()
+            self.logger.log_event(self.current_time, "vehicle_became_idle", {"vehicle_id": vehicle.id, "reason": "task_invalid"})
             return
 
         assigned_load = vehicle.task_load if vehicle.task_load > 0 else min(task.remaining_weight, task.weight)
@@ -596,6 +604,7 @@ class Environment:
             return
 
         vehicle.status = VehicleStatus.IDLE
+        self.logger.log_event(self.current_time, "vehicle_became_idle", {"vehicle_id": vehicle.id, "reason": "task_done"})
         if self._should_charge(vehicle):
             self._redirect_to_charge(vehicle)
 
@@ -620,6 +629,7 @@ class Environment:
             self.total_score += task_score
 
         self.logger.log_task_event(self.current_time, task, "completed")
+        self.logger.log_event(self.current_time, "task_completed", {"task_id": task.id})
 
     def _compute_task_score(self, task: Task) -> float:
         travel_dist = task.service_distance
@@ -645,11 +655,17 @@ class Environment:
         station.enqueue(vehicle.id)
         vehicle.start_waiting_charge(station.id)
         self.logger.log_vehicle_event(self.current_time, vehicle, "queue_charge")
+        self.logger.log_event(
+            self.current_time,
+            "vehicle_reached_station",
+            {"vehicle_id": vehicle.id, "station_id": station.id},
+        )
 
     def _on_reach_depot(self, vehicle: Vehicle) -> None:
         vehicle.clear_route()
         vehicle.status = VehicleStatus.IDLE
         self.logger.log_vehicle_event(self.current_time, vehicle, "reach_depot")
+        self.logger.log_event(self.current_time, "vehicle_became_idle", {"vehicle_id": vehicle.id, "reason": "reach_depot"})
 
         if self._should_charge(vehicle):
             self._redirect_to_charge(vehicle)
@@ -747,6 +763,7 @@ class Environment:
         best_station_id: int | None = None
         best_cost = math.inf
         best_distance = math.inf
+        use_nearest_only = self.config.charging_strategy == "nearest_station"
 
         for station in self.stations.values():
             distance = self.pathfinder.shortest_distance(vehicle.current_node, station.node_id)
@@ -756,11 +773,14 @@ class Environment:
             if vehicle.battery < needed:
                 continue
 
-            load_cost = (
-                self.config.charge_queue_weight * station.queue_length
-                + self.config.charge_occupied_weight * station.occupied_piles
-            )
-            total_cost = distance + load_cost
+            if use_nearest_only:
+                total_cost = distance
+            else:
+                load_cost = (
+                    self.config.charge_queue_weight * station.queue_length
+                    + self.config.charge_occupied_weight * station.occupied_piles
+                )
+                total_cost = distance + load_cost
             if total_cost < best_cost or (total_cost == best_cost and distance < best_distance):
                 best_cost = total_cost
                 best_distance = distance

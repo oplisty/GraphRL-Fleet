@@ -7,12 +7,10 @@ import Link from 'next/link';
 
 // 策略配置
 const strategies: { id: SchedulingStrategy; name: string; description: string; icon: string }[] = [
-  { id: 'nearest_first', name: '最近优先', description: '优先处理距离最近的任务', icon: '📍' },
+  { id: 'nearest_first', name: '最近优先', description: '优先处理路径最近且可执行的任务', icon: '📍' },
   { id: 'largest_first', name: '最大优先', description: '优先处理货物最重的任务', icon: '📦' },
-  { id: 'highest_reward', name: '收益优先', description: '优先处理奖励最高的任务', icon: '💰' },
-  { id: 'earliest_deadline', name: '截止优先', description: '优先处理即将超时的任务', icon: '⏰' },
-  { id: 'balanced', name: '均衡策略', description: '综合考虑多个因素', icon: '⚖️' },
-  { id: 'collaborative', name: '协同调度', description: '多车协作完成任务', icon: '🤝' },
+  { id: 'earliest_deadline', name: '截止优先（EDF）', description: '优先处理截止时间最早的任务', icon: '⏰' },
+  { id: 'q_learning', name: 'Q-learning', description: '用训练好的 Q-learning 模型选择启发式规则', icon: '🧠' },
 ];
 
 // 策略比较结果
@@ -23,7 +21,7 @@ interface CompareResult {
 }
 
 export default function ComparePage() {
-  const [selectedStrategies, setSelectedStrategies] = useState<SchedulingStrategy[]>(['nearest_first', 'largest_first', 'highest_reward']);
+  const [selectedStrategies, setSelectedStrategies] = useState<SchedulingStrategy[]>(['nearest_first', 'largest_first', 'earliest_deadline']);
   const [selectedScale, setSelectedScale] = useState(ProblemScales[1]);
   const [isRunning, setIsRunning] = useState(false);
   const [results, setResults] = useState<CompareResult[]>([]);

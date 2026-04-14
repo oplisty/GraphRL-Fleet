@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import sys
 import asyncio
 import json
 import os
@@ -8,6 +9,10 @@ import uuid
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
+
+ENGINE_PROJECT_ROOT = Path(__file__).resolve().parents[3]
+if str(ENGINE_PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(ENGINE_PROJECT_ROOT))
 
 from fastapi import FastAPI, HTTPException, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
@@ -28,7 +33,10 @@ from Framework.core import (
 )
 from Framework.examples.run_baseline import build_environment as build_random_environment
 from Framework.generator import generate_real_tasks, load_real_map_from_processed
-from Framework.scheduler import HeaviestTaskScheduler, NearestTaskScheduler, OfflineRouteScheduler
+from Framework.scheduler import EarliestDeadlineScheduler, HeaviestTaskScheduler, NearestTaskScheduler, OfflineRouteScheduler
+from Framework.scheduler.base import SchedulerBase
+from policy.gymnasium_qlearning import GymLogisticsEnvConfig, QLearningAgent, RULE_LIBRARY, TrainingConfig, evaluate_policy, train_q_learning
+from policy.gymnasium_qlearning.state_encoder import StateEncoder
 
 
 app = FastAPI(title="Engine Realtime API", version="1.0.0")
@@ -52,6 +60,7 @@ class ProblemScaleModel(BaseModel):
 class SimulationStartRequest(BaseModel):
     scale: ProblemScaleModel = Field(default_factory=ProblemScaleModel)
     strategy: str = "nearest_first"
+    chargingStrategy: str = "optimal_station"
     simulationSpeed: float = 1.0
     maxSimulationTime: int = 240
     enableCollaboration: bool = False
@@ -64,6 +73,22 @@ class OfflineSolveRequest(BaseModel):
     solver: str = "gurobi"
     chargeMode: str = "piecewise"
     timeLimit: int = 120
+
+
+class RLTrainRequest(BaseModel):
+    episodes: int = 50
+    scale: str = "small"
+    maxSteps: int = 180
+    chargingStrategy: str = "optimal_station"
+    randomSeed: int = 7
+
+
+class RLDecisionRequest(BaseModel):
+    idleLevel: int
+    backlogLevel: int
+    urgencyLevel: int
+    lowBatteryLevel: int
+    chargeCongestionLevel: int
 
 
 @dataclass
@@ -82,6 +107,11 @@ class SimulationSession:
 
 
 SESSIONS: dict[str, SimulationSession] = {}
+
+RL_OUTPUT_DIR = Path(__file__).resolve().parents[3] / "policy" / "gymnasium_qlearning" / "output"
+RL_MODEL_PATH = RL_OUTPUT_DIR / "q_table.json"
+RL_TRAINING_SUMMARY_PATH = RL_OUTPUT_DIR / "training_summary.json"
+RL_EVAL_SUMMARY_PATH = RL_OUTPUT_DIR / "eval_summary.json"
 
 DEFAULT_PANYU_BBOX = (113.243972, 22.858513, 113.569794, 23.082811)
 
@@ -107,8 +137,79 @@ def _parse_env_bbox() -> tuple[float, float, float, float]:
 
 PANYU_BBOX = _parse_env_bbox()
 
+LICENSE_LIMIT_MARKERS = (
+    "model too large for size-limited license",
+    "size-limited license",
+    "restricted license",
+)
+
+
+def _is_license_size_error(exc: Exception) -> bool:
+    message = str(exc).lower()
+    return any(marker in message for marker in LICENSE_LIMIT_MARKERS)
+
+
+def _offline_fallback_scales(requested_scale_id: str) -> list[str]:
+    normalized = requested_scale_id if requested_scale_id in {"small", "medium", "large"} else "small"
+    if normalized == "large":
+        return ["small", "tiny"]
+    if normalized == "medium":
+        return ["small", "tiny"]
+    if normalized == "small":
+        return ["tiny"]
+    return ["small", "tiny"]
+
+
+def _build_tiny_fallback_instance(module: Any, max_simulation_time: int):
+    instance = module.build_tiny_demo_instance()
+    instance.horizon = float(max_simulation_time)
+    return instance
+
+
+def _solve_offline_with_fallback(module: Any, req: OfflineSolveRequest) -> tuple[Any, Any, dict[str, Any]]:
+    requested_scale_id = req.scale.id if req.scale and req.scale.id else "small"
+    attempt_scales = [requested_scale_id, *_offline_fallback_scales(requested_scale_id)]
+    tried: list[dict[str, str]] = []
+    last_exc: Exception | None = None
+
+    for attempt_scale in attempt_scales:
+        try:
+            if attempt_scale == "tiny":
+                instance = _build_tiny_fallback_instance(module, req.maxSimulationTime)
+            else:
+                instance = _build_engine_constrained_offline_instance(
+                    module=module,
+                    scale_id=attempt_scale,
+                    max_simulation_time=req.maxSimulationTime,
+                )
+            engine = module.GodViewMILP(instance, solver=req.solver, charge_mode=req.chargeMode)
+            result = engine.solve(time_limit_sec=req.timeLimit)
+            return instance, result, {
+                "requestedScale": requested_scale_id,
+                "actualScale": attempt_scale,
+                "fallbackApplied": attempt_scale != requested_scale_id,
+                "attempts": tried + [{"scale": attempt_scale, "status": "success"}],
+            }
+        except Exception as exc:
+            last_exc = exc
+            tried.append({"scale": attempt_scale, "status": f"failed: {type(exc).__name__}: {exc}"})
+            if not _is_license_size_error(exc):
+                raise
+
+    assert last_exc is not None
+    raise last_exc
+
+
+def _augment_offline_summary_with_fallback(summary_json_path: Path, fallback_meta: dict[str, Any]) -> dict[str, Any]:
+    payload = json.loads(summary_json_path.read_text(encoding="utf-8"))
+    payload["fallback"] = fallback_meta
+    summary_json_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    return payload
+
 
 def _load_offline_milp_module():
+    import sys
+
     engine_root = Path(__file__).resolve().parents[3]
     module_path = engine_root / "policy" / "offline" / "god_view_milp.py"
     if not module_path.exists():
@@ -119,6 +220,7 @@ def _load_offline_milp_module():
         raise RuntimeError("failed to load offline milp module spec")
 
     module = importlib_util.module_from_spec(spec)
+    sys.modules[spec.name] = module
     spec.loader.exec_module(module)
     return module
 
@@ -621,16 +723,44 @@ def _write_offline_route_comparison_exports(
 
 
 def _map_strategy(strategy: str) -> str:
-    # Engine currently has nearest/heaviest baseline schedulers.
     mapping = {
         "nearest_first": "nearest",
         "largest_first": "heaviest",
         "highest_reward": "nearest",
-        "earliest_deadline": "nearest",
+        "earliest_deadline": "earliest_deadline",
         "balanced": "nearest",
         "collaborative": "nearest",
+        "q_learning": "q_learning",
     }
     return mapping.get(strategy, "nearest")
+
+
+class QLearningScheduler(SchedulerBase):
+    def __init__(self, agent: QLearningAgent):
+        self.agent = agent
+        self.encoder = StateEncoder()
+
+    def select_actions(self, env: Environment) -> list[tuple[int, int] | dict]:
+        state = self.encoder.encode(env).as_tuple()
+        action = int(self.agent.select_action(state=state, epsilon=0.0))
+        rule = RULE_LIBRARY[action]
+        return rule.apply(env)
+
+
+def _load_q_learning_agent() -> QLearningAgent:
+    if not RL_MODEL_PATH.exists():
+        raise RuntimeError(f"Q-learning model not found: {RL_MODEL_PATH}")
+    return QLearningAgent.load(RL_MODEL_PATH)
+
+
+def _read_json_if_exists(path: Path) -> dict[str, Any] | list[Any] | None:
+    if not path.exists():
+        return None
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _normalize_charging_strategy(strategy: str) -> str:
+    return strategy if strategy in {"optimal_station", "nearest_station"} else "optimal_station"
 
 
 def _build_environment(
@@ -638,6 +768,7 @@ def _build_environment(
     scheduler_name: str,
     enable_collaboration: bool,
     max_simulation_time: int,
+    charging_strategy: str,
 ) -> Environment:
     """Prefer real Panyu processed map; fallback to random map if unavailable."""
     engine_root = Path(__file__).resolve().parents[2]
@@ -675,11 +806,19 @@ def _build_environment(
             for i in range(scenario.num_vehicles)
         ]
 
-        scheduler = NearestTaskScheduler() if scheduler_name == "nearest" else HeaviestTaskScheduler()
+        if scheduler_name == "nearest":
+            scheduler = NearestTaskScheduler()
+        elif scheduler_name == "earliest_deadline":
+            scheduler = EarliestDeadlineScheduler()
+        elif scheduler_name == "q_learning":
+            scheduler = QLearningScheduler(_load_q_learning_agent())
+        else:
+            scheduler = HeaviestTaskScheduler()
         sim_config = SimulationConfig(
             end_time=max_simulation_time,
             enable_collaborative_tasks=enable_collaboration,
             auto_collaborative_dispatch=enable_collaboration,
+            charging_strategy=_normalize_charging_strategy(charging_strategy),
         )
 
         return Environment(
@@ -699,6 +838,7 @@ def _build_environment(
         collaborative_task_ratio=0.3 if enable_collaboration else 0.0,
         enable_collaborative_tasks=enable_collaboration,
         auto_collaborative_dispatch=enable_collaboration,
+        charging_strategy=_normalize_charging_strategy(charging_strategy),
     )
 
 
@@ -1019,20 +1159,18 @@ async def health() -> dict[str, Any]:
 @app.post("/api/v1/solver/offline/start")
 async def start_offline_solver(req: OfflineSolveRequest) -> dict[str, Any]:
     try:
-        scale_id = req.scale.id if req.scale and req.scale.id else "small"
+        requested_scale_id = req.scale.id if req.scale and req.scale.id else "small"
         module = _load_offline_milp_module()
-        instance = _build_engine_constrained_offline_instance(
-            module=module,
-            scale_id=scale_id,
-            max_simulation_time=req.maxSimulationTime,
-        )
-        engine = module.GodViewMILP(instance, solver=req.solver, charge_mode=req.chargeMode)
-        result = engine.solve(time_limit_sec=req.timeLimit)
+        instance, result, fallback_meta = _solve_offline_with_fallback(module=module, req=req)
 
         engine_root = Path(__file__).resolve().parents[3]
         out_dir = engine_root / "policy" / "offline" / "output"
-        json_path, summary_csv, route_csv = engine.save_result(result, out_dir=out_dir, prefix="god_view_milp")
-        payload = json.loads(json_path.read_text(encoding="utf-8"))
+        json_path, summary_csv, route_csv = module.GodViewMILP(instance, solver=req.solver, charge_mode=req.chargeMode).save_result(
+            result,
+            out_dir=out_dir,
+            prefix="god_view_milp",
+        )
+        payload = _augment_offline_summary_with_fallback(json_path, fallback_meta)
 
         env = _build_offline_replay_environment(
             instance=instance,
@@ -1048,11 +1186,16 @@ async def start_offline_solver(req: OfflineSolveRequest) -> dict[str, Any]:
         payload = json.loads(json_path.read_text(encoding="utf-8"))
 
         simulation_id = str(uuid.uuid4())
+        actual_scale_id = fallback_meta.get("actualScale", requested_scale_id)
+        actual_scale_name = "tiny" if actual_scale_id == "tiny" else (req.scale.name or actual_scale_id)
+        description_suffix = "（离线求解回放）"
+        if fallback_meta.get("fallbackApplied"):
+            description_suffix = f"（离线求解回放，已从 {requested_scale_id} 自动降级到 {actual_scale_id}）"
         config_payload = {
             "scale": {
-                "id": scale_id,
-                "name": req.scale.name or scale_id,
-                "description": (req.scale.description or "") + "（离线求解回放）",
+                "id": actual_scale_id,
+                "name": actual_scale_name,
+                "description": (req.scale.description or "") + description_suffix,
                 "vehicleCount": len(env.vehicles),
                 "nodeCount": len(env.graph.nodes),
                 "chargingStationCount": len(env.stations),
@@ -1071,6 +1214,10 @@ async def start_offline_solver(req: OfflineSolveRequest) -> dict[str, Any]:
                 "summaryCsv": str(summary_csv),
                 "routeCsv": str(route_csv),
                 "compareVehicleCount": len(comparison.get("vehicle_routes", [])),
+                "requestedScale": requested_scale_id,
+                "actualScale": actual_scale_id,
+                "fallbackApplied": bool(fallback_meta.get("fallbackApplied")),
+                "attempts": fallback_meta.get("attempts", []),
             },
         }
 
@@ -1092,9 +1239,100 @@ async def start_offline_solver(req: OfflineSolveRequest) -> dict[str, Any]:
             "routeCsv": str(route_csv),
             "objective": payload["result"]["objective"],
             "status": payload["result"]["status"],
+            "requestedScale": requested_scale_id,
+            "actualScale": actual_scale_id,
+            "fallbackApplied": bool(fallback_meta.get("fallbackApplied")),
         }
     except Exception as exc:
-        raise HTTPException(status_code=500, detail=f"offline solve failed: {exc}") from exc
+        raise HTTPException(status_code=500, detail=f"offline solve failed: {type(exc).__name__}: {exc}") from exc
+
+
+@app.get("/api/v1/rl/state")
+async def get_rl_state() -> dict[str, Any]:
+    summary = _read_json_if_exists(RL_TRAINING_SUMMARY_PATH)
+    eval_rows = _read_json_if_exists(RL_EVAL_SUMMARY_PATH)
+    last_reward = 0.0
+    if isinstance(eval_rows, list) and eval_rows:
+        last = eval_rows[-1]
+        if isinstance(last, dict):
+            last_reward = float(last.get("total_reward", 0.0))
+
+    episodes_ran = 0
+    epsilon = 0.0
+    if isinstance(summary, dict):
+        episodes_ran = int(summary.get("episodes_ran", 0))
+        epsilon = float(summary.get("final_epsilon", 0.0))
+
+    return {
+        "modelLoaded": RL_MODEL_PATH.exists(),
+        "trainedEpisodes": episodes_ran,
+        "currentReward": last_reward,
+        "epsilon": epsilon,
+    }
+
+
+@app.post("/api/v1/rl/train")
+async def train_rl_model(req: RLTrainRequest) -> dict[str, Any]:
+    try:
+        env_cfg = GymLogisticsEnvConfig(
+            scale=req.scale,
+            max_steps=req.maxSteps,
+            charging_strategy=req.chargingStrategy,
+            random_seed=req.randomSeed,
+        )
+        train_cfg = TrainingConfig(episodes=req.episodes)
+
+        started = time.time()
+        agent, _history, summary = train_q_learning(
+            env_config=env_cfg,
+            training_config=train_cfg,
+            checkpoint_dir=RL_OUTPUT_DIR / "checkpoints",
+        )
+        eval_rows = evaluate_policy(agent, env_cfg, episodes=min(5, max(1, req.episodes // 10 or 1)))
+        RL_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+        agent.save(RL_MODEL_PATH)
+        RL_TRAINING_SUMMARY_PATH.write_text(json.dumps({
+            "best_eval_score": summary.best_eval_score,
+            "best_episode": summary.best_episode,
+            "final_epsilon": summary.final_epsilon,
+            "episodes_ran": summary.episodes_ran,
+            "stop_reason": summary.stop_reason,
+        }, ensure_ascii=False, indent=2), encoding="utf-8")
+        RL_EVAL_SUMMARY_PATH.write_text(json.dumps(eval_rows, ensure_ascii=False, indent=2), encoding="utf-8")
+        training_time = time.time() - started
+        final_reward = float(eval_rows[-1]["total_reward"]) if eval_rows else 0.0
+        return {
+            "trainedEpisodes": summary.episodes_ran,
+            "finalReward": final_reward,
+            "trainingTime": training_time,
+        }
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=f"rl train failed: {type(exc).__name__}: {exc}") from exc
+
+
+@app.post("/api/v1/rl/decide")
+async def rl_decide(req: RLDecisionRequest) -> dict[str, Any]:
+    try:
+        agent = _load_q_learning_agent()
+        state = (
+            int(req.idleLevel),
+            int(req.backlogLevel),
+            int(req.urgencyLevel),
+            int(req.lowBatteryLevel),
+            int(req.chargeCongestionLevel),
+        )
+        action = int(agent.select_action(state=state, epsilon=0.0))
+        rule = RULE_LIBRARY[action]
+        return {
+            "assignments": [],
+            "score": 0,
+            "executionTime": 0,
+            "selectedAction": action,
+            "selectedRule": rule.name,
+            "chargingStrategy": rule.charging_strategy,
+        }
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=f"rl decide failed: {type(exc).__name__}: {exc}") from exc
 
 
 @app.post("/api/v1/simulation/start")
@@ -1107,6 +1345,7 @@ async def start_simulation(req: SimulationStartRequest) -> dict[str, Any]:
         scheduler_name=scheduler_name,
         enable_collaboration=req.enableCollaboration,
         max_simulation_time=req.maxSimulationTime,
+        charging_strategy=req.chargingStrategy,
     )
 
     env.end_time = req.maxSimulationTime
@@ -1128,6 +1367,7 @@ async def start_simulation(req: SimulationStartRequest) -> dict[str, Any]:
         "simulationSpeed": req.simulationSpeed,
         "maxSimulationTime": req.maxSimulationTime,
         "enableCollaboration": req.enableCollaboration,
+        "chargingStrategy": _normalize_charging_strategy(req.chargingStrategy),
         "randomSeed": req.randomSeed,
     }
 

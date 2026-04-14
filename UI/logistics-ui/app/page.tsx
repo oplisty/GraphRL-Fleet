@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
-import { SimulationState, SchedulingStrategy, ProblemScale, Node, Edge } from './types';
+import { SimulationState, SchedulingStrategy, ChargingStrategy, ProblemScale, Node, Edge, RLModelState } from './types';
 import { SimulationEngine, ProblemScales, getSimulationEngine } from './core/simulation';
 import {
   AMapRealtimeMap,
@@ -45,6 +45,7 @@ function buildDefaultState(): SimulationState {
     config: {
       scale: ProblemScales[1],
       strategy: 'nearest_first',
+      chargingStrategy: 'optimal_station',
       simulationSpeed: 1,
       maxSimulationTime: 480,
       enableCollaboration: false,
@@ -137,16 +138,19 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState<'vehicles' | 'tasks' | 'stations'>('vehicles');
   const [isInitialized, setIsInitialized] = useState(false);
   const [offlineSolving, setOfflineSolving] = useState(false);
-
-  // 登录状态
+  const [rlState, setRlState] = useState<RLModelState | null>(null);
+  const [rlTraining, setRlTraining] = useState(false);
   const { user, login, logout } = useAuth();
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showLeaderboard, setShowLeaderboard] = useState(false);
 
-  // 离线日志记录与回放状态
-  const [showOfflineModal, setShowOfflineModal] = useState(false);
-  const [offlineLogText, setOfflineLogText] = useState("");
-  const offlineTimeRef = useRef<NodeJS.Timeout | null>(null);
+  useEffect(() => {
+    apiClient.getRLModelState().then((res) => {
+      if (res.success && res.data) {
+        setRlState(res.data);
+      }
+    }).catch(() => undefined);
+  }, []);
 
   // 游戏结束时提交成绩
   const gameEndSubmittedRef = useRef(false);
@@ -194,6 +198,7 @@ export default function Home() {
     engine.initialize({
       scale: ProblemScales[1], // 中等规模
       strategy: 'nearest_first',
+      chargingStrategy: 'optimal_station',
       simulationSpeed: 1,
       maxSimulationTime: 480,
       enableCollaboration: false
@@ -357,6 +362,23 @@ export default function Home() {
     }
   }, []);
 
+  const handleChargingStrategyChange = useCallback((chargingStrategy: ChargingStrategy) => {
+    if (USE_REMOTE_ENGINE) {
+      setState((prev) => {
+        if (!prev) return prev;
+        return {
+          ...prev,
+          config: {
+            ...prev.config,
+            chargingStrategy,
+          },
+        };
+      });
+      return;
+    }
+    engineRef.current?.setChargingStrategy(chargingStrategy);
+  }, []);
+
   const handleCollaborationChange = useCallback((enabled: boolean) => {
     if (USE_REMOTE_ENGINE) {
       setState((prev) => {
@@ -412,6 +434,24 @@ export default function Home() {
       setOfflineSolving(false);
     }
   }, [offlineSolving, remoteSimulationId, state]);
+
+  const handleTrainQLearning = useCallback(async () => {
+    if (!USE_REMOTE_ENGINE || rlTraining) return;
+    try {
+      setRlTraining(true);
+      const result = await apiClient.trainRLModel(50);
+      if (!result.success) {
+        console.error('Failed to train RL model:', result.error);
+        return;
+      }
+      const stateResult = await apiClient.getRLModelState();
+      if (stateResult.success && stateResult.data) {
+        setRlState(stateResult.data);
+      }
+    } finally {
+      setRlTraining(false);
+    }
+  }, [rlTraining]);
 
   // 加载状态
   if (!isInitialized || !state) {
@@ -478,16 +518,19 @@ export default function Home() {
             <ControlPanel
               config={state.config}
               status={state.status}
+              rlState={rlState}
+              rlTraining={rlTraining}
               onStart={handleStart}
               onPause={handlePause}
               onStop={handleStop}
               onReset={handleReset}
-              onOfflineReplay={handleOfflineReplay}
               onSpeedChange={handleSpeedChange}
               onStrategyChange={handleStrategyChange}
+              onChargingStrategyChange={handleChargingStrategyChange}
               onScaleChange={handleScaleChange}
               onCollaborationChange={handleCollaborationChange}
               onOfflineSolve={handleOfflineSolve}
+              onTrainQLearning={handleTrainQLearning}
               offlineSolving={offlineSolving}
             />
             <StatisticsPanel
@@ -502,10 +545,10 @@ export default function Home() {
           <div className="flex-1">
             <div className="w-full h-[600px] relative rounded-xl overflow-hidden border border-gray-800 bg-gray-900/50 shadow-2xl backdrop-blur-sm">
               <AMapRealtimeMap
-                state={state}
-                onNodeClick={handleNodeClick}
-                selectedVehicleId={selectedVehicleId}
-              />
+              state={state}
+              onNodeClick={handleNodeClick}
+              selectedVehicleId={selectedVehicleId}
+            />
             </div>
             
             {/* 快速信息条 */}
@@ -653,40 +696,6 @@ export default function Home() {
           onClose={() => setShowLeaderboard(false)}
           isModal={true}
         />
-      )}
-
-      {/* 离线回放模态框 */}
-      {showOfflineModal && (
-        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-[100]">
-          <div className="bg-gray-900 border border-gray-700 rounded-xl p-6 w-[600px] shadow-2xl">
-            <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-              <span>🧠</span> 离线求解日志回放
-            </h2>
-            <p className="text-gray-400 text-sm mb-4">
-              请将算法离线求解得出的状态日志 (JSON格式的数组) 粘贴到下方，系统将自动高帧率进行展示，不再穿墙。
-            </p>
-            <textarea
-              className="w-full h-64 bg-gray-950 border border-gray-700 rounded-lg p-3 text-gray-300 font-mono text-sm focus:outline-none focus:border-blue-500 transition-colors mb-4"
-              placeholder='[ { "status": "running", "currentTime": 0, "vehicles": [...], ... }, ... ]'
-              value={offlineLogText}
-              onChange={(e) => setOfflineLogText(e.target.value)}
-            />
-            <div className="flex justify-end gap-3">
-              <button
-                onClick={() => setShowOfflineModal(false)}
-                className="px-4 py-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800 transition-colors"
-              >
-                取消
-              </button>
-              <button
-                onClick={handlePlayOffline}
-                className="px-4 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-medium transition-colors"
-              >
-                开始回放
-              </button>
-            </div>
-          </div>
-        </div>
       )}
     </div>
   );

@@ -6,7 +6,7 @@ from pathlib import Path
 from Framework.core import Environment, SimulationConfig, Vehicle, preset_scenario
 from Framework.generator import generate_dynamic_tasks, generate_random_map
 from Framework.examples.yaml_config import parse_args_with_yaml
-from Framework.scheduler import HeaviestTaskScheduler, NearestTaskScheduler
+from Framework.scheduler import EarliestDeadlineScheduler, HeaviestTaskScheduler, NearestTaskScheduler
 
 
 def build_environment(
@@ -15,6 +15,7 @@ def build_environment(
     collaborative_task_ratio: float = 0.0,
     enable_collaborative_tasks: bool = True,
     auto_collaborative_dispatch: bool = True,
+    charging_strategy: str = "optimal_station",
 ) -> Environment:
     scenario = preset_scenario(scale)
     scenario.collaborative_task_ratio = collaborative_task_ratio
@@ -39,10 +40,13 @@ def build_environment(
         end_time=scenario.horizon,
         enable_collaborative_tasks=enable_collaborative_tasks,
         auto_collaborative_dispatch=auto_collaborative_dispatch,
+        charging_strategy=charging_strategy if charging_strategy in {"optimal_station", "nearest_station"} else "optimal_station",
     )
 
     if scheduler_name == "nearest":
         scheduler = NearestTaskScheduler()
+    elif scheduler_name == "earliest_deadline":
+        scheduler = EarliestDeadlineScheduler()
     else:
         scheduler = HeaviestTaskScheduler()
 
@@ -61,7 +65,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Run baseline EV logistics simulation")
     parser.add_argument("--config", default=None, help="YAML config path")
     parser.add_argument("--scale", choices=["small", "medium", "large"], default="small")
-    parser.add_argument("--scheduler", choices=["nearest", "heaviest"], default="nearest")
+    parser.add_argument("--scheduler", choices=["nearest", "heaviest", "earliest_deadline"], default="nearest")
+    parser.add_argument("--charging-strategy", choices=["optimal_station", "nearest_station"], default="optimal_station")
     parser.add_argument("--collaborative-task-ratio", type=float, default=0.0)
     parser.add_argument("--disable-collaborative-tasks", action="store_true")
     parser.add_argument("--disable-auto-collaborative-dispatch", action="store_true")
@@ -74,6 +79,7 @@ def main() -> None:
         collaborative_task_ratio=args.collaborative_task_ratio,
         enable_collaborative_tasks=not args.disable_collaborative_tasks,
         auto_collaborative_dispatch=not args.disable_auto_collaborative_dispatch,
+        charging_strategy=args.charging_strategy,
     )
     summary = env.run()
 

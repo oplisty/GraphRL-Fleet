@@ -1,6 +1,9 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from typing import Literal
+
+ChargingStrategy = Literal["optimal_station", "nearest_station"]
 
 
 @dataclass(slots=True)
@@ -17,6 +20,7 @@ class SimulationConfig:
 
     charge_queue_weight: float = 2.5
     charge_occupied_weight: float = 1.5
+    charging_strategy: ChargingStrategy = "optimal_station"
 
     reward_base: float = 100.0
     distance_penalty: float = 0.6

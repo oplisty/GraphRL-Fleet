@@ -1,0 +1,282 @@
+# Data-Structure-HW
+
+新能源物流车队协同调度课程大作业总仓库。
+
+本项目围绕“**新能源物流车队在动态任务场景下的协同调度**”展开，核心目标是：
+- 用**图结构**表示城市道路网络
+- 模拟**有限车队**在一段时间内执行**动态出现的配送任务**
+- 同时考虑**电量、载重、充电站排队、任务超时惩罚**等现实约束
+- 对比不同调度策略，并提供可视化展示
+
+---
+
+## 1. 仓库结构总览
+
+```text
+Data-Structure-HW/
+├── Engine/                 # Python 仿真引擎与后端接口
+│   ├── Framework/          # 核心仿真框架（图、实体、寻路、调度、日志）
+│   ├── Map Resource/       # 番禺地图资源、预处理数据、分析脚本
+│   ├── docs/               # 引擎文档
+│   ├── README.md           # Engine 层说明
+│   └── requirements.txt    # Engine 依赖
+├── UI/                     # 前端可视化界面（Next.js）
+│   └── logistics-ui/
+├── policy/                 # 扩展算法与策略实验目录
+│   ├── gymnasium_qlearning/
+│   └── offline/
+├── 2026-大作业要求.txt      # 课程原始要求
+├── 说明.md                  # 需求完成度核对说明
+├── requirements.txt        # 仓库补充依赖
+└── Readme                  # 当前总说明文件
+```
+
+---
+
+## 2. 这个项目实现了什么
+
+### 已实现的核心能力
+
+- **图结构道路网络建模**
+  - 使用图表示节点与道路边
+  - 支持随机图与番禺真实地图数据
+
+- **路径规划**
+  - 已实现 `Dijkstra`
+  - 已实现 `A*`
+  - 已加入 `RRT` 作为扩展对比算法
+
+- **车辆仿真**
+  - 车队数量有限
+  - 每辆车具有电量上限、载重上限、速度、耗电参数
+  - 车辆可在执行任务、回仓、充电、排队等状态之间切换
+
+- **动态任务生成**
+  - 任务包含释放时间、位置节点、重量、截止时间
+  - 仿真过程中任务按时间动态出现，不是一次性全部可见
+
+- **调度策略**
+  - 最近任务优先
+  - 最大任务优先
+  - 支持协同任务扩展
+
+- **充电站约束**
+  - 电量不足时自动寻找可达充电站
+  - 充电站包含队列与充电桩占用状态
+  - 选站时考虑距离与负荷压力
+
+- **日志与结果导出**
+  - 支持导出 `step_log / vehicle_log / task_log / station_log / events`
+  - 可用于实验报告、策略对比、可视化联调
+
+- **图形界面展示**
+  - 提供 Next.js 前端
+  - 支持实时仿真展示与基础策略切换
+
+---
+
+## 3. 各目录职责说明
+
+## `Engine/`
+
+项目的核心部分，负责**仿真、调度、寻路、日志输出、后端 API**。
+
+### `Engine/Framework/`
+核心仿真框架，包括：
+- `core/`：实体、图结构、路径规划、仿真主循环
+- `scheduler/`：调度策略
+- `generator/`：任务与地图数据生成/加载
+- `examples/`：运行脚本
+- `configs/`：YAML 配置文件
+- `api/`：供前端连接的后端服务
+- `output/`：实验输出结果
+
+如果你只想理解“系统怎么运行”，优先看这里。
+
+### `Engine/Map Resource/`
+真实地图数据与预处理结果：
+- 番禺 `osm.pbf` 原始地图数据
+- 预处理后的 `nodes / edges / stations` parquet 文件
+- 地图分析与抽取脚本
+
+### `Engine/docs/`
+引擎文档，建议阅读顺序：
+1. `00-文档总览.md`
+2. `01-快速开始与常用命令.md`
+3. `02-协作接口说明.md`
+4. `03-场景分析与数据结构.md`
+
+---
+
+## `UI/logistics-ui/`
+
+前端可视化系统，基于：
+- `Next.js`
+- `React`
+- `TypeScript`
+
+主要用于：
+- 展示地图、车辆、任务、充电站
+- 实时观察调度过程
+- 展示统计结果与事件日志
+- 进行策略可视化对比
+
+---
+
+## `policy/`
+
+策略扩展与实验目录：
+- `gymnasium_qlearning/`：强化学习方向的实验代码
+- `offline/`：离线/上帝视角优化相关草案与模型文件
+
+这一部分更偏向“进阶扩展”和后续提升，不是主仿真闭环的唯一入口。
+
+---
+
+## 4. 推荐阅读路线
+
+### 如果你是第一次接触这个仓库
+
+建议按下面顺序看：
+
+1. `2026-大作业要求.txt`
+   - 先明确课程要求
+2. `说明.md`
+   - 快速了解当前完成度与哪些部分已经落地
+3. `Engine/README.md`
+   - 了解引擎整体结构
+4. `Engine/Framework/README.md`
+   - 了解仿真框架、日志和接口
+5. `Engine/docs/01-快速开始与常用命令.md`
+   - 按步骤跑通工程
+
+### 如果你想看核心代码
+
+建议优先阅读：
+- `Engine/Framework/core/entities.py`
+- `Engine/Framework/core/graph.py`
+- `Engine/Framework/core/pathfinder.py`
+- `Engine/Framework/core/simulation.py`
+- `Engine/Framework/scheduler/nearest_task.py`
+- `Engine/Framework/scheduler/heaviest_task.py`
+
+---
+
+## 5. 快速开始
+
+## 5.1 安装 Python 依赖
+
+在仓库根目录执行：
+
+```bash
+pip install -r Engine/requirements.txt
+```
+
+如需补充仓库扩展依赖：
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 5.2 运行 Engine 基线仿真
+
+在仓库根目录执行：
+
+```bash
+python -m Engine.Framework.examples.run_panyu_processed_baseline \
+  --config "Engine/Framework/configs/panyu_processed_baseline.yaml"
+```
+
+如果当前 Python 模块路径要求从 `Engine/` 目录运行，也可以：
+
+```bash
+cd Engine
+python -m Framework.examples.run_panyu_processed_baseline \
+  --config "Framework/configs/panyu_processed_baseline.yaml"
+```
+
+常见输出目录：
+
+```text
+Engine/Framework/output/
+```
+
+---
+
+## 5.3 启动后端 API
+
+```bash
+cd Engine
+python -m uvicorn Framework.api.server:app --host 127.0.0.1 --port 8000
+```
+
+健康检查：
+
+```bash
+curl http://127.0.0.1:8000/api/v1/health
+```
+
+---
+
+## 5.4 启动前端 UI
+
+```bash
+cd UI/logistics-ui
+npm install
+npm run dev
+```
+
+浏览器访问：
+
+```text
+http://localhost:3000
+```
+
+如果需要让前端连接后端，请在 `UI/logistics-ui/` 下创建 `.env.local`：
+
+```bash
+NEXT_PUBLIC_USE_ENGINE_BACKEND=1
+NEXT_PUBLIC_API_URL=http://127.0.0.1:8000
+NEXT_PUBLIC_AMAP_KEY=你的高德 Web JS API Key
+NEXT_PUBLIC_AMAP_SECURITY_CODE=你的高德安全密钥
+```
+
+不配置高德 Key 时，前端通常会回退到 Canvas 视图。
+
+---
+
+## 6. 当前版本适合做什么
+
+这个仓库当前特别适合用于：
+- 课程大作业答辩展示
+- 报告中的实验与结果对比
+- 调度策略横向比较
+- 继续扩展更复杂的调度算法
+- 与前端实时联调演示
+
+---
+
+## 7. 当前完成度总结
+
+按课程要求核对，当前版本已经完成了大部分核心目标：
+- 车辆电量/载重/动态任务建模
+- 图结构道路与寻路
+- 任务评分与超时惩罚
+- 自动充电与排队负荷
+- 至少两种调度策略
+- 多规模实验
+- 图形界面展示
+
+更进阶的部分，如：
+- 更强的学习型调度策略
+- 数学规划全局最优对比
+
+可作为后续扩展方向继续完善。
+
+---
+
+## 8. 一句话概括
+
+这是一个以**新能源物流车队动态调度**为主题、集成了**图算法仿真引擎 + 路径规划 + 调度策略 + 实验日志 + Web 可视化界面**的完整课程项目仓库。

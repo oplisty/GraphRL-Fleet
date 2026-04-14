@@ -19,7 +19,7 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass
 from math import hypot
 from pathlib import Path
-from typing import Any, Literal
+from typing import Literal
 
 import csv
 import json
@@ -58,7 +58,7 @@ class OfflineInstance:
     tasks: list[Task]
     stations: list[Station]
     max_station_visits_per_station: int = 2
-    graph_data: dict[str, Any] | None = None
+    graph_data: dict | None = None
 
     # 速度离散层（km / min）
     speed_levels: tuple[float, ...] = (0.8, 1.0, 1.2)
@@ -128,25 +128,7 @@ class GodViewMILP:
                 self.station_of_node[n] = s
 
     def _build_dist_matrix(self) -> dict[tuple[str, str], float]:
-        graph_data = self.inst.graph_data or {}
-        shortest_distances = graph_data.get("shortest_distances")
-        if isinstance(shortest_distances, dict):
-            dist: dict[tuple[str, str], float] = {}
-            for i in self.nodes:
-                for j in self.nodes:
-                    if i == j:
-                        continue
-                    if i == "DEPOT_END":
-                        continue
-                    if j == "DEPOT_START":
-                        continue
-                    value = shortest_distances.get(f"{i}->{j}")
-                    if value is None:
-                        continue
-                    dist[(i, j)] = float(value)
-            return dist
-
-        dist = {}
+        dist: dict[tuple[str, str], float] = {}
         for i in self.nodes:
             xi, yi = self.node_coord[i]
             for j in self.nodes:

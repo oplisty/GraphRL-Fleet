@@ -42,6 +42,7 @@ export interface SchedulingRequest {
   tasks: Task[];
   vehicles: Vehicle[];
   strategy: SchedulingStrategy;
+  chargingStrategy?: SimulationConfig['chargingStrategy'];
   enableCollaboration?: boolean;
 }
 
@@ -84,6 +85,9 @@ export interface OfflineSolveResponse {
   routeCsv: string;
   objective: number;
   status: string;
+  requestedScale?: string;
+  actualScale?: string;
+  fallbackApplied?: boolean;
 }
 
 // Gurobi 求解响应
@@ -122,10 +126,12 @@ class ApiClient {
   private async request<T>(
     endpoint: string,
     method: 'GET' | 'POST' | 'PUT' | 'DELETE' = 'GET',
-    body?: object
+    body?: object,
+    timeoutMs?: number
   ): Promise<ApiResponse<T>> {
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), this.timeout);
+    const effectiveTimeout = timeoutMs ?? this.timeout;
+    const timeoutId = setTimeout(() => controller.abort(), effectiveTimeout);
 
     try {
       const response = await fetch(`${this.baseUrl}${endpoint}`, {
@@ -140,7 +146,16 @@ class ApiClient {
       clearTimeout(timeoutId);
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        let errorMessage = `HTTP error! status: ${response.status}`;
+        try {
+          const errorPayload = await response.json();
+          if (errorPayload && typeof errorPayload.detail === 'string' && errorPayload.detail.trim()) {
+            errorMessage = errorPayload.detail;
+          }
+        } catch {
+          // ignore json parse failure and keep status message
+        }
+        throw new Error(errorMessage);
       }
 
       const data = await response.json();
@@ -151,9 +166,10 @@ class ApiClient {
       };
     } catch (error) {
       clearTimeout(timeoutId);
+      const isAbort = error instanceof Error && error.name === 'AbortError';
       return {
         success: false,
-        error: error instanceof Error ? error.message : 'Unknown error',
+        error: isAbort ? `请求超时（>${Math.round(effectiveTimeout / 1000)}秒）` : error instanceof Error ? error.message : 'Unknown error',
         timestamp: Date.now(),
       };
     }
@@ -207,7 +223,7 @@ class ApiClient {
   async startOfflineSolve(
     request: OfflineSolveRequest
   ): Promise<ApiResponse<OfflineSolveResponse>> {
-    return this.request('/solver/offline/start', 'POST', request);
+    return this.request('/solver/offline/start', 'POST', request, 300000);
   }
 
   // 获取Gurobi求解状态（长时间运行时）

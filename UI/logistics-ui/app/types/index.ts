@@ -102,10 +102,13 @@ export interface Warehouse {
 export type SchedulingStrategy = 
   | 'nearest_first' // 最近任务优先
   | 'largest_first' // 最大任务优先（货物最重）
-  | 'highest_reward' // 最高收益优先
   | 'earliest_deadline' // 最早截止时间优先
-  | 'balanced' // 均衡策略
-  | 'collaborative'; // 协同调度（多车协作）
+  | 'q_learning' // Q-learning 策略
+  | 'highest_reward' // 前端本地演示策略
+  | 'balanced' // 前端本地演示策略
+  | 'collaborative'; // 前端本地演示策略
+
+export type ChargingStrategy = 'optimal_station' | 'nearest_station';
 
 // 问题规模
 export interface ProblemScale {
@@ -126,6 +129,7 @@ export type SimulationStatus = 'idle' | 'running' | 'paused' | 'completed';
 export interface SimulationConfig {
   scale: ProblemScale;
   strategy: SchedulingStrategy;
+  chargingStrategy: ChargingStrategy;
   simulationSpeed: number; // 模拟速度倍率
   maxSimulationTime: number; // 最大模拟时间（分钟）
   enableCollaboration: boolean; // 启用多车协作
@@ -188,4 +192,11 @@ export interface SchedulingDecision {
   needsCharging: boolean;
   chargingStationId?: string;
   collaborators?: string[]; // 协作车辆
+}
+
+export interface RLModelState {
+  modelLoaded: boolean;
+  trainedEpisodes: number;
+  currentReward: number;
+  epsilon: number;
 }

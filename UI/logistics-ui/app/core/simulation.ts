@@ -9,6 +9,7 @@ import {
   SimulationEvent,
   Statistics,
   SchedulingStrategy,
+  ChargingStrategy,
   ProblemScale
 } from '../types';
 import { GraphManager, generateRandomNetwork } from './graph';
@@ -139,6 +140,7 @@ export class SimulationEngine {
     return {
       scale: ProblemScales[1], // 默认中等规模
       strategy: 'nearest_first',
+      chargingStrategy: 'optimal_station',
       simulationSpeed: 1,
       maxSimulationTime: 480, // 8小时
       enableCollaboration: false
@@ -306,15 +308,30 @@ export class SimulationEngine {
     this.notifyStateChange();
   }
 
+  setChargingStrategy(strategy: ChargingStrategy): void {
+    this.state.config.chargingStrategy = strategy;
+    this.addEvent('strategy_changed', `充电策略变更为: ${this.getChargingStrategyName(strategy)}`);
+    this.notifyStateChange();
+  }
+
   // 获取策略名称
   getStrategyName(strategy: SchedulingStrategy): string {
     const names: Record<SchedulingStrategy, string> = {
       'nearest_first': '最近任务优先',
       'largest_first': '最大任务优先',
+      'q_learning': 'Q-learning',
       'highest_reward': '最高收益优先',
       'earliest_deadline': '最早截止优先',
       'balanced': '均衡策略',
       'collaborative': '协同调度'
+    };
+    return names[strategy];
+  }
+
+  getChargingStrategyName(strategy: ChargingStrategy): string {
+    const names: Record<ChargingStrategy, string> = {
+      'optimal_station': '最优充电站',
+      'nearest_station': '最近充电站',
     };
     return names[strategy];
   }

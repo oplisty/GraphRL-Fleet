@@ -1,0 +1,122 @@
+
+---
+
+# 三、Q-learning 的训练流程
+
+---
+
+## 1. 训练数据怎么来
+
+不是拿真实数据训练，而是：
+
+* 用你们的任务生成器
+* 不同随机种子
+* 不同规模场景
+* 重复仿真
+
+每次仿真都是一条 episode。
+
+---
+
+## 2. 训练循环
+
+伪代码如下：
+
+```python
+initialize Q[s, a] = 0
+
+for episode in range(num_episodes):
+    env.reset(seed=episode)
+    state = get_discrete_state(env)
+
+    while not env.done():
+        if random.random() < epsilon:
+            action = random_action()
+        else:
+            action = argmax_a Q[state, a]
+
+        rule = action_to_rule(action)
+
+        reward = env.apply_rule_once(rule)   # 执行一轮调度
+        next_state = get_discrete_state(env)
+
+        Q[state, action] = Q[state, action] + alpha * (
+            reward + gamma * max(Q[next_state, :]) - Q[state, action]
+        )
+
+        state = next_state
+```
+
+这里最关键的是 `apply_rule_once(rule)` 怎么定义。
+
+---
+
+## 3. “执行一轮调度”怎么定义
+
+建议别每秒都决策，那样太频繁。
+
+你们可以把决策时刻定义成这些事件点：
+
+* 新任务发布
+* 某车辆完成任务
+* 某车辆到达充电站
+* 某车辆充电结束
+* 某车辆变为空闲
+
+每次事件发生时：
+
+* 提取当前状态
+* Q-learning 选一个规则
+* 用该规则给一个或多个空闲车分配动作
+
+这很适合离散事件仿真。
+
+---
+
+# 四、低层规则怎么写
+
+建议统一接口，不然后面很乱。
+
+```python
+class DispatchHeuristic:
+    def select_action(self, env, vehicle):
+        pass
+```
+
+每条规则对一个空闲车做选择。
+
+例如：
+
+```python
+class NearestTaskRule(DispatchHeuristic):
+    def select_action(self, env, vehicle):
+        feasible_tasks = env.get_feasible_tasks(vehicle)
+        if not feasible_tasks:
+            return ("idle", None)
+
+        best_task = min(
+            feasible_tasks,
+            key=lambda t: env.shortest_path_time(vehicle.node, t.origin_node)
+        )
+        return ("serve_task", best_task.id)
+```
+
+充电规则类似：
+
+```python
+class BestChargeRule(DispatchHeuristic):
+    def select_action(self, env, vehicle):
+        feasible_stations = env.get_reachable_stations(vehicle)
+        if not feasible_stations:
+            return ("return_depot", None)
+
+        best_station = min(
+            feasible_stations,
+            key=lambda s: (
+                env.travel_time(vehicle.node, s.node)
+                + env.expected_wait_time(s)
+                + env.estimated_charging_time(vehicle, s)
+            )
+        )
+        return ("go_charge", best_station.id)
+```

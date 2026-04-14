@@ -1,3 +1,29 @@
 __pycache__/
 *.pyc
-.env.local
+*.pyo
+*.pyd
+.DS_Store
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# Python caches
+**/__pycache__/
+**/*.pyc
+
+# Engine / experiment outputs
+Engine/Framework/output/
+Engine/backend_fixed.log
+backend_fixed.log
+
+# Offline solver outputs
+policy/offline/output/
+
+# Q-learning outputs
+policy/gymnasium_qlearning/output/
+
+# Local UI env
+UI/logistics-ui/.env.local
