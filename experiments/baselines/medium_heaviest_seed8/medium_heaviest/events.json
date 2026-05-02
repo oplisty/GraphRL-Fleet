@@ -1,0 +1,8900 @@
+[
+  {
+    "time": 1,
+    "event_type": "task_released",
+    "task_id": 38
+  },
+  {
+    "time": 2,
+    "event_type": "task_released",
+    "task_id": 49
+  },
+  {
+    "time": 10,
+    "event_type": "task_released",
+    "task_id": 6
+  },
+  {
+    "time": 11,
+    "event_type": "task_released",
+    "task_id": 50
+  },
+  {
+    "time": 13,
+    "event_type": "task_released",
+    "task_id": 26
+  },
+  {
+    "time": 14,
+    "event_type": "task_completed",
+    "task_id": 38
+  },
+  {
+    "time": 18,
+    "event_type": "task_released",
+    "task_id": 83
+  },
+  {
+    "time": 19,
+    "event_type": "task_completed",
+    "task_id": 6
+  },
+  {
+    "time": 20,
+    "event_type": "task_completed",
+    "task_id": 49
+  },
+  {
+    "time": 23,
+    "event_type": "task_released",
+    "task_id": 75
+  },
+  {
+    "time": 24,
+    "event_type": "task_completed",
+    "task_id": 50
+  },
+  {
+    "time": 28,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 0,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 29,
+    "event_type": "task_released",
+    "task_id": 10
+  },
+  {
+    "time": 29,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 2,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 31,
+    "event_type": "task_released",
+    "task_id": 39
+  },
+  {
+    "time": 32,
+    "event_type": "task_released",
+    "task_id": 35
+  },
+  {
+    "time": 33,
+    "event_type": "task_released",
+    "task_id": 85
+  },
+  {
+    "time": 33,
+    "event_type": "task_released",
+    "task_id": 88
+  },
+  {
+    "time": 33,
+    "event_type": "task_completed",
+    "task_id": 83
+  },
+  {
+    "time": 35,
+    "event_type": "task_released",
+    "task_id": 31
+  },
+  {
+    "time": 36,
+    "event_type": "task_completed",
+    "task_id": 26
+  },
+  {
+    "time": 38,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 3,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 38,
+    "event_type": "task_completed",
+    "task_id": 75
+  },
+  {
+    "time": 39,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 1,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 41,
+    "event_type": "task_released",
+    "task_id": 66
+  },
+  {
+    "time": 42,
+    "event_type": "task_released",
+    "task_id": 81
+  },
+  {
+    "time": 42,
+    "event_type": "task_released",
+    "task_id": 94
+  },
+  {
+    "time": 43,
+    "event_type": "task_released",
+    "task_id": 32
+  },
+  {
+    "time": 43,
+    "event_type": "task_completed",
+    "task_id": 31
+  },
+  {
+    "time": 48,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 3,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 49,
+    "event_type": "task_released",
+    "task_id": 17
+  },
+  {
+    "time": 49,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 5,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 50,
+    "event_type": "task_completed",
+    "task_id": 10
+  },
+  {
+    "time": 50,
+    "event_type": "task_completed",
+    "task_id": 66
+  },
+  {
+    "time": 50,
+    "event_type": "task_completed",
+    "task_id": 39
+  },
+  {
+    "time": 51,
+    "event_type": "task_completed",
+    "task_id": 35
+  },
+  {
+    "time": 51,
+    "event_type": "task_completed",
+    "task_id": 85
+  },
+  {
+    "time": 54,
+    "event_type": "task_released",
+    "task_id": 73
+  },
+  {
+    "time": 54,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 6,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 54,
+    "event_type": "task_completed",
+    "task_id": 88
+  },
+  {
+    "time": 55,
+    "event_type": "task_released",
+    "task_id": 60
+  },
+  {
+    "time": 55,
+    "event_type": "task_released",
+    "task_id": 90
+  },
+  {
+    "time": 60,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 1,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 60,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 4,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 65,
+    "event_type": "task_completed",
+    "task_id": 60
+  },
+  {
+    "time": 66,
+    "event_type": "task_completed",
+    "task_id": 17
+  },
+  {
+    "time": 68,
+    "event_type": "task_completed",
+    "task_id": 94
+  },
+  {
+    "time": 70,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 2,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 70,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 8,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 71,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 7,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 72,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 0,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 72,
+    "event_type": "task_completed",
+    "task_id": 81
+  },
+  {
+    "time": 75,
+    "event_type": "task_released",
+    "task_id": 14
+  },
+  {
+    "time": 76,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 6,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 76,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 9,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 77,
+    "event_type": "vehicle_reached_station",
+    "vehicle_id": 0,
+    "station_id": 0
+  },
+  {
+    "time": 79,
+    "event_type": "task_released",
+    "task_id": 43
+  },
+  {
+    "time": 83,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 5,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 84,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 1,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 84,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 85,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 86,
+    "event_type": "task_released",
+    "task_id": 96
+  },
+  {
+    "time": 86,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 87,
+    "event_type": "task_released",
+    "task_id": 74
+  },
+  {
+    "time": 87,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 88,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 88,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 3,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 89,
+    "event_type": "task_released",
+    "task_id": 25
+  },
+  {
+    "time": 89,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 90,
+    "event_type": "task_released",
+    "task_id": 91
+  },
+  {
+    "time": 90,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 91,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 92,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 92,
+    "event_type": "task_completed",
+    "task_id": 43
+  },
+  {
+    "time": 93,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 93,
+    "event_type": "vehicle_reached_station",
+    "vehicle_id": 3,
+    "station_id": 0
+  },
+  {
+    "time": 94,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 94,
+    "event_type": "task_completed",
+    "task_id": 14
+  },
+  {
+    "time": 94,
+    "event_type": "vehicle_finished_charging",
+    "vehicle_id": 0,
+    "station_id": 0
+  },
+  {
+    "time": 95,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 96,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 97,
+    "event_type": "task_released",
+    "task_id": 76
+  },
+  {
+    "time": 97,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 98,
+    "event_type": "task_released",
+    "task_id": 1
+  },
+  {
+    "time": 98,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 99,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 100,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 100,
+    "event_type": "task_completed",
+    "task_id": 74
+  },
+  {
+    "time": 100,
+    "event_type": "task_completed",
+    "task_id": 96
+  },
+  {
+    "time": 101,
+    "event_type": "task_released",
+    "task_id": 19
+  },
+  {
+    "time": 101,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 102,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 103,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 104,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 105,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 106,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 106,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 4,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 107,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 108,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 108,
+    "event_type": "task_completed",
+    "task_id": 76
+  },
+  {
+    "time": 109,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 110,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 111,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 111,
+    "event_type": "vehicle_reached_station",
+    "vehicle_id": 4,
+    "station_id": 0
+  },
+  {
+    "time": 111,
+    "event_type": "vehicle_finished_charging",
+    "vehicle_id": 3,
+    "station_id": 0
+  },
+  {
+    "time": 112,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 113,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 114,
+    "event_type": "task_released",
+    "task_id": 42
+  },
+  {
+    "time": 114,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 114,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 6,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 114,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 114,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 7,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 114,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 115,
+    "event_type": "task_released",
+    "task_id": 95
+  },
+  {
+    "time": 115,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 115,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 115,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 115,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 8,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 115,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 116,
+    "event_type": "task_released",
+    "task_id": 0
+  },
+  {
+    "time": 116,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 116,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 116,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 116,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 117,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 117,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 117,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 117,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 118,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 118,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 118,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 118,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 119,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 119,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 119,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 119,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 120,
+    "event_type": "task_completed",
+    "task_id": 25
+  },
+  {
+    "time": 120,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 120,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 2,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 120,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 120,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 120,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 120,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 121,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 121,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 121,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 121,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 121,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 122,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 122,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 122,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 122,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 122,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 123,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 123,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 123,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 123,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 123,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 124,
+    "event_type": "task_released",
+    "task_id": 22
+  },
+  {
+    "time": 124,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 124,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 124,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 124,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 124,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 125,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 125,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 125,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 125,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 125,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 126,
+    "event_type": "task_released",
+    "task_id": 2
+  },
+  {
+    "time": 126,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 126,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 126,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 126,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 126,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 127,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 127,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 127,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 127,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 127,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 128,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 128,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 128,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 128,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 128,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 129,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 129,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 129,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 129,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 129,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 129,
+    "event_type": "task_completed",
+    "task_id": 95
+  },
+  {
+    "time": 129,
+    "event_type": "vehicle_finished_charging",
+    "vehicle_id": 4,
+    "station_id": 0
+  },
+  {
+    "time": 130,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 130,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 130,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 130,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 130,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 131,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 131,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 131,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 131,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 131,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 132,
+    "event_type": "task_released",
+    "task_id": 8
+  },
+  {
+    "time": 132,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 132,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 132,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 132,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 132,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 133,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 133,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 133,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 133,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 133,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 134,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 134,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 134,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 134,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 134,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 135,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 135,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 135,
+    "event_type": "task_completed",
+    "task_id": 91
+  },
+  {
+    "time": 135,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 135,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 135,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 136,
+    "event_type": "task_released",
+    "task_id": 23
+  },
+  {
+    "time": 136,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 136,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 136,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 136,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 136,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 137,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 137,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 137,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 137,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 137,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 138,
+    "event_type": "task_released",
+    "task_id": 67
+  },
+  {
+    "time": 138,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 138,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 138,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 138,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 138,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 139,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 139,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 139,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 139,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 139,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 140,
+    "event_type": "task_released",
+    "task_id": 68
+  },
+  {
+    "time": 140,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 140,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 140,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 140,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 140,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 141,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 141,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 141,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 141,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 141,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 142,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 142,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 142,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 142,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 142,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 143,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 143,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 143,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 143,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 143,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 144,
+    "event_type": "task_released",
+    "task_id": 78
+  },
+  {
+    "time": 144,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 0,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 144,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 144,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 144,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 144,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 144,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 144,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 9,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 145,
+    "event_type": "task_released",
+    "task_id": 20
+  },
+  {
+    "time": 145,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 145,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 145,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 145,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 145,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 146,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 146,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 146,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 146,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 146,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 147,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 147,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 147,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 147,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 147,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 148,
+    "event_type": "task_released",
+    "task_id": 62
+  },
+  {
+    "time": 148,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 148,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 148,
+    "event_type": "task_completed",
+    "task_id": 2
+  },
+  {
+    "time": 148,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 148,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 148,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 149,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 149,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 149,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 149,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 149,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 149,
+    "event_type": "vehicle_reached_station",
+    "vehicle_id": 9,
+    "station_id": 0
+  },
+  {
+    "time": 150,
+    "event_type": "task_released",
+    "task_id": 89
+  },
+  {
+    "time": 150,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 150,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 150,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 150,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 150,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 151,
+    "event_type": "task_released",
+    "task_id": 55
+  },
+  {
+    "time": 151,
+    "event_type": "task_released",
+    "task_id": 84
+  },
+  {
+    "time": 151,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 151,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 151,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 151,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 151,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 152,
+    "event_type": "task_released",
+    "task_id": 24
+  },
+  {
+    "time": 152,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 152,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 152,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 152,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 152,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 153,
+    "event_type": "task_released",
+    "task_id": 27
+  },
+  {
+    "time": 153,
+    "event_type": "task_released",
+    "task_id": 37
+  },
+  {
+    "time": 153,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 153,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 153,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 153,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 153,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 154,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 154,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 154,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 3,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 154,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 154,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 154,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 155,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 155,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 155,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 155,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 155,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 156,
+    "event_type": "task_completed",
+    "task_id": 20
+  },
+  {
+    "time": 156,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 156,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 156,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 156,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 156,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 157,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 157,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 157,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 157,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 157,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 158,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 158,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 158,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 158,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 158,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 159,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 159,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 159,
+    "event_type": "task_completed",
+    "task_id": 84
+  },
+  {
+    "time": 159,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 159,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 159,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 160,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 160,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 160,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 160,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 160,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 161,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 161,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 161,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 161,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 161,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 162,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 162,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 162,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 4,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 162,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 162,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 162,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 163,
+    "event_type": "task_released",
+    "task_id": 80
+  },
+  {
+    "time": 163,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 163,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 163,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 163,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 163,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 164,
+    "event_type": "task_released",
+    "task_id": 58
+  },
+  {
+    "time": 164,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 164,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 164,
+    "event_type": "task_completed",
+    "task_id": 24
+  },
+  {
+    "time": 164,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 164,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 164,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 165,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 165,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 165,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 165,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 165,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 166,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 166,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 166,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 166,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 166,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 167,
+    "event_type": "task_released",
+    "task_id": 92
+  },
+  {
+    "time": 167,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 167,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 167,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 167,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 167,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 167,
+    "event_type": "vehicle_finished_charging",
+    "vehicle_id": 9,
+    "station_id": 0
+  },
+  {
+    "time": 168,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 0,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 168,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 168,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 168,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 168,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 5,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 168,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 168,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 168,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 168,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 169,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 169,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 169,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 169,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 169,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 169,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 169,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 170,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 170,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 170,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 170,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 170,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 170,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 170,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 171,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 171,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 171,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 171,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 171,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 171,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 171,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 171,
+    "event_type": "task_completed",
+    "task_id": 92
+  },
+  {
+    "time": 172,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 172,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 172,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 172,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 172,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 172,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 172,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 173,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 173,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 173,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 173,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 173,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 173,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 173,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 174,
+    "event_type": "task_released",
+    "task_id": 36
+  },
+  {
+    "time": 174,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 174,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 174,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 174,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 3,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 174,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 174,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 174,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 174,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 175,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 175,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 175,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 175,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 175,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 175,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 175,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 176,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 176,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 176,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 176,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 176,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 176,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 176,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 177,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 177,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 177,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 177,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 177,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 177,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 177,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 178,
+    "event_type": "task_released",
+    "task_id": 86
+  },
+  {
+    "time": 178,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 178,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 178,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 178,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 178,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 178,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 178,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 179,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 179,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 179,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 179,
+    "event_type": "vehicle_reached_station",
+    "vehicle_id": 3,
+    "station_id": 0
+  },
+  {
+    "time": 179,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 179,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 179,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 179,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 180,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 180,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 180,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 180,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 180,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 180,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 180,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 180,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 9,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 181,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 181,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 181,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 181,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 181,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 181,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 181,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 182,
+    "event_type": "task_released",
+    "task_id": 18
+  },
+  {
+    "time": 182,
+    "event_type": "task_released",
+    "task_id": 59
+  },
+  {
+    "time": 182,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 182,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 182,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 182,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 182,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 182,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 182,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 183,
+    "event_type": "task_released",
+    "task_id": 79
+  },
+  {
+    "time": 183,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 183,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 183,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 183,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 183,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 183,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 183,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 184,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 184,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 184,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 184,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 184,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 184,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 184,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 185,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 185,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 185,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 185,
+    "event_type": "task_completed",
+    "task_id": 37
+  },
+  {
+    "time": 185,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 185,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 185,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 185,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 186,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 186,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 186,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 186,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 186,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 186,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 186,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 187,
+    "event_type": "task_released",
+    "task_id": 82
+  },
+  {
+    "time": 187,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 187,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 187,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 187,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 187,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 187,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 187,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 188,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 188,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 188,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 188,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 188,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 188,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 188,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 189,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 189,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 189,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 189,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 189,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 189,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 189,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 190,
+    "event_type": "task_released",
+    "task_id": 99
+  },
+  {
+    "time": 190,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 190,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 190,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 190,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 190,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 190,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 190,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 191,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 191,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 191,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 191,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 191,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 191,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 191,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 192,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 192,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 192,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 192,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 192,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 192,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 192,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 193,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 193,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 193,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 193,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 193,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 193,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 193,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 194,
+    "event_type": "task_released",
+    "task_id": 28
+  },
+  {
+    "time": 194,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 194,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 194,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 194,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 194,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 194,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 194,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 195,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 195,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 195,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 195,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 195,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 195,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 195,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 196,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 196,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 196,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 196,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 196,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 196,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 196,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 196,
+    "event_type": "vehicle_finished_charging",
+    "vehicle_id": 3,
+    "station_id": 0
+  },
+  {
+    "time": 197,
+    "event_type": "task_released",
+    "task_id": 9
+  },
+  {
+    "time": 197,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 197,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 197,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 197,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 197,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 197,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 197,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 198,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 198,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 198,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 198,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 198,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 198,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 198,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 199,
+    "event_type": "task_released",
+    "task_id": 87
+  },
+  {
+    "time": 199,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 199,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 199,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 199,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 199,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 199,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 199,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 200,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 200,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 200,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 200,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 4,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 200,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 200,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 200,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 200,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 200,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 201,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 201,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 201,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 201,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 201,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 201,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 201,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 201,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 202,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 202,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 202,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 202,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 202,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 202,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 202,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 202,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 203,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 203,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 203,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 203,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 203,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 203,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 203,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 203,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 204,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 204,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 204,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 204,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 204,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 204,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 204,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 204,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 205,
+    "event_type": "task_released",
+    "task_id": 3
+  },
+  {
+    "time": 205,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 205,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 205,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 205,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 205,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 205,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 205,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 205,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 206,
+    "event_type": "task_released",
+    "task_id": 5
+  },
+  {
+    "time": 206,
+    "event_type": "task_released",
+    "task_id": 56
+  },
+  {
+    "time": 206,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 206,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 206,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 206,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 206,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 206,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 206,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 206,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 207,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 207,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 207,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 207,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 207,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 207,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 207,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 207,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 207,
+    "event_type": "task_completed",
+    "task_id": 79
+  },
+  {
+    "time": 208,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 208,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 208,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 208,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 208,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 208,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 208,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 208,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 209,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 209,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 209,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 209,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 209,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 209,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 209,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 209,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 210,
+    "event_type": "task_released",
+    "task_id": 70
+  },
+  {
+    "time": 210,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 210,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 210,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 210,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 210,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 210,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 210,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 210,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 211,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 211,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 211,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 211,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 211,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 211,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 211,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 211,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 212,
+    "event_type": "task_released",
+    "task_id": 98
+  },
+  {
+    "time": 212,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 212,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 212,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 212,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 212,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 212,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 212,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 212,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 213,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 213,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 213,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 213,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 213,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 213,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 213,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 213,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 214,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 214,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 214,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 214,
+    "event_type": "task_completed",
+    "task_id": 59
+  },
+  {
+    "time": 214,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 214,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 214,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 214,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 214,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 215,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 215,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 215,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 215,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 215,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 215,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 215,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 215,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 216,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 216,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 216,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 216,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 216,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 216,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 216,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 216,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 217,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 217,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 217,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 217,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 217,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 217,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 217,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 217,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 218,
+    "event_type": "task_released",
+    "task_id": 16
+  },
+  {
+    "time": 218,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 218,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 218,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 218,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 218,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 218,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 218,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 218,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 219,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 219,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 219,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 219,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 219,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 219,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 219,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 219,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 220,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 220,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 220,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 220,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 220,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 220,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 220,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 220,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 221,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 221,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 221,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 221,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 221,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 221,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 221,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 221,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 222,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 222,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 222,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 222,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 222,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 222,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 222,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 222,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 223,
+    "event_type": "task_released",
+    "task_id": 29
+  },
+  {
+    "time": 223,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 223,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 223,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 223,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 223,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 223,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 223,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 223,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 224,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 224,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 224,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 224,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 224,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 224,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 224,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 224,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 225,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 225,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 225,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 225,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 225,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 225,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 225,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 225,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 225,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 9,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 226,
+    "event_type": "task_released",
+    "task_id": 41
+  },
+  {
+    "time": 226,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 226,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 226,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 226,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 226,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 226,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 226,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 226,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 227,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 227,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 227,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 227,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 227,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 227,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 227,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 227,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 228,
+    "event_type": "task_released",
+    "task_id": 30
+  },
+  {
+    "time": 228,
+    "event_type": "task_released",
+    "task_id": 48
+  },
+  {
+    "time": 228,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 228,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 228,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 228,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 228,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 228,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 228,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 228,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 229,
+    "event_type": "task_released",
+    "task_id": 97
+  },
+  {
+    "time": 229,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 229,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 229,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 229,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 229,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 229,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 229,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 229,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 229,
+    "event_type": "task_completed",
+    "task_id": 18
+  },
+  {
+    "time": 230,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 230,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 230,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 230,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 230,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 230,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 230,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 230,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 231,
+    "event_type": "task_released",
+    "task_id": 44
+  },
+  {
+    "time": 231,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 231,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 231,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 231,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 231,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 231,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 231,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 231,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 232,
+    "event_type": "task_released",
+    "task_id": 4
+  },
+  {
+    "time": 232,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 232,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 232,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 232,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 232,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 232,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 232,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 232,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 233,
+    "event_type": "task_released",
+    "task_id": 47
+  },
+  {
+    "time": 233,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 233,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 233,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 233,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 233,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 233,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 233,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 233,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 233,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 9,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 234,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 234,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 234,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 234,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 234,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 234,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 234,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 234,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 235,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 235,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 235,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 235,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 235,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 235,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 235,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 235,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 236,
+    "event_type": "task_released",
+    "task_id": 77
+  },
+  {
+    "time": 236,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 236,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 236,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 236,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 236,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 236,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 236,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 236,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 237,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 237,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 237,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 237,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 3,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 237,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 237,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 237,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 237,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 237,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 238,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 238,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 238,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 238,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 238,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 238,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 238,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 238,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 238,
+    "event_type": "vehicle_reached_station",
+    "vehicle_id": 9,
+    "station_id": 0
+  },
+  {
+    "time": 239,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 239,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 239,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 239,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 239,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 239,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 239,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 239,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 240,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 240,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 240,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 240,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 240,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 240,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 240,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 240,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 241,
+    "event_type": "task_released",
+    "task_id": 46
+  },
+  {
+    "time": 241,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 241,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 241,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 241,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 241,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 241,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 241,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 241,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 242,
+    "event_type": "task_released",
+    "task_id": 7
+  },
+  {
+    "time": 242,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 242,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 242,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 242,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 242,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 242,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 242,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 242,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 243,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 243,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 243,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 243,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 243,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 243,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 243,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 243,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 244,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 244,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 244,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 244,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 244,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 244,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 244,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 244,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 245,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 245,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 245,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 245,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 245,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 245,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 245,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 245,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 246,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 246,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 246,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 246,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 246,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 246,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 246,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 246,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 247,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 247,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 247,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 247,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 247,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 247,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 247,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 247,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 248,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 248,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 248,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 248,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 248,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 248,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 248,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 248,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 249,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 249,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 249,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 249,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 249,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 249,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 249,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 249,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 250,
+    "event_type": "task_released",
+    "task_id": 65
+  },
+  {
+    "time": 250,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 250,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 250,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 250,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 250,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 250,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 250,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 250,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 251,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 251,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 251,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 251,
+    "event_type": "task_completed",
+    "task_id": 98
+  },
+  {
+    "time": 251,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 251,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 251,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 251,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 251,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 252,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 252,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 252,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 252,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 252,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 252,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 252,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 252,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 253,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 253,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 253,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 253,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 253,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 253,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 253,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 253,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 254,
+    "event_type": "task_released",
+    "task_id": 11
+  },
+  {
+    "time": 254,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 254,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 254,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 254,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 254,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 254,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 254,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 254,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 255,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 255,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 255,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 255,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 255,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 255,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 255,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 255,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 255,
+    "event_type": "vehicle_finished_charging",
+    "vehicle_id": 9,
+    "station_id": 0
+  },
+  {
+    "time": 256,
+    "event_type": "task_released",
+    "task_id": 53
+  },
+  {
+    "time": 256,
+    "event_type": "task_released",
+    "task_id": 93
+  },
+  {
+    "time": 256,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 256,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 256,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 256,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 256,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 256,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 256,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 256,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 257,
+    "event_type": "task_released",
+    "task_id": 52
+  },
+  {
+    "time": 257,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 257,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 257,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 257,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 257,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 257,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 257,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 257,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 258,
+    "event_type": "task_released",
+    "task_id": 34
+  },
+  {
+    "time": 258,
+    "event_type": "task_released",
+    "task_id": 69
+  },
+  {
+    "time": 258,
+    "event_type": "task_released",
+    "task_id": 71
+  },
+  {
+    "time": 258,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 258,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 258,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 258,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 258,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 258,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 258,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 258,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 259,
+    "event_type": "task_released",
+    "task_id": 21
+  },
+  {
+    "time": 259,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 259,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 259,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 259,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 259,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 259,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 259,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 259,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 260,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 260,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 260,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 260,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 260,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 260,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 260,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 260,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 261,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 261,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 261,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 261,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 261,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 261,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 261,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 261,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 262,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 262,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 262,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 262,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 262,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 262,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 262,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 262,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 263,
+    "event_type": "task_released",
+    "task_id": 45
+  },
+  {
+    "time": 263,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 263,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 263,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 263,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 263,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 263,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 263,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 263,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 264,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 264,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 264,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 264,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 264,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 264,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 264,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 264,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 265,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 265,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 265,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 265,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 3,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 265,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 265,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 265,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 265,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 265,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 266,
+    "event_type": "task_released",
+    "task_id": 54
+  },
+  {
+    "time": 266,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 266,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 266,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 266,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 266,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 266,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 266,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 266,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 267,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 267,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 267,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 267,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 267,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 267,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 267,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 267,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 268,
+    "event_type": "task_released",
+    "task_id": 63
+  },
+  {
+    "time": 268,
+    "event_type": "task_released",
+    "task_id": 72
+  },
+  {
+    "time": 268,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 268,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 268,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 268,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 268,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 268,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 268,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 268,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 269,
+    "event_type": "task_released",
+    "task_id": 33
+  },
+  {
+    "time": 269,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 269,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 269,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 269,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 269,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 269,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 269,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 269,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 270,
+    "event_type": "task_released",
+    "task_id": 51
+  },
+  {
+    "time": 270,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 270,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 270,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 270,
+    "event_type": "vehicle_reached_station",
+    "vehicle_id": 3,
+    "station_id": 0
+  },
+  {
+    "time": 270,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 270,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 270,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 270,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 270,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 271,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 271,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 271,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 271,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 271,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 271,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 271,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 271,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 272,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 272,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 272,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 272,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 272,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 272,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 272,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 272,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 272,
+    "event_type": "task_completed",
+    "task_id": 77
+  },
+  {
+    "time": 273,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 273,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 273,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 273,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 273,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 273,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 273,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 273,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 274,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 274,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 274,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 274,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 274,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 274,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 274,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 274,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 275,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 275,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 275,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 275,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 275,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 275,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 275,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 275,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 276,
+    "event_type": "task_released",
+    "task_id": 13
+  },
+  {
+    "time": 276,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 276,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 276,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 276,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 276,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 276,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 276,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 276,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 277,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 277,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 277,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 277,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 277,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 277,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 277,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 277,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 278,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 278,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 278,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 278,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 278,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 278,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 278,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 278,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 279,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 279,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 279,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 279,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 279,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 279,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 279,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 279,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 280,
+    "event_type": "task_released",
+    "task_id": 57
+  },
+  {
+    "time": 280,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 280,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 280,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 280,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 280,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 280,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 280,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 280,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 281,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 281,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 281,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 281,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 281,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 281,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 281,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 281,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 282,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 282,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 282,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 282,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 282,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 282,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 282,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 282,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 283,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 283,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 283,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 283,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 283,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 283,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 283,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 283,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 284,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 284,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 284,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 284,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 284,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 284,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 284,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 284,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 285,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 285,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 285,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 285,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 285,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 285,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 285,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 285,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 286,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 286,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 286,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 286,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 286,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 286,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 286,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 286,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 287,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 287,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 287,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 287,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 287,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 287,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 287,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 287,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 288,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 288,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 288,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 288,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 288,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 288,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 288,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 288,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 288,
+    "event_type": "vehicle_finished_charging",
+    "vehicle_id": 3,
+    "station_id": 0
+  },
+  {
+    "time": 289,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 289,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 289,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 289,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 289,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 289,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 289,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 289,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 289,
+    "event_type": "vehicle_became_idle",
+    "vehicle_id": 9,
+    "reason": "reach_depot"
+  },
+  {
+    "time": 290,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 290,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 290,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 290,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 290,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 290,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 290,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 290,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 291,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 291,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 291,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 291,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 291,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 291,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 291,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 291,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 292,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 292,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 292,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 292,
+    "event_type": "task_completed",
+    "task_id": 51
+  },
+  {
+    "time": 292,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 292,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 292,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 292,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 292,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 293,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 293,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 293,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 293,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 293,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 293,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 293,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 293,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 294,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 294,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 294,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 294,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 294,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 294,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 294,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 294,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 295,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 295,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 295,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 295,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 295,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 295,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 295,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 295,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 296,
+    "event_type": "task_released",
+    "task_id": 40
+  },
+  {
+    "time": 296,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 296,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 296,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 296,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 296,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 296,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 296,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 296,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 297,
+    "event_type": "task_released",
+    "task_id": 12
+  },
+  {
+    "time": 297,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 297,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 297,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 297,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 297,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 297,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 297,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 297,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 298,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 298,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 298,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 298,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 298,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 298,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 298,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 298,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  },
+  {
+    "time": 299,
+    "event_type": "task_released",
+    "task_id": 15
+  },
+  {
+    "time": 299,
+    "event_type": "task_released",
+    "task_id": 61
+  },
+  {
+    "time": 299,
+    "event_type": "task_released",
+    "task_id": 64
+  },
+  {
+    "time": 299,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 0,
+    "node": 0
+  },
+  {
+    "time": 299,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 1,
+    "node": 0
+  },
+  {
+    "time": 299,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 2,
+    "node": 0
+  },
+  {
+    "time": 299,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 4,
+    "node": 0
+  },
+  {
+    "time": 299,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 5,
+    "node": 0
+  },
+  {
+    "time": 299,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 6,
+    "node": 0
+  },
+  {
+    "time": 299,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 7,
+    "node": 0
+  },
+  {
+    "time": 299,
+    "event_type": "charge_unreachable",
+    "vehicle_id": 8,
+    "node": 0
+  }
+]

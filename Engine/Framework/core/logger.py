@@ -142,8 +142,14 @@ class SimulationLogger:
             path.write_text("", encoding="utf-8")
             return
 
-        keys = list(payload[0].keys())
+        # 收集所有可能的字段名（因为不同事件可能有不同字段）
+        all_keys = set()
+        for row in payload:
+            all_keys.update(row.keys())
+        
+        keys = sorted(all_keys)
+        
         with path.open("w", encoding="utf-8", newline="") as f:
-            writer = csv.DictWriter(f, fieldnames=keys)
+            writer = csv.DictWriter(f, fieldnames=keys, extrasaction='ignore')
             writer.writeheader()
             writer.writerows(payload)
