@@ -1,9 +1,63 @@
 \section{Experiment}
+\subsection{Experiment Setup}
+This section introduces the experimental setup from four aspects: the experimental environment, comparison methods, evaluation metrics, and implementation details. Overall, our goal is to systematically evaluate the differences among heuristic baselines, the Q-learning hyper-heuristic, and the offline MILP method in terms of task completion quality, running cost, and scalability within a unified dynamic new energy logistics scheduling environment.
+\subsubsection{Environment Setup}
+The environment is built on a graph-based road network and explicitly models a limited number of vehicles, dynamically released tasks, vehicle battery and load constraints, charging-station resources, and task deadlines. Our experiments support three different scales with the following configurations:
 
-You must include your signed IEEE copyright release form when you submit your finished paper.
-We MUST have this form before your paper can be published in the proceedings.
+\begin{itemize}
+    \item \textbf{small:}  includes 5 vehicles, 30 dynamic tasks, 2 charging stations, and 25 road nodes. The map size is \(30\times 30\), and the simulation horizon is 180. This scale is mainly used for quickly verifying algorithm effectiveness and training convergence behavior.
+    
+    \item \textbf{medium:}  includes 10 vehicles, 100 dynamic tasks, 4 charging stations, and 60 road nodes. The map size is \(50\times 50\), and the simulation horizon is 300. This scale is used to test the stability of different methods under higher task density and more complex charging pressure.
+    
+    \item \textbf{large:} includes 20 vehicles, 300 dynamic tasks, 8 charging stations, and 120 road nodes. The map size is \(80\times 80\), and the simulation horizon is 480. In addition, each charging station is equipped with 3 chargers by default. This scale is mainly used to evaluate the scalability and robustness of different methods in complex dynamic scenarios.
+\end{itemize}
 
-Please direct any questions to the production editor in charge of these proceedings at the IEEE Computer Society Press:
-\url{https://www.computer.org/about/contact}.
+In addition to the scale factor, charging decisions can significantly affect vehicle availability, task delay, and the overall score. 
+Therefore, the experiments also consider two charging strategies(\text{optimal\_station} and \text{nearest\_station}). 
+The former jointly considers travel distance and station load when selecting a charging station, while the latter always gives priority to the nearest charging station.
 
+\subsubsection{Evaluation Metric}
+To comprehensively evaluate the performance of different methods in the dynamic new energy logistics scenario, we report experimental metrics from two aspects: task effectiveness and operating cost. The definitions of these metrics are given below.
+
+\noindent \textbf{Task effectiveness metrics:}
+\begin{itemize}
+    \item \textbf{Final Score:} For each task \(\tau_i\), its reward is defined as
+    \[
+    \begin{aligned}
+    \mathrm{Score}(\tau_i) = {} & R_0-\lambda_d\,\mathrm{dist}_i-\lambda_w\,\mathrm{wait}_i \\
+    & {}-\mathbb{I}(\mathrm{overdue}_i>0)\cdot P_{\mathrm{overdue}}.
+    \end{aligned}
+    \]
+    The overdue term is defined as
+    \[
+    \mathrm{overdue}_i = t_i^{\mathrm{finish}} - d_i.
+    \]
+    Here, \(R_0\) is the base reward, \(\lambda_d\) is the distance penalty, \(\lambda_w\) is the wait-time penalty, and \(P_{\mathrm{overdue}}\) is the overdue penalty. In addition, \(\mathrm{dist}_i\) denotes the total service distance of task \(i\), while \(\mathrm{wait}_i = t_i^{\mathrm{finish}} - r_i\) denotes the elapsed time from task release to task completion.
+    
+    \item \textbf{Completed Tasks:} The number of tasks completed by the end of the simulation.
+    \item \textbf{Expired Tasks:} The number of tasks that pass their deadlines and remain unfinished by the end of the simulation.
+    \item \textbf{Total Tardiness:} This metric is used for offline MILP result analysis. It is defined as the sum of task delays over all tasks
+    \[
+    \sum_n \max(0, \mathrm{arr}_n-d_n).
+    \]
+    If a task is completed before its deadline, its tardiness is recorded as 0.
+\end{itemize}
+
+\noindent \textbf{Operating cost metrics:}
+\begin{itemize}
+    \item \textbf{Total Distance:} The sum of the travel distances of all vehicles.
+    
+    \item \textbf{Steps:} the number of discrete time steps from the initial time to the end of the simulation in online simulation. 
+    \item \textbf{Makespan:}the maximum completion time after all vehicles finish service and return to the depot in offline MILP.
+    \item \textbf{Charging Burden:} We report two statistics: 1) \textbf{the number of charging triggers}, which measures how often the system enters the charging process; and 2) \textbf{the average queue load}, which measures congestion caused by competition for charging resources.
+\end{itemize}
+
+\noindent \textbf{Training-stage metrics:}
+\begin{itemize}
+    \item \textbf{Total Reward:} The sum of immediate rewards over all time steps in a single training episode.
+    \item \textbf{Eval Score Mean:} The mean final score obtained by applying the greedy policy over several evaluation episodes after each training round. This metric is used to measure the stable performance of the learned policy, rather than relying only on a single training trajectory.
+\end{itemize}
+
+\subsection{Experiment Results}
+\subsection{Ablation}
 \section{Summary}

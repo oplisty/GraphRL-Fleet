@@ -1,186 +1,252 @@
-## 2.数据层
-The data resource layer provides a unified representation of the environment for the whole system and serves as the foundation for subsequent path planning, task scheduling, and state simulation. To satisfy the course requirement of using a graph structure for road representation and routing, this paper first models the urban delivery scenario as a weighted directed graph
-\[
-G=(V,E,W),
-\]
-where the node set \(V\) represents road intersections, depots, candidate task locations, and charging stations; the edge set \(E\subseteq V\times V\) represents road connectivity; and the weight function \(W:E\rightarrow \mathbb{R}^{+}\) describes the distance or travel cost of each edge. Based on this representation, the entire logistics environment can be mapped into a discrete graph space, which provides a computable foundation for shortest-path search, reachability analysis, and energy consumption evaluation.
+# Experiment（中文版写作规划）
 
-In the implementation, the system denotes the depot as node \(v_d\in V\), the set of charging stations as
-\[
-S=\{s_1,s_2,\dots,s_m\}\subseteq V,
-\]
-and generates dynamic tasks from the candidate task node set \(V_T\subseteq V\). For any task \(\tau_i\), it can be represented as the following four-tuple:
-\[
-\tau_i=(r_i,\, v_i,\, w_i,\, d_i),
-\]
-where \(r_i\) is the release time of the task, \(v_i\in V_T\) is the task location, \(w_i\) is the cargo weight, and \(d_i\) is the deadline. This representation allows each task to include not only spatial information but also explicit time constraints, thereby supporting online scheduling decisions in dynamic arrival scenarios.
+## 1. 实验部分总体写作目标
 
-Furthermore, the data resource layer maintains the static parameter sets of vehicles and stations. For example, for vehicle \(k\), its state parameters can be defined as
-\[
-\mathbf{x}_k=(b_k^{\max},\, b_k,\, c_k,\, v_k^{\text{cur}},\, \eta_k),
-\]
-where \(b_k^{\max}\) and \(b_k\) denote the maximum battery level and current battery level, respectively; \(c_k\) is the load capacity limit; \(v_k^{\text{cur}}\) is the current node location; and \(\eta_k\) is the energy consumption per unit distance. For charging station \(s_j\), the system records attributes such as the number of chargers, queue length, and charging rate. In this way, the data resource layer provides not only the static topology of the road network but also a unified description of the parameters of tasks, vehicles, and charging facilities.
+本节的核心目标不是简单罗列运行结果，而是围绕“本文提出的方法是否有效、在什么条件下有效、相较于哪些基线更优、代价是什么”这几个问题展开系统性验证。按照 CVPR 风格的论文写法，实验部分应当围绕以下四个层次组织：
 
-## 3. 算法层
+1. **实验设置（Experimental Setup）**：说明环境、规模、评价指标、对比方法与实现细节；
+2. **主结果（Main Results）**：比较 baseline、Q-learning 超启发式与离线 MILP 的表现差异；
+3. **消融分析（Ablation Study）**：分析奖励项、启发式动作库、充电策略等设计是否必要；
+4. **定性分析（Qualitative Analysis）**：结合可视化回放、车辆路径与充电行为解释模型表现。
 
-在数据资源层完成环境形式化之后，算法层进一步负责在图结构路网 \(G=(V,E,W)\) 上生成可执行的路径与调度决策。本文将该层划分为两个个相互耦合的基础模块：路径规划module与任务调度 模块。
+也就是说，Experiment 部分不应只回答“哪个方法分数高”，还要回答“为什么高”“在哪些场景下高”“离线最优与在线策略之间差距来自哪里”。
 
-### 3.1 路径规划模块
+---
 
-For any vehicle \(k\) and target node \(v\in V\), the goal of the path planning module is to find a feasible path \(P_k(v_k^{\text{cur}}, v)\) on graph \(G\) from the current location \(v_k^{\text{cur}}\) to the target node \(v\). Let the total cost of a path \(P\) be
-\[
-C(P)=\sum_{e\in P} W(e),
-\]
-then the shortest path problem can be written as
-\[
-P_k^*(v_k^{\text{cur}}, v)=\arg\min_{P\in \mathcal{P}(v_k^{\text{cur}}, v)} C(P),
-\]
-where \(\mathcal{P}(v_k^{\text{cur}}, v)\) denotes the set of all feasible paths from \(v_k^{\text{cur}}\) to \(v\).
+## 2. 建议的 Experiment 章节结构
 
-Based on this unified objective, the system implements three path planning baselines.
+建议论文中的 `Experiment` 章节采用如下结构：
 
-\textbf{Dijkstra:} A classic shortest-path algorithm for weighted graphs. It directly minimizes the total path cost \(C(P)\) and can stably return the global optimal path. Therefore, it is used as the standard shortest-path baseline in the system.
+### 4.1 Experimental Setup
+这一小节用于回答“实验是如何搭建的”。建议包含以下内容：
 
-\textbf{A*:} This method introduces a heuristic evaluation function \(h(u,v)\) on top of Dijkstra and uses
-\[
-f(n)=g(n)+h(n)
-\]
-as the search priority, where \(g(n)\) is the known accumulated cost from the start node to the current node \(n\), and \(h(n)\) is the heuristic estimated cost from \(n\) to the target node. This method maintains good search quality while reducing unnecessary node expansions, thereby improving the efficiency of each query.
+#### 4.1.1 环境与场景设置
+根据代码实现，当前实验环境可自然划分为 `small`、`medium`、`large` 三种规模，且 Q-learning 训练脚本中已支持通过 `--scale` 和 `--train-scales` 控制训练与评估规模。因此可在文中明确说明：
+- `small`：用于快速训练与算法验证；
+- `medium`：用于更复杂动态任务压力下的性能测试；
+- `large`：用于验证方法扩展性与鲁棒性。
 
-\textbf{RRT:} A sampling-based search method. It does not directly guarantee a strict shortest path in the graph sense, but explores a large state space through random tree expansion. This provides an interface for future research under more complex path planning settings.
+此外，还应说明环境中包含：
+- 有限数量车辆；
+- 动态释放任务；
+- 电量上限与载重上限；
+- 两种充电策略（`optimal_station` / `nearest_station`）；
+- 任务截止时间与超时惩罚；
+- 充电站排队与队列拥堵。
 
-In the new energy delivery scenario, path planning is not only used for travel from the current node to a task node, but also needs to support feasibility checking for returning to the depot after task completion and visiting a charging station when the battery is low. Therefore, for a task \(\tau_i=(r_i, v_i, w_i, d_i)\), the system not only computes \(C(P_k^*(v_k^{\text{cur}}, v_i))\), but also further evaluates whether the vehicle satisfies the basic energy consumption constraint. Let \(\eta_k\) denote the energy consumption per unit distance of vehicle \(k\). Then the energy consumption along path \(P\) can be approximately written as
-\[
-E_k(P)=\eta_k\, C(P).
-\]
-Only when the current battery level \(b_k\) is sufficient to support the planned trip is the path regarded as executable.
+如果最终你们在报告中只保留两个规模，也建议在文中写清楚原因，例如：离线 MILP 受求解器规模限制，仅在 tiny/small 规模上做全局最优对比，而在线方法在 medium/large 上测试扩展能力。
 
-### 3.2 调度策略 baselines
+#### 4.1.2 对比方法
+根据当前代码，可以明确列出如下比较对象：
 
-在获得可行路径之后，调度模块进一步决定应将哪个任务分配给哪一辆车。对于当前可见任务集合 \(\mathcal{T}_t\) 与车辆 \(k\) 的当前状态 \(\mathbf{x}_k\)，baseline 调度策略本质上是在所有候选任务中定义一个优先级评分函数 \(\phi_k(\tau_i)\)，并选择
-\[
-\tau_k^*=\arg\max_{\tau_i\in \mathcal{T}_t} \phi_k(\tau_i)
-\]
-作为当前时刻最优先分配的任务。不同 baseline 的差异体现在评分函数 \(\phi_k(\tau_i)\) 的定义方式上。
-\begin{itemize}
-* 最近任务优先策略:最小路径成本为核心准则，其policy可表示为
-\[
-\tau_k^*=\arg\min_{\tau_i\in \mathcal{T}_t} C\bigl(P_k^*(v_k^{\text{cur}}, v_i)\bigr).
-\]
+**启发式 baselines：**
+- Nearest-task-first with best charging
+- Earliest-deadline-first with best charging
+- Max-weight-first with best charging
+- Best-score heuristic with best charging
+- Nearest-task-first with nearest-station charging
+- Best-score heuristic with nearest-station charging
 
+这些方法已经在 `policy/gymnasium_qlearning/heuristics.py` 中作为 `RULE_LIBRARY` 实现，因而完全可以在论文中定义为实验对比基线。
 
-最大重量优先策略:关注高负载任务的优先处理。对于任务 \(\tau_i=(r_i,v_i,w_i,d_i)\)，其policy可写为
-\[
-\tau_k^*=\arg\max_{\tau_i\in \mathcal{T}_t,\, w_i\le c_k} w_i,
-\]
+**强化学习方法：**
+- Q-learning hyper-heuristic
 
+该方法的动作空间并不是原始路径或任务编号，而是对上述底层启发式规则的选择，因此实验中要明确说明：Q-learning 是在统一仿真环境中学习“何时采用哪一种 rule”的高层策略选择器。
 
-最早截止时间:以任务时效性为核心，其策略可表述为
-\[
-\tau_k^*=\arg\min_{\tau_i\in \mathcal{T}_t} d_i.
-\]
+**离线优化上界：**
+- Offline MILP planner
 
-在上述 baseline 之外，我们进一步实现了基于 Q-learning 的在线强化学习策略选择模块，以及上帝视角下的离线 MILP 全局优化模块。二者分别对应“基于交互学习的在线决策”与“基于精确优化的离线求解”两类不同的方法范式。
+该方法在任务全集已知的上帝视角下求解全局计划，适合作为小规模问题上的近优参考上界，而不是大规模动态场景下的直接在线部署方案。
 
-* Q-learning 模块遵循标准强化学习建模：在每个时间步 \(t\)，环境根据当前仿真状态产生离散状态 \(s_t\)，agent 选择动作 \(a_t\)，并从环境获得即时奖励 \(r_t\) 与下一状态 \(s_{t+1}\)。在本项目中，状态 \(s_t\) 由车辆利用率、待处理任务压力、电量水平以及任务完成情况等统计量离散编码得到；动作 \(a_t\) 并不直接表示具体路径，而是表示对某一底层调度规则的选择，例如最近任务优先、最大重量优先或最早截止时间优先。这样一来，Q-learning 的作用可以理解为在不同环境状态下自适应选择更优的 baseline 策略。
+#### 4.1.3 评价指标
+结合训练脚本 `train_q_learning.py`、环境封装 `env.py` 和输出字段，当前可直接写入论文的指标包括：
 
-记状态--动作价值函数为 \(Q(s,a)\)，则其迭代更新遵循 Bellman 最优方程对应的时序差分形式
-\[
-Q(s_t,a_t) \leftarrow Q(s_t,a_t) + \alpha \Bigl[r_t + \gamma \max_{a'} Q(s_{t+1},a') - Q(s_t,a_t)\Bigr],
-\]
-其中 \(\alpha\) 为学习率，\(\gamma\) 为折扣因子。训练阶段采用 \(\epsilon\)-greedy 机制在探索与利用之间取得平衡，即以概率 \(\epsilon\) 选择随机动作，以概率 \(1-\epsilon\) 选择 \(\arg\max_a Q(s_t,a)\)，并在训练过程中逐步衰减 \(\epsilon\)。由于环境 reward 已综合反映任务完成数、过期任务数以及最终得分变化，因此该更新过程本质上是在最大化长期累计回报
-\[
-G_t = \sum_{\ell=0}^{\infty} \gamma^{\ell} r_{t+\ell+1}.
-\]
-相较于直接端到端学习连续调度动作，该设计保留了启发式规则的可解释性，同时利用强化学习提升了策略切换的自适应能力。
+- **Final Score**：最终总得分，是最核心的综合指标；
+- **Completed Tasks**：完成任务数量；
+- **Expired Tasks**：超时任务数量；
+- **Total Reward**：强化学习训练过程中的累计奖励；
+- **Steps / Makespan**：完成调度过程所需时间步或离线求解中的整体完工时间；
+- **Total Distance**：车辆总行驶距离；
+- **Total Tardiness**：总迟到量（MILP 输出中已给出）；
+- **Charging-related statistics**：如平均排队长度、充电触发次数或充电负载（若日志中已有，可进一步统计）。
 
-**Algorithm 1: Q-learning-based policy selection**
+论文写作时建议将指标分成两类：
+1. **任务效能指标**：score、completed、expired、tardiness；
+2. **运行成本指标**：distance、makespan、charging burden。
 
-```text
-Input: training episodes M, learning rate α, discount factor γ,
-       initial exploration rate ε, decay factor ρ,
-       discrete state space S, action space A
-Output: learned Q-table Q
+这样更符合 CVPR 风格中“effectiveness + efficiency/cost”的结果组织方式。
 
-Initialize Q(s,a) = 0, for all (s,a) ∈ S × A
-for episode = 1 to M do
-    Reset environment and obtain initial state s0
-    while episode not terminated do
-        With probability ε choose a random action at
-        Otherwise choose at = argmax_a Q(st, a)
-        Execute action at in environment
-        Observe reward rt, next state st+1, and termination flag
-        Update Q-table:
-            Q(st,at) ← Q(st,at) + α [rt + γ max_a' Q(st+1,a') - Q(st,at)]
-        st ← st+1
-    end while
-    ε ← max(εmin, ρ · ε)
-end for
-Return Q
-```
+#### 4.1.4 实现细节
+结合代码可写明如下实验细节：
+- Q-learning 采用表格型 `Q-table`；
+- 状态空间由五维离散状态组成：空闲车辆比例、任务积压程度、任务紧迫程度、低电量车辆比例、充电拥堵程度；
+- 动作空间大小等于规则库大小，即当前为 6 个 unified rules；
+- 默认训练超参数包括：`alpha=0.1`、`gamma=0.95`、`epsilon=0.2`、`epsilon_decay=0.995`、`epsilon_min=0.05`；
+- 每轮训练后采用 greedy policy 做 `eval_episodes` 次评估；
+- 训练日志保存 `episode`、`epsilon`、`final_score`、`completed_tasks`、`expired_tasks`、`eval_score_mean` 等字段。
 
-### 3.4 Offline MILP optimization
+如果最终报告中给出具体实验命令，可以把训练命令附在附录或实验设置小节最后，例如说明如何用 `--episodes`、`--scale`、`--train-scales` 控制训练方案。
 
-与在线学习方法不同，离线 MILP 模块假设任务集合在规划开始时已全部已知，即所有 \(\tau_i=(r_i,v_i,w_i,d_i)\) 可以在优化前一次性获得。在这一前提下，系统将仓库、任务节点与充电站副本统一扩展为节点集合，并定义二元变量 \(x_{vij}\in\{0,1\}\) 表示车辆 \(v\) 是否经过弧 \((i,j)\)。进一步地，模型还联合维护到达时刻、载重、电量、充电量与迟到量等变量，从而将路径规划、任务分配与补能决策统一纳入同一个优化框架。
+---
 
-其目标函数可概括写为
-\[
-\min \sum_{v}\sum_{(i,j)} C_{ij} x_{vij} + \lambda_1 \sum_{v}\sum_{n\in \mathcal{T}} \mathrm{tardy}_{vn} + \lambda_2 T_{\max},
-\]
-其中 \(C_{ij}\) 表示弧代价，\(\mathrm{tardy}_{vn}\) 表示任务超时量，\(T_{\max}\) 表示全局完工时间。约束方面，模型同时满足：1）每个任务恰好被访问一次；2）每辆车从仓库出发并最终回仓；3）流守恒约束保证路径连续性；4）载重变量随任务完成而递减；5）SOC 变量随行驶能耗与充电行为动态演化；6）到达时刻必须满足释放时间、服务时间与截止时间要求。由于代码实现中还引入了速度离散层和分段线性充电近似，因此该 MILP 不仅能描述任务分配关系，还能在一定程度上刻画新能源车辆的真实运行约束。
+## 3. 主实验结果应如何写
 
-**Algorithm 2: Offline MILP-based global planning**
+### 4.2 Comparison with Heuristic Baselines
+这一小节建议聚焦在线动态调度场景，对比 Q-learning 与多个 baseline。写作目标是验证：
 
-```text
-Input: full task set T, vehicle set V, expanded node set N,
-       arc cost matrix C, battery and capacity constraints
-Output: offline global assignment and route plan
+> 在相同环境、相同资源约束下，Q-learning 超启发式是否能够优于固定单一规则。
 
-Construct expanded graph with depot, task nodes, and station copies
-Define binary routing variables x(v,i,j)
-Define auxiliary variables for arrival time, load, SOC,
-charge amount, charge time, and tardiness
-Build objective:
-    minimize total routing cost + tardiness penalty + makespan penalty
-Add constraints:
-    each task is visited exactly once
-    each used vehicle starts from depot and returns to depot
-    flow conservation holds on every visited node
-    load evolution satisfies demand and capacity limits
-    SOC evolution satisfies energy consumption and charging constraints
-    arrival times satisfy release time, service time, and deadline constraints
-Call MILP solver (e.g., Gurobi/CPLEX) to obtain optimal solution
-Decode semantic routes and task-to-vehicle assignments
-Replay the offline plan in the simulation engine for comparison
-Return offline plan
-```
+建议表格字段：
+- Method
+- Final Score ↑
+- Completed Tasks ↑
+- Expired Tasks ↓
+- Total Distance ↓
+- Charging Events / Queue Burden ↓
 
-## 4. 仿真引擎层
+写作时可突出两类现象：
+1. **固定规则的偏置**：例如最近任务优先有利于降低路径成本，但可能忽略高权重或紧急任务；最早截止时间优先可降低超时，但可能增加总里程；
+2. **Q-learning 的优势**：其不固定使用某一种 rule，而是根据任务积压、紧迫性、电量与拥堵状态动态选择规则，因此在综合得分上更有优势。
 
-仿真引擎层负责将数据资源层定义的静态环境与算法层输出的调度动作转化为可执行的时序过程，是整个系统进行动态闭环模拟的核心。与仅关注单次路径查询或局部派单不同，该层显式建模了任务释放、车辆运动、电量消耗、充电排队与任务完成等随时间演化的状态变量，从而使新能源物流调度问题能够在统一的时间轴上被持续求解与评估。
+如果实验结果并不是 Q-learning 在所有指标都最好，也可以按 CVPR 风格正常写：例如说明它在最终总得分上最优，但在单一距离指标上不一定最小，这表明它学到的是“综合权衡”而不是“单指标最优”。
 
-在实现上，系统采用离散时间推进机制。记时刻 \(t\) 的全局环境状态为 \(\mathcal{S}_t\)，算法层生成的联合动作记为 \(\mathcal{A}_t\)，则仿真引擎可被形式化为一个状态转移过程
-\[
-\mathcal{S}_{t+1} = \Phi(\mathcal{S}_t, \mathcal{A}_t),
-\]
-其中 \(\Phi(\cdot)\) 表示由任务更新、车辆推进、能耗结算、充电调度和统计记录共同构成的环境演化算子。具体而言，在每一个时间步中，系统首先根据释放时间将新任务并入待调度集合，并剔除已超过截止时间的失效任务；随后根据当前车辆状态与候选任务集调用调度器生成派单动作；接着执行路径推进与任务服务，同时更新车辆位置、剩余电量、载重状态与任务完成情况；最后处理充电站的排队、占桩和补能事件，并同步刷新系统级统计量。
+### 4.3 Comparison with Offline MILP Upper Bound
+这一小节建议聚焦小规模场景，验证在线策略与离线全局最优之间的差距。根据当前 `god_view_milp_summary.json`，你们已经具备以下可直接写入的结果信息：
+- 求解器：Gurobi；
+- 求解状态：Optimal；
+- 目标值：86.25；
+- 总距离：77.70；
+- 总迟到量：0.0；
+- makespan：42.77；
+- 两辆车的语义路径和引擎回放路径。
 
-该层的关键作用在于将路径规划与任务调度从“静态选择问题”扩展为“受资源约束的动态演化问题”。例如，当车辆 \(k\) 沿路径 \(P\) 行驶时，其电量会按照前文定义的能耗模型 \(E_k(P)=\eta_k C(P)\) 持续递减；当 \(b_k\) 无法支撑车辆完成既定行程时，仿真引擎会触发充电站选择与排队逻辑，并在站点容量受限的条件下更新等待状态。类似地，对于动态释放任务，仿真引擎不仅决定任务何时进入可分配集合，也决定其是否因超时而转化为惩罚项。由此，任务收益、车辆利用率、路径长度与充电负载等指标都可以在统一仿真框架下被一致计算。
+这一节建议回答两个问题：
+1. 在线动态方法与离线最优之间有多大差距？
+2. 这个差距主要来自信息不完备、任务在线释放，还是来自充电/时间/载重约束带来的局部次优？
 
-## 5. Frontend and Backend
+这里很适合写成：
+- MILP 给出的是 full-information setting 下的近优参考；
+- 在线策略在不知道未来任务的条件下仍能达到较高得分，说明其在动态场景中具有实际意义；
+- 当规模提升时，MILP 受求解器 license 和复杂度限制，只能回退到 tiny/small，进一步体现在线方法在实际部署中的必要性。
 
-前端层和后端层并不直接参与路径规划或调度优化本身，而是负责将仿真引擎内部的状态、事件与统计结果组织为可访问、可回放、可分析的外部表示，从而使整个系统具备完整的实验闭环与交互能力。
+你们现在 `fallback` 信息也很有价值，可以直接作为论文中的分析点：
+- medium 和 small 因 license 限制无法直接求解；
+- tiny 可以成功求得最优解；
+- 这说明离线精确求解虽然在小规模场景下能提供参考上界，但在更大规模问题中难以直接扩展。
 
-在实现上，后端部分承担统一的状态封装与服务暴露功能。系统通过 FastAPI 与 WebSocket 建立持续通信通道，将时刻 \(t\) 的环境状态 \(\mathcal{S}_t\) 投影为前端可消费的数据对象，例如车辆位置、任务状态、充电站负载、累计得分与事件日志等；与此同时，后端还负责接收来自外部的控制指令，并将其转换为对仿真进程或算法模块的调用请求。除常规的开始、暂停、恢复与停止控制外，该层还统一封装了 Q-learning 训练/推理接口、离线 MILP 求解接口以及结果导出接口，使实验过程能够在同一服务框架下被调度与复用。换言之，该层实质上提供了一个映射
-\[
-\Psi: \mathcal{S}_t \mapsto \mathcal{O}_t,
-\]
-其中 \(\mathcal{O}_t\) 表示面向外部接口的结构化观测结果，从而将底层复杂状态转换为标准化服务输出。
+---
 
-在此基础上，前端可视化模块进一步将 \(\mathcal{O}_t\) 转化为用户可理解的图形表达。具体而言，界面持续呈现道路网络、仓库、任务节点、充电站与车辆的空间分布，并同步更新任务完成情况、车辆利用率、路径代价、充电队列长度与系统得分等关键指标。更重要的是，该层并非仅承担静态展示功能，而是为策略切换、离线回放、训练触发和结果对比提供统一交互入口。由此，原本分散在仿真日志、调度输出与统计结果中的多源信息，被重新整合为面向分析与展示的可视化工作流。
+## 4. 消融实验建议怎么写
 
-## 6. 各层之间的递进关系与协同机制
+### 4.4 Ablation Study
+根据现有代码，我建议至少做以下三组消融：
 
-综合上述分析，可以将整个系统的工作流程理解为一个自底向上的递进结构。首先，数据资源层提供道路网络、任务候选点、充电站与仓库等基础环境信息；随后，算法层在这些环境信息之上完成路径搜索与调度决策；接着，仿真引擎层根据算法输出推动系统状态在时间轴上演化，并处理任务释放、电量消耗、充电排队和收益统计等动态过程；最后，系统接口与可视化层将这些动态状态与算法能力统一封装并对外展示，从而形成从环境建模、算法求解到仿真执行与结果交互的完整闭环。
+#### 4.4.1 奖励函数消融
+你们当前环境中的 reward 由多项组成：
+- score 增量；
+- completed tasks 奖励；
+- distance 惩罚；
+- expired tasks 惩罚；
+- emergency unserved 惩罚；
+- charge start 惩罚。
 
-这种层层递进的结构保证了系统既具备较强的模块独立性，又能够形成清晰的数据流和控制流：底层为上层提供资源与状态，上层对下层进行调度、封装与展示反馈，最终形成一个从环境建模、算法决策到仿真执行和可视化输出的完整系统闭环。也正是在这种框架之下，本文实现了课程要求中的主要功能，并为后续在更大规模场景、更复杂调度策略以及更强学习方法上的扩展奠定了基础。
+因此可以围绕 reward 设计消融实验，例如：
+- 去掉距离惩罚；
+- 去掉紧急任务惩罚；
+- 去掉充电触发惩罚；
+- 使用完整 reward。
+
+这类实验很适合回答：
+> Q-learning 的性能提升究竟来自哪一类奖励信号？
+
+如果你已经有 `score_ablation_comparison.svg` 这类图，可以把这节作为重点。
+
+#### 4.4.2 动作库消融
+由于 Q-learning 的动作实际上是 rule selection，因此还可以比较：
+- 仅使用 3 个基础启发式动作；
+- 加入 best-score 动作；
+- 再加入 nearest-station charging 相关动作；
+- 完整 6 动作规则库。
+
+这节回答的问题是：
+> 强化学习性能提升到底来自学习能力本身，还是来自更丰富的 rule library？
+
+#### 4.4.3 充电策略消融
+当前代码明确区分：
+- `optimal_station`
+- `nearest_station`
+
+因此可自然形成一组实验：
+- 固定调度规则，只改变充电策略；
+- 固定 Q-learning，其动作库是否包含 nearest-station rule；
+- 比较不同充电决策对 score、distance、expired tasks 的影响。
+
+这节可以突出新能源场景特有的贡献：在传统路径规划问题中，补能逻辑通常不是主角，但在新能源物流中，充电策略会直接改变整体调度质量。
+
+---
+
+## 5. 定性分析建议怎么写
+
+### 4.5 Qualitative Analysis and Visualization
+这部分建议结合前端回放和 MILP 语义路径做定性说明。可以写的内容包括：
+
+1. **典型成功案例**：Q-learning 在任务积压高、部分车辆低电量时切换到更适合的 rule，从而避免超时任务爆发；
+2. **典型失败案例**：固定规则在高拥堵充电场景下可能出现局部贪心，导致后续任务集中超时；
+3. **离线-在线对比案例**：MILP 在已知未来任务时可以提前规划车辆分工，而在线策略只能基于当前可见任务做局部最优决策；
+4. **回放一致性分析**：`god_view_milp_summary.json` 中已经包含 semantic route 与 engine replay route，可用来说明离线求解结果与仿真引擎的一致性。
+
+在 CVPR 风格中，这类定性分析通常不是为了“好看”，而是为了帮助读者理解方法行为机制。因此建议不要只放前端截图，而是配合说明：某辆车为何此时充电、为何切换规则、为何产生局部延迟。
+
+---
+
+## 6. 建议最终写成的核心研究问题
+
+为了让 Experiment 部分更像论文而不是项目运行说明，建议开头明确提出本节围绕以下几个研究问题展开：
+
+- **RQ1:** 在动态新能源物流场景中，Q-learning 超启发式是否优于固定启发式调度规则？
+- **RQ2:** 在线策略与离线 MILP 全局最优之间的性能差距有多大，其主要来源是什么？
+- **RQ3:** 奖励设计、动作库构成与充电策略对强化学习性能的影响分别是什么？
+- **RQ4:** 通过可视化回放，能否解释不同方法在典型场景中的行为差异？
+
+有了这几个研究问题之后，Experiment 各小节就会显得非常自然，也更符合 CVPR 风格论文常见的叙述方式。
+
+---
+
+## 7. 建议你后续补充/整理的实验素材
+
+为了把这一节真正写完整，建议你后续优先准备以下内容：
+
+1. **主结果表**
+   - 各 heuristic baseline + Q-learning 的 score/completed/expired/distance 对比；
+
+2. **离线 MILP 对比表**
+   - online best vs offline MILP（tiny/small）；
+
+3. **训练曲线图**
+   - episode vs eval score mean
+   - episode vs reward
+   - epsilon decay curve（可选）；
+
+4. **消融图**
+   - 奖励项消融；
+   - 动作库消融；
+   - 充电策略消融；
+
+5. **定性图**
+   - 前端回放截图；
+   - MILP 语义路径与 engine replay 路径示意图；
+   - 充电拥堵场景截图。
+
+---
+
+## 8. 可以直接放进论文的过渡句模板
+
+你后面正式写实验时，可以直接参考下面这种 CVPR 风格过渡句：
+
+- “We evaluate the proposed system from four aspects: overall effectiveness, comparison with offline upper bounds, ablation on reward and action design, and qualitative visualization analysis.”
+- “Unless otherwise specified, all methods are evaluated under the same dynamic task generation process and vehicle resource constraints.”
+- “The offline MILP planner is used as a full-information upper-bound reference on small-scale instances rather than as a deployable online method.”
+- “These experiments are designed to answer whether the learned policy selector can outperform fixed heuristics and under what conditions such gains emerge.”
+
+如果你需要，我下一步可以继续把这份中文规划直接扩写成论文里可用的 `Experiment` 中文初稿，或者直接转成 `paper/sec/3_finalcopy.tex` 的英文/LaTeX 结构稿。
