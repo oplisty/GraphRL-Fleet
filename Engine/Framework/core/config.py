@@ -23,8 +23,12 @@ class SimulationConfig:
     charging_strategy: ChargingStrategy = "optimal_station"
 
     reward_base: float = 100.0
+    distance_reference: float | None = None
+    distance_cost_weight: float = 30.0
+    late_penalty: float = 10.0
+    failed_task_penalty: float = 20.0
     distance_penalty: float = 0.6
-    wait_time_penalty: float = 0.2
+    wait_time_penalty: float = 0.0
     overdue_penalty: float = 60.0
 
     enable_collaborative_tasks: bool = True

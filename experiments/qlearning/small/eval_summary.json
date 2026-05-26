@@ -1,41 +1,41 @@
 [
   {
     "episode": 0.0,
-    "total_reward": 3044.882984271259,
+    "total_reward": 3044.403195474205,
     "steps": 69.0,
-    "final_score": 2554.642010342717,
+    "final_score": 2554.162221545663,
     "completed_tasks": 28.0,
     "expired_tasks": 0.0
   },
   {
     "episode": 1.0,
-    "total_reward": 3044.882984271259,
+    "total_reward": 3044.403195474205,
     "steps": 69.0,
-    "final_score": 2554.642010342717,
+    "final_score": 2554.162221545663,
     "completed_tasks": 28.0,
     "expired_tasks": 0.0
   },
   {
     "episode": 2.0,
-    "total_reward": 3044.882984271259,
+    "total_reward": 3044.403195474205,
     "steps": 69.0,
-    "final_score": 2554.642010342717,
+    "final_score": 2554.162221545663,
     "completed_tasks": 28.0,
     "expired_tasks": 0.0
   },
   {
     "episode": 3.0,
-    "total_reward": 3044.882984271259,
+    "total_reward": 3044.403195474205,
     "steps": 69.0,
-    "final_score": 2554.642010342717,
+    "final_score": 2554.162221545663,
     "completed_tasks": 28.0,
     "expired_tasks": 0.0
   },
   {
     "episode": 4.0,
-    "total_reward": 3044.882984271259,
+    "total_reward": 3044.403195474205,
     "steps": 69.0,
-    "final_score": 2554.642010342717,
+    "final_score": 2554.162221545663,
     "completed_tasks": 28.0,
     "expired_tasks": 0.0
   }

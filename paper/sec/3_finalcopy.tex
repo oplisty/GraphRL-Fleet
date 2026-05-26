@@ -21,18 +21,24 @@ To comprehensively evaluate the performance of different methods in the dynamic 
 
 \noindent \textbf{Task effectiveness metrics:}
 \begin{itemize}
-    \item \textbf{Final Score:} For each task \(\tau_i\), its reward is defined as
+    \item \textbf{Final Score:} For each completed task \(\tau_i\), its reward is defined as
     \[
-    \begin{aligned}
-    \mathrm{Score}(\tau_i) = {} & R_0-\lambda_d\,\mathrm{dist}_i-\lambda_w\,\mathrm{wait}_i \\
-    & {}-\mathbb{I}(\mathrm{overdue}_i>0)\cdot P_{\mathrm{overdue}}.
-    \end{aligned}
+    \mathrm{Score}(\tau_i)=
+    \max\left(
+    0,
+    R_0
+    -\alpha \cdot \min\left(\frac{d_i}{D_{\mathrm{ref}}},1\right)
+    -P_{\mathrm{late}}\cdot \mathbb{I}(t_i^{\mathrm{finish}}>d_i^{\mathrm{deadline}})
+    \right).
     \]
-    The overdue term is defined as
+    Here, \(R_0\) is the base reward, \(d_i\) is the service travel distance of task \(i\), \(D_{\mathrm{ref}}\) is the reference distance used for normalization, \(\alpha\) is the normalized distance-cost weight, and \(P_{\mathrm{late}}\) is the penalty for late completion. In our implementation, \(R_0=100\), \(\alpha=30\), and \(P_{\mathrm{late}}=60\). Unfinished expired tasks receive an additional failure penalty \(P_{\mathrm{fail}}\), and the final score is
     \[
-    \mathrm{overdue}_i = t_i^{\mathrm{finish}} - d_i.
+    \mathrm{FinalScore}=
+    \sum_{i\in\mathcal{T}_{\mathrm{completed}}}\mathrm{Score}(\tau_i)
+    -P_{\mathrm{fail}}\cdot \lvert\mathcal{T}_{\mathrm{expired}}\rvert
+    +S_{\mathrm{partial}},
     \]
-    Here, \(R_0\) is the base reward, \(\lambda_d\) is the distance penalty, \(\lambda_w\) is the wait-time penalty, and \(P_{\mathrm{overdue}}\) is the overdue penalty. In addition, \(\mathrm{dist}_i\) denotes the total service distance of task \(i\), while \(\mathrm{wait}_i = t_i^{\mathrm{finish}} - r_i\) denotes the elapsed time from task release to task completion.
+    where \(P_{\mathrm{fail}}=60\) by default and \(S_{\mathrm{partial}}\) denotes optional partial credit for collaborative tasks. This scoring function does not directly penalize task waiting time; instead, it considers completion, normalized service distance, and whether the task is completed after its deadline.
     
     \item \textbf{Completed Tasks:} The number of tasks completed by the end of the simulation.
     \item \textbf{Expired Tasks:} The number of tasks that pass their deadlines and remain unfinished by the end of the simulation.

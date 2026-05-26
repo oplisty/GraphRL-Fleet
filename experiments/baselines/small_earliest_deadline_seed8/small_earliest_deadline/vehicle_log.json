@@ -712,7 +712,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 3.8675,
-    "total_score": 97.2795
+    "total_score": 97.0343
   },
   {
     "time": 10,
@@ -725,7 +725,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 3.8675,
-    "total_score": 97.2795
+    "total_score": 97.0343
   },
   {
     "time": 10,
@@ -777,7 +777,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 3.8675,
-    "total_score": 97.2795
+    "total_score": 97.0343
   },
   {
     "time": 10,
@@ -842,7 +842,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 5.3675,
-    "total_score": 97.2795
+    "total_score": 97.0343
   },
   {
     "time": 11,
@@ -907,7 +907,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 6.8675,
-    "total_score": 97.2795
+    "total_score": 97.0343
   },
   {
     "time": 12,
@@ -933,7 +933,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 13.0571,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 13,
@@ -946,7 +946,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 13.0571,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 13,
@@ -959,7 +959,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 7.7351,
-    "total_score": 97.2795
+    "total_score": 97.0343
   },
   {
     "time": 13,
@@ -998,7 +998,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 13.0571,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 13,
@@ -1011,7 +1011,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 7.7351,
-    "total_score": 97.2795
+    "total_score": 97.0343
   },
   {
     "time": 13,
@@ -1037,7 +1037,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 17.149,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 14,
@@ -1050,7 +1050,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 17.149,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 14,
@@ -1063,7 +1063,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 17.149,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 14,
@@ -1089,7 +1089,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 14.5571,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 14,
@@ -1102,7 +1102,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 7.7351,
-    "total_score": 97.2795
+    "total_score": 97.0343
   },
   {
     "time": 14,
@@ -1128,7 +1128,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 18.649,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 15,
@@ -1154,7 +1154,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 16.0571,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 15,
@@ -1167,7 +1167,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 7.7351,
-    "total_score": 97.2795
+    "total_score": 97.0343
   },
   {
     "time": 15,
@@ -1193,7 +1193,7 @@
     "task_load": 28.44,
     "target_station": null,
     "total_distance": 7.7351,
-    "total_score": 97.2795
+    "total_score": 97.0343
   },
   {
     "time": 16,
@@ -1206,7 +1206,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.7293,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 16,
@@ -1219,7 +1219,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.7293,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 16,
@@ -1232,7 +1232,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 20.149,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 16,
@@ -1245,7 +1245,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.7293,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 16,
@@ -1258,7 +1258,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 17.5571,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 16,
@@ -1271,7 +1271,7 @@
     "task_load": 28.44,
     "target_station": null,
     "total_distance": 9.2351,
-    "total_score": 97.2795
+    "total_score": 97.0343
   },
   {
     "time": 16,
@@ -1297,7 +1297,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 21.649,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 17,
@@ -1310,7 +1310,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 21.2293,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 17,
@@ -1323,7 +1323,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0571,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 17,
@@ -1336,7 +1336,7 @@
     "task_load": 28.44,
     "target_station": null,
     "total_distance": 10.7351,
-    "total_score": 97.2795
+    "total_score": 97.0343
   },
   {
     "time": 17,
@@ -1362,7 +1362,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 23.149,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 18,
@@ -1375,7 +1375,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 22.7293,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 18,
@@ -1388,7 +1388,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 20.5571,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 18,
@@ -1401,7 +1401,7 @@
     "task_load": 28.44,
     "target_station": null,
     "total_distance": 12.2351,
-    "total_score": 97.2795
+    "total_score": 97.0343
   },
   {
     "time": 18,
@@ -1427,7 +1427,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 13.3938,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 19,
@@ -1440,7 +1440,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 13.3938,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 19,
@@ -1453,7 +1453,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 24.649,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 19,
@@ -1466,7 +1466,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 24.2293,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 19,
@@ -1479,7 +1479,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 22.0571,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 19,
@@ -1492,7 +1492,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 13.3938,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 19,
@@ -1518,7 +1518,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 26.149,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 20,
@@ -1531,7 +1531,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 25.7293,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 20,
@@ -1544,7 +1544,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 23.5571,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 20,
@@ -1557,7 +1557,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 14.8938,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 20,
@@ -1583,7 +1583,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 27.649,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 21,
@@ -1596,7 +1596,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 27.2293,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 21,
@@ -1609,7 +1609,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 25.0571,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 21,
@@ -1622,7 +1622,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 16.3938,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 21,
@@ -1661,7 +1661,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 26.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 22,
@@ -1674,7 +1674,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 29.149,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 22,
@@ -1687,7 +1687,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 28.7293,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 22,
@@ -1700,7 +1700,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 26.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 22,
@@ -1713,7 +1713,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 17.8938,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 22,
@@ -1739,7 +1739,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 23,
@@ -1752,7 +1752,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 30.649,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 23,
@@ -1765,7 +1765,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 30.2293,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 23,
@@ -1778,7 +1778,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 26.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 23,
@@ -1791,7 +1791,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 23,
@@ -1817,7 +1817,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 32.149,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 24,
@@ -1830,7 +1830,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 31.7293,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 24,
@@ -1843,7 +1843,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 26.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 24,
@@ -1856,7 +1856,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 24,
@@ -1882,7 +1882,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 33.649,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 25,
@@ -1895,7 +1895,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 33.2293,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 25,
@@ -1908,7 +1908,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 26.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 25,
@@ -1921,7 +1921,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 25,
@@ -1947,7 +1947,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 34.298,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 26,
@@ -1960,7 +1960,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 34.298,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 26,
@@ -1973,7 +1973,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 34.7293,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 26,
@@ -1986,7 +1986,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 26.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 26,
@@ -1999,7 +1999,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 26,
@@ -2025,7 +2025,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 34.298,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 27,
@@ -2038,7 +2038,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 36.2293,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 27,
@@ -2051,7 +2051,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 26.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 27,
@@ -2064,7 +2064,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 27,
@@ -2090,7 +2090,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 34.298,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 28,
@@ -2103,7 +2103,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 37.7293,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 28,
@@ -2116,7 +2116,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 26.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 28,
@@ -2129,7 +2129,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 28,
@@ -2155,7 +2155,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 34.298,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 29,
@@ -2168,7 +2168,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 39.2293,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 29,
@@ -2181,7 +2181,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 26.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 29,
@@ -2194,7 +2194,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 29,
@@ -2220,7 +2220,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 39.4586,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 30,
@@ -2233,7 +2233,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 34.298,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 30,
@@ -2246,7 +2246,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 39.4586,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 30,
@@ -2259,7 +2259,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 26.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 30,
@@ -2272,7 +2272,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 30,
@@ -2298,7 +2298,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 14.9978,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 31,
@@ -2311,7 +2311,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 14.9978,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 31,
@@ -2324,7 +2324,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 34.298,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 31,
@@ -2337,7 +2337,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 39.4586,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 31,
@@ -2350,7 +2350,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 26.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 31,
@@ -2363,7 +2363,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 31,
@@ -2376,7 +2376,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 14.9978,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 32,
@@ -2389,7 +2389,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 34.298,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 32,
@@ -2402,7 +2402,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 39.4586,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 32,
@@ -2415,7 +2415,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 26.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 32,
@@ -2428,7 +2428,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 32,
@@ -2441,7 +2441,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 16.4978,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 33,
@@ -2454,7 +2454,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 34.298,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 33,
@@ -2467,7 +2467,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 39.4586,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 33,
@@ -2480,7 +2480,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 26.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 33,
@@ -2493,7 +2493,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 33,
@@ -2506,7 +2506,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 17.9978,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 34,
@@ -2519,7 +2519,7 @@
     "task_load": 23.16,
     "target_station": null,
     "total_distance": 34.298,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 34,
@@ -2532,7 +2532,7 @@
     "task_load": 23.16,
     "target_station": null,
     "total_distance": 35.798,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 34,
@@ -2545,7 +2545,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 39.4586,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 34,
@@ -2558,7 +2558,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 26.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 34,
@@ -2571,7 +2571,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 34,
@@ -2584,7 +2584,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.4978,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 35,
@@ -2597,7 +2597,7 @@
     "task_load": 23.16,
     "target_station": null,
     "total_distance": 37.298,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 35,
@@ -2610,7 +2610,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 39.4586,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 35,
@@ -2623,7 +2623,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 26.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 35,
@@ -2636,7 +2636,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 35,
@@ -2649,7 +2649,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 20.9978,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 36,
@@ -2662,7 +2662,7 @@
     "task_load": 23.16,
     "target_station": null,
     "total_distance": 38.798,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 36,
@@ -2675,7 +2675,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 39.4586,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 36,
@@ -2688,7 +2688,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 26.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 36,
@@ -2701,7 +2701,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 36,
@@ -2714,7 +2714,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 22.4978,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 37,
@@ -2727,7 +2727,7 @@
     "task_load": 23.16,
     "target_station": null,
     "total_distance": 40.298,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 37,
@@ -2740,7 +2740,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 39.4586,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 37,
@@ -2753,7 +2753,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 26.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 37,
@@ -2766,7 +2766,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 37,
@@ -2779,7 +2779,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 23.9978,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 38,
@@ -2792,7 +2792,7 @@
     "task_load": 23.16,
     "target_station": null,
     "total_distance": 41.798,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 38,
@@ -2805,7 +2805,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 39.4586,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 38,
@@ -2818,7 +2818,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 26.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 38,
@@ -2831,7 +2831,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 38,
@@ -2844,7 +2844,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 25.4978,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 39,
@@ -2857,7 +2857,7 @@
     "task_load": 23.16,
     "target_station": null,
     "total_distance": 43.298,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 39,
@@ -2870,7 +2870,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 39.4586,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 39,
@@ -2883,7 +2883,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 26.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 39,
@@ -2896,7 +2896,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 39,
@@ -2909,7 +2909,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 26.9978,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 40,
@@ -2922,7 +2922,7 @@
     "task_load": 23.16,
     "target_station": null,
     "total_distance": 44.798,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 40,
@@ -2935,7 +2935,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 39.4586,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 40,
@@ -2948,7 +2948,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 26.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 40,
@@ -2961,7 +2961,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 40,
@@ -2974,7 +2974,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 28.4978,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 41,
@@ -2987,7 +2987,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 29.9956,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 41,
@@ -3000,7 +3000,7 @@
     "task_load": 23.16,
     "target_station": null,
     "total_distance": 46.298,
-    "total_score": 87.5106
+    "total_score": 86.8499
   },
   {
     "time": 41,
@@ -3013,7 +3013,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 39.4586,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 41,
@@ -3026,7 +3026,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 26.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 41,
@@ -3039,7 +3039,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 41,
@@ -3052,7 +3052,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 29.9956,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 42,
@@ -3065,7 +3065,7 @@
     "task_load": 25.71,
     "target_station": null,
     "total_distance": 39.4586,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 42,
@@ -3078,7 +3078,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 47.5599,
-    "total_score": 177.9535
+    "total_score": 176.6805
   },
   {
     "time": 42,
@@ -3091,7 +3091,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 47.5599,
-    "total_score": 177.9535
+    "total_score": 176.6805
   },
   {
     "time": 42,
@@ -3104,7 +3104,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 47.5599,
-    "total_score": 177.9535
+    "total_score": 176.6805
   },
   {
     "time": 42,
@@ -3117,7 +3117,7 @@
     "task_load": 25.71,
     "target_station": null,
     "total_distance": 40.9586,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 42,
@@ -3130,7 +3130,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 26.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 42,
@@ -3143,7 +3143,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 42,
@@ -3156,7 +3156,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 29.9956,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 43,
@@ -3169,7 +3169,7 @@
     "task_load": 13.63,
     "target_station": null,
     "total_distance": 26.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 43,
@@ -3182,7 +3182,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 49.0599,
-    "total_score": 177.9535
+    "total_score": 176.6805
   },
   {
     "time": 43,
@@ -3195,7 +3195,7 @@
     "task_load": 25.71,
     "target_station": null,
     "total_distance": 42.4586,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 43,
@@ -3208,7 +3208,7 @@
     "task_load": 13.63,
     "target_station": null,
     "total_distance": 27.6142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 43,
@@ -3221,7 +3221,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 43,
@@ -3234,7 +3234,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 29.9956,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 44,
@@ -3247,7 +3247,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 50.5599,
-    "total_score": 177.9535
+    "total_score": 176.6805
   },
   {
     "time": 44,
@@ -3260,7 +3260,7 @@
     "task_load": 25.71,
     "target_station": null,
     "total_distance": 43.9586,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 44,
@@ -3273,7 +3273,7 @@
     "task_load": 13.63,
     "target_station": null,
     "total_distance": 29.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 44,
@@ -3286,7 +3286,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 44,
@@ -3299,7 +3299,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 29.9956,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 45,
@@ -3312,7 +3312,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 52.0599,
-    "total_score": 177.9535
+    "total_score": 176.6805
   },
   {
     "time": 45,
@@ -3325,7 +3325,7 @@
     "task_load": 25.71,
     "target_station": null,
     "total_distance": 45.4586,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 45,
@@ -3338,7 +3338,7 @@
     "task_load": 13.63,
     "target_station": null,
     "total_distance": 30.6142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 45,
@@ -3351,7 +3351,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 45,
@@ -3364,7 +3364,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 29.9956,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 46,
@@ -3377,7 +3377,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 53.5599,
-    "total_score": 177.9535
+    "total_score": 176.6805
   },
   {
     "time": 46,
@@ -3390,7 +3390,7 @@
     "task_load": 25.71,
     "target_station": null,
     "total_distance": 46.9586,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 46,
@@ -3403,7 +3403,7 @@
     "task_load": 13.63,
     "target_station": null,
     "total_distance": 32.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 46,
@@ -3416,7 +3416,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 46,
@@ -3429,7 +3429,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 29.9956,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 47,
@@ -3442,7 +3442,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 55.0599,
-    "total_score": 177.9535
+    "total_score": 176.6805
   },
   {
     "time": 47,
@@ -3455,7 +3455,7 @@
     "task_load": 25.71,
     "target_station": null,
     "total_distance": 48.4586,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 47,
@@ -3468,7 +3468,7 @@
     "task_load": 13.63,
     "target_station": null,
     "total_distance": 33.6142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 47,
@@ -3481,7 +3481,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 47,
@@ -3494,7 +3494,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 29.9956,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 48,
@@ -3507,7 +3507,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 56.5599,
-    "total_score": 177.9535
+    "total_score": 176.6805
   },
   {
     "time": 48,
@@ -3520,7 +3520,7 @@
     "task_load": 25.71,
     "target_station": null,
     "total_distance": 49.9586,
-    "total_score": 85.5624
+    "total_score": 84.8713
   },
   {
     "time": 48,
@@ -3533,7 +3533,7 @@
     "task_load": 13.63,
     "target_station": null,
     "total_distance": 35.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 48,
@@ -3546,7 +3546,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 48,
@@ -3559,7 +3559,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 29.9956,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 49,
@@ -3572,7 +3572,7 @@
     "task_load": 2.27,
     "target_station": null,
     "total_distance": 19.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 49,
@@ -3585,7 +3585,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 51.1909,
-    "total_score": 177.123
+    "total_score": 175.8748
   },
   {
     "time": 49,
@@ -3598,7 +3598,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 51.1909,
-    "total_score": 177.123
+    "total_score": 175.8748
   },
   {
     "time": 49,
@@ -3611,7 +3611,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 58.0599,
-    "total_score": 177.9535
+    "total_score": 176.6805
   },
   {
     "time": 49,
@@ -3624,7 +3624,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 51.1909,
-    "total_score": 177.123
+    "total_score": 175.8748
   },
   {
     "time": 49,
@@ -3637,7 +3637,7 @@
     "task_load": 13.63,
     "target_station": null,
     "total_distance": 36.6142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 49,
@@ -3650,7 +3650,7 @@
     "task_load": 2.27,
     "target_station": null,
     "total_distance": 20.5526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 49,
@@ -3663,7 +3663,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 29.9956,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 50,
@@ -3676,7 +3676,7 @@
     "task_load": 5.35,
     "target_station": null,
     "total_distance": 29.9956,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 50,
@@ -3689,7 +3689,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 59.5599,
-    "total_score": 177.9535
+    "total_score": 176.6805
   },
   {
     "time": 50,
@@ -3702,7 +3702,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 52.6909,
-    "total_score": 177.123
+    "total_score": 175.8748
   },
   {
     "time": 50,
@@ -3715,7 +3715,7 @@
     "task_load": 13.63,
     "target_station": null,
     "total_distance": 38.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 50,
@@ -3728,7 +3728,7 @@
     "task_load": 2.27,
     "target_station": null,
     "total_distance": 22.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 50,
@@ -3741,7 +3741,7 @@
     "task_load": 5.35,
     "target_station": null,
     "total_distance": 31.4956,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 51,
@@ -3754,7 +3754,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 60.8218,
-    "total_score": 177.9535
+    "total_score": 176.6805
   },
   {
     "time": 51,
@@ -3767,7 +3767,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 60.8218,
-    "total_score": 177.9535
+    "total_score": 176.6805
   },
   {
     "time": 51,
@@ -3780,7 +3780,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 54.1909,
-    "total_score": 177.123
+    "total_score": 175.8748
   },
   {
     "time": 51,
@@ -3793,7 +3793,7 @@
     "task_load": 13.63,
     "target_station": null,
     "total_distance": 39.6142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 51,
@@ -3806,7 +3806,7 @@
     "task_load": 2.27,
     "target_station": null,
     "total_distance": 23.5526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 51,
@@ -3819,7 +3819,7 @@
     "task_load": 5.35,
     "target_station": null,
     "total_distance": 32.9956,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 52,
@@ -3832,7 +3832,7 @@
     "task_load": 5.66,
     "target_station": null,
     "total_distance": 60.8218,
-    "total_score": 177.9535
+    "total_score": 176.6805
   },
   {
     "time": 52,
@@ -3845,7 +3845,7 @@
     "task_load": 5.66,
     "target_station": null,
     "total_distance": 62.3218,
-    "total_score": 177.9535
+    "total_score": 176.6805
   },
   {
     "time": 52,
@@ -3858,7 +3858,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 55.6909,
-    "total_score": 177.123
+    "total_score": 175.8748
   },
   {
     "time": 52,
@@ -3871,7 +3871,7 @@
     "task_load": 13.63,
     "target_station": null,
     "total_distance": 41.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 52,
@@ -3884,7 +3884,7 @@
     "task_load": 2.27,
     "target_station": null,
     "total_distance": 25.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 52,
@@ -3897,7 +3897,7 @@
     "task_load": 5.35,
     "target_station": null,
     "total_distance": 34.4956,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 53,
@@ -3910,7 +3910,7 @@
     "task_load": 5.66,
     "target_station": null,
     "total_distance": 63.8218,
-    "total_score": 177.9535
+    "total_score": 176.6805
   },
   {
     "time": 53,
@@ -3923,7 +3923,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 57.1909,
-    "total_score": 177.123
+    "total_score": 175.8748
   },
   {
     "time": 53,
@@ -3936,7 +3936,7 @@
     "task_load": 13.63,
     "target_station": null,
     "total_distance": 42.6142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 53,
@@ -3949,7 +3949,7 @@
     "task_load": 2.27,
     "target_station": null,
     "total_distance": 26.5526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 53,
@@ -3962,7 +3962,7 @@
     "task_load": 5.35,
     "target_station": null,
     "total_distance": 35.9956,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 54,
@@ -3975,7 +3975,7 @@
     "task_load": 5.66,
     "target_station": null,
     "total_distance": 65.3218,
-    "total_score": 177.9535
+    "total_score": 176.6805
   },
   {
     "time": 54,
@@ -3988,7 +3988,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 58.6909,
-    "total_score": 177.123
+    "total_score": 175.8748
   },
   {
     "time": 54,
@@ -4001,7 +4001,7 @@
     "task_load": 13.63,
     "target_station": null,
     "total_distance": 44.1142,
-    "total_score": 90.5657
+    "total_score": 89.9876
   },
   {
     "time": 54,
@@ -4014,7 +4014,7 @@
     "task_load": 2.27,
     "target_station": null,
     "total_distance": 28.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 54,
@@ -4027,7 +4027,7 @@
     "task_load": 5.35,
     "target_station": null,
     "total_distance": 37.4956,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 55,
@@ -4040,7 +4040,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 44.2283,
-    "total_score": 177.2973
+    "total_score": 176.0975
   },
   {
     "time": 55,
@@ -4053,7 +4053,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 44.2283,
-    "total_score": 177.2973
+    "total_score": 176.0975
   },
   {
     "time": 55,
@@ -4066,7 +4066,7 @@
     "task_load": 5.66,
     "target_station": null,
     "total_distance": 66.8218,
-    "total_score": 177.9535
+    "total_score": 176.6805
   },
   {
     "time": 55,
@@ -4079,7 +4079,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 60.1909,
-    "total_score": 177.123
+    "total_score": 175.8748
   },
   {
     "time": 55,
@@ -4092,7 +4092,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 44.2283,
-    "total_score": 177.2973
+    "total_score": 176.0975
   },
   {
     "time": 55,
@@ -4105,7 +4105,7 @@
     "task_load": 2.27,
     "target_station": null,
     "total_distance": 29.5526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 55,
@@ -4118,7 +4118,7 @@
     "task_load": 5.35,
     "target_station": null,
     "total_distance": 38.9956,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 56,
@@ -4131,7 +4131,7 @@
     "task_load": 5.66,
     "target_station": null,
     "total_distance": 68.3218,
-    "total_score": 177.9535
+    "total_score": 176.6805
   },
   {
     "time": 56,
@@ -4144,7 +4144,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 61.6909,
-    "total_score": 177.123
+    "total_score": 175.8748
   },
   {
     "time": 56,
@@ -4157,7 +4157,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 45.7283,
-    "total_score": 177.2973
+    "total_score": 176.0975
   },
   {
     "time": 56,
@@ -4170,7 +4170,7 @@
     "task_load": 2.27,
     "target_station": null,
     "total_distance": 31.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 56,
@@ -4183,7 +4183,7 @@
     "task_load": 5.35,
     "target_station": null,
     "total_distance": 40.4956,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 57,
@@ -4196,7 +4196,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 62.9232,
-    "total_score": 177.123
+    "total_score": 175.8748
   },
   {
     "time": 57,
@@ -4209,7 +4209,7 @@
     "task_load": 5.66,
     "target_station": null,
     "total_distance": 69.8218,
-    "total_score": 177.9535
+    "total_score": 176.6805
   },
   {
     "time": 57,
@@ -4222,7 +4222,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 62.9232,
-    "total_score": 177.123
+    "total_score": 175.8748
   },
   {
     "time": 57,
@@ -4235,7 +4235,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 47.2283,
-    "total_score": 177.2973
+    "total_score": 176.0975
   },
   {
     "time": 57,
@@ -4248,7 +4248,7 @@
     "task_load": 2.27,
     "target_station": null,
     "total_distance": 32.5526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 57,
@@ -4261,7 +4261,7 @@
     "task_load": 5.35,
     "target_station": null,
     "total_distance": 41.9956,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 58,
@@ -4274,7 +4274,7 @@
     "task_load": 28.91,
     "target_station": null,
     "total_distance": 62.9232,
-    "total_score": 177.123
+    "total_score": 175.8748
   },
   {
     "time": 58,
@@ -4287,7 +4287,7 @@
     "task_load": 5.66,
     "target_station": null,
     "total_distance": 71.3218,
-    "total_score": 177.9535
+    "total_score": 176.6805
   },
   {
     "time": 58,
@@ -4300,7 +4300,7 @@
     "task_load": 28.91,
     "target_station": null,
     "total_distance": 64.4232,
-    "total_score": 177.123
+    "total_score": 175.8748
   },
   {
     "time": 58,
@@ -4313,7 +4313,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 48.7283,
-    "total_score": 177.2973
+    "total_score": 176.0975
   },
   {
     "time": 58,
@@ -4326,7 +4326,7 @@
     "task_load": 2.27,
     "target_station": null,
     "total_distance": 34.0526,
-    "total_score": 193.2842
+    "total_score": 192.6951
   },
   {
     "time": 58,
@@ -4339,7 +4339,7 @@
     "task_load": 5.35,
     "target_station": null,
     "total_distance": 43.4956,
-    "total_score": 89.2013
+    "total_score": 88.4995
   },
   {
     "time": 59,
@@ -4352,7 +4352,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 34.612,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 59,
@@ -4365,7 +4365,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 34.612,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 59,
@@ -4378,7 +4378,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 44.9934,
-    "total_score": 178.4027
+    "total_score": 176.999
   },
   {
     "time": 59,
@@ -4391,7 +4391,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 44.9934,
-    "total_score": 178.4027
+    "total_score": 176.999
   },
   {
     "time": 59,
@@ -4404,7 +4404,7 @@
     "task_load": 5.66,
     "target_station": null,
     "total_distance": 72.8218,
-    "total_score": 177.9535
+    "total_score": 176.6805
   },
   {
     "time": 59,
@@ -4417,7 +4417,7 @@
     "task_load": 28.91,
     "target_station": null,
     "total_distance": 65.9232,
-    "total_score": 177.123
+    "total_score": 175.8748
   },
   {
     "time": 59,
@@ -4430,7 +4430,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 50.2283,
-    "total_score": 177.2973
+    "total_score": 176.0975
   },
   {
     "time": 59,
@@ -4443,7 +4443,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 34.612,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 59,
@@ -4456,7 +4456,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 44.9934,
-    "total_score": 178.4027
+    "total_score": 176.999
   },
   {
     "time": 60,
@@ -4469,7 +4469,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 74.0837,
-    "total_score": 268.1963
+    "total_score": 266.5111
   },
   {
     "time": 60,
@@ -4482,7 +4482,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 74.0837,
-    "total_score": 268.1963
+    "total_score": 266.5111
   },
   {
     "time": 60,
@@ -4495,7 +4495,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 74.0837,
-    "total_score": 268.1963
+    "total_score": 266.5111
   },
   {
     "time": 60,
@@ -4508,7 +4508,7 @@
     "task_load": 28.91,
     "target_station": null,
     "total_distance": 67.4232,
-    "total_score": 177.123
+    "total_score": 175.8748
   },
   {
     "time": 60,
@@ -4521,7 +4521,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 51.7283,
-    "total_score": 177.2973
+    "total_score": 176.0975
   },
   {
     "time": 60,
@@ -4534,7 +4534,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 36.112,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 60,
@@ -4547,7 +4547,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 46.4934,
-    "total_score": 178.4027
+    "total_score": 176.999
   },
   {
     "time": 61,
@@ -4560,7 +4560,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 75.5837,
-    "total_score": 268.1963
+    "total_score": 266.5111
   },
   {
     "time": 61,
@@ -4573,7 +4573,7 @@
     "task_load": 28.91,
     "target_station": null,
     "total_distance": 68.9232,
-    "total_score": 177.123
+    "total_score": 175.8748
   },
   {
     "time": 61,
@@ -4586,7 +4586,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 53.2283,
-    "total_score": 177.2973
+    "total_score": 176.0975
   },
   {
     "time": 61,
@@ -4599,7 +4599,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 37.612,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 61,
@@ -4612,7 +4612,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 47.9934,
-    "total_score": 178.4027
+    "total_score": 176.999
   },
   {
     "time": 62,
@@ -4625,7 +4625,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 77.0837,
-    "total_score": 268.1963
+    "total_score": 266.5111
   },
   {
     "time": 62,
@@ -4638,7 +4638,7 @@
     "task_load": 28.91,
     "target_station": null,
     "total_distance": 70.4232,
-    "total_score": 177.123
+    "total_score": 175.8748
   },
   {
     "time": 62,
@@ -4651,7 +4651,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 54.7283,
-    "total_score": 177.2973
+    "total_score": 176.0975
   },
   {
     "time": 62,
@@ -4664,7 +4664,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 39.112,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 62,
@@ -4677,7 +4677,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 49.4934,
-    "total_score": 178.4027
+    "total_score": 176.999
   },
   {
     "time": 63,
@@ -4690,7 +4690,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 78.5837,
-    "total_score": 268.1963
+    "total_score": 266.5111
   },
   {
     "time": 63,
@@ -4703,7 +4703,7 @@
     "task_load": 28.91,
     "target_station": null,
     "total_distance": 71.9232,
-    "total_score": 177.123
+    "total_score": 175.8748
   },
   {
     "time": 63,
@@ -4716,7 +4716,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 56.2283,
-    "total_score": 177.2973
+    "total_score": 176.0975
   },
   {
     "time": 63,
@@ -4729,7 +4729,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 40.612,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 63,
@@ -4742,7 +4742,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 50.9934,
-    "total_score": 178.4027
+    "total_score": 176.999
   },
   {
     "time": 64,
@@ -4755,7 +4755,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.0837,
-    "total_score": 268.1963
+    "total_score": 266.5111
   },
   {
     "time": 64,
@@ -4768,7 +4768,7 @@
     "task_load": 28.91,
     "target_station": null,
     "total_distance": 73.4232,
-    "total_score": 177.123
+    "total_score": 175.8748
   },
   {
     "time": 64,
@@ -4781,7 +4781,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 57.7283,
-    "total_score": 177.2973
+    "total_score": 176.0975
   },
   {
     "time": 64,
@@ -4794,7 +4794,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 42.112,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 64,
@@ -4807,7 +4807,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 52.4934,
-    "total_score": 178.4027
+    "total_score": 176.999
   },
   {
     "time": 65,
@@ -4820,7 +4820,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 81.5837,
-    "total_score": 268.1963
+    "total_score": 266.5111
   },
   {
     "time": 65,
@@ -4833,7 +4833,7 @@
     "task_load": 28.91,
     "target_station": null,
     "total_distance": 74.9232,
-    "total_score": 177.123
+    "total_score": 175.8748
   },
   {
     "time": 65,
@@ -4846,7 +4846,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 59.2283,
-    "total_score": 177.2973
+    "total_score": 176.0975
   },
   {
     "time": 65,
@@ -4859,7 +4859,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 43.612,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 65,
@@ -4872,7 +4872,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 53.9934,
-    "total_score": 178.4027
+    "total_score": 176.999
   },
   {
     "time": 66,
@@ -4885,7 +4885,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 83.0837,
-    "total_score": 268.1963
+    "total_score": 266.5111
   },
   {
     "time": 66,
@@ -4898,7 +4898,7 @@
     "task_load": 28.91,
     "target_station": null,
     "total_distance": 76.4232,
-    "total_score": 177.123
+    "total_score": 175.8748
   },
   {
     "time": 66,
@@ -4911,7 +4911,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 60.7283,
-    "total_score": 177.2973
+    "total_score": 176.0975
   },
   {
     "time": 66,
@@ -4924,7 +4924,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 45.112,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 66,
@@ -4937,7 +4937,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 55.4934,
-    "total_score": 178.4027
+    "total_score": 176.999
   },
   {
     "time": 67,
@@ -4950,7 +4950,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 84.5837,
-    "total_score": 268.1963
+    "total_score": 266.5111
   },
   {
     "time": 67,
@@ -4963,7 +4963,7 @@
     "task_load": 28.91,
     "target_station": null,
     "total_distance": 77.9232,
-    "total_score": 177.123
+    "total_score": 175.8748
   },
   {
     "time": 67,
@@ -4976,7 +4976,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 62.2283,
-    "total_score": 177.2973
+    "total_score": 176.0975
   },
   {
     "time": 67,
@@ -4989,7 +4989,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 46.612,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 67,
@@ -5002,7 +5002,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 56.9934,
-    "total_score": 178.4027
+    "total_score": 176.999
   },
   {
     "time": 68,
@@ -5015,7 +5015,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 78.4827,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 68,
@@ -5028,7 +5028,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 78.4827,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 68,
@@ -5041,7 +5041,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 62.3424,
-    "total_score": 177.2973
+    "total_score": 176.0975
   },
   {
     "time": 68,
@@ -5054,7 +5054,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 86.0837,
-    "total_score": 268.1963
+    "total_score": 266.5111
   },
   {
     "time": 68,
@@ -5067,7 +5067,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 78.4827,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 68,
@@ -5080,7 +5080,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 62.3424,
-    "total_score": 177.2973
+    "total_score": 176.0975
   },
   {
     "time": 68,
@@ -5093,7 +5093,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 48.112,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 68,
@@ -5106,7 +5106,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 58.4934,
-    "total_score": 178.4027
+    "total_score": 176.999
   },
   {
     "time": 69,
@@ -5119,7 +5119,7 @@
     "task_load": 29.76,
     "target_station": null,
     "total_distance": 62.3424,
-    "total_score": 177.2973
+    "total_score": 176.0975
   },
   {
     "time": 69,
@@ -5132,7 +5132,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 87.3456,
-    "total_score": 268.1963
+    "total_score": 266.5111
   },
   {
     "time": 69,
@@ -5145,7 +5145,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 59.9911,
-    "total_score": 178.4027
+    "total_score": 176.999
   },
   {
     "time": 69,
@@ -5158,7 +5158,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 87.3456,
-    "total_score": 268.1963
+    "total_score": 266.5111
   },
   {
     "time": 69,
@@ -5171,7 +5171,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 79.9827,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 69,
@@ -5184,7 +5184,7 @@
     "task_load": 29.76,
     "target_station": null,
     "total_distance": 63.8424,
-    "total_score": 177.2973
+    "total_score": 176.0975
   },
   {
     "time": 69,
@@ -5197,7 +5197,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 49.612,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 69,
@@ -5210,7 +5210,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 59.9911,
-    "total_score": 178.4027
+    "total_score": 176.999
   },
   {
     "time": 70,
@@ -5223,7 +5223,7 @@
     "task_load": 24.44,
     "target_station": null,
     "total_distance": 87.3456,
-    "total_score": 268.1963
+    "total_score": 266.5111
   },
   {
     "time": 70,
@@ -5236,7 +5236,7 @@
     "task_load": 29.97,
     "target_station": null,
     "total_distance": 59.9911,
-    "total_score": 178.4027
+    "total_score": 176.999
   },
   {
     "time": 70,
@@ -5249,7 +5249,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 50.1715,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 70,
@@ -5262,7 +5262,7 @@
     "task_load": 24.44,
     "target_station": null,
     "total_distance": 88.8456,
-    "total_score": 268.1963
+    "total_score": 266.5111
   },
   {
     "time": 70,
@@ -5275,7 +5275,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 81.4827,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 70,
@@ -5288,7 +5288,7 @@
     "task_load": 29.76,
     "target_station": null,
     "total_distance": 65.3424,
-    "total_score": 177.2973
+    "total_score": 176.0975
   },
   {
     "time": 70,
@@ -5301,7 +5301,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 50.1715,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 70,
@@ -5314,7 +5314,7 @@
     "task_load": 29.97,
     "target_station": null,
     "total_distance": 61.4911,
-    "total_score": 178.4027
+    "total_score": 176.999
   },
   {
     "time": 71,
@@ -5327,7 +5327,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 66.513,
-    "total_score": 273.7949
+    "total_score": 272.8994
   },
   {
     "time": 71,
@@ -5340,7 +5340,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 66.513,
-    "total_score": 273.7949
+    "total_score": 272.8994
   },
   {
     "time": 71,
@@ -5353,7 +5353,7 @@
     "task_load": 24.44,
     "target_station": null,
     "total_distance": 90.3456,
-    "total_score": 268.1963
+    "total_score": 266.5111
   },
   {
     "time": 71,
@@ -5366,7 +5366,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 82.9827,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 71,
@@ -5379,7 +5379,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 66.513,
-    "total_score": 273.7949
+    "total_score": 272.8994
   },
   {
     "time": 71,
@@ -5392,7 +5392,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 50.1715,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 71,
@@ -5405,7 +5405,7 @@
     "task_load": 29.97,
     "target_station": null,
     "total_distance": 62.9911,
-    "total_score": 178.4027
+    "total_score": 176.999
   },
   {
     "time": 72,
@@ -5418,7 +5418,7 @@
     "task_load": 20.05,
     "target_station": null,
     "total_distance": 50.1715,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 72,
@@ -5431,7 +5431,7 @@
     "task_load": 24.44,
     "target_station": null,
     "total_distance": 91.8456,
-    "total_score": 268.1963
+    "total_score": 266.5111
   },
   {
     "time": 72,
@@ -5444,7 +5444,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 84.4827,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 72,
@@ -5457,7 +5457,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 68.013,
-    "total_score": 273.7949
+    "total_score": 272.8994
   },
   {
     "time": 72,
@@ -5470,7 +5470,7 @@
     "task_load": 20.05,
     "target_station": null,
     "total_distance": 51.6715,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 72,
@@ -5483,7 +5483,7 @@
     "task_load": 29.97,
     "target_station": null,
     "total_distance": 64.4911,
-    "total_score": 178.4027
+    "total_score": 176.999
   },
   {
     "time": 73,
@@ -5496,7 +5496,7 @@
     "task_load": 24.44,
     "target_station": null,
     "total_distance": 93.3456,
-    "total_score": 268.1963
+    "total_score": 266.5111
   },
   {
     "time": 73,
@@ -5509,7 +5509,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 85.9827,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 73,
@@ -5522,7 +5522,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 69.513,
-    "total_score": 273.7949
+    "total_score": 272.8994
   },
   {
     "time": 73,
@@ -5535,7 +5535,7 @@
     "task_load": 20.05,
     "target_station": null,
     "total_distance": 53.1715,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 73,
@@ -5548,7 +5548,7 @@
     "task_load": 29.97,
     "target_station": null,
     "total_distance": 65.9911,
-    "total_score": 178.4027
+    "total_score": 176.999
   },
   {
     "time": 74,
@@ -5561,7 +5561,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 93.4837,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 74,
@@ -5574,7 +5574,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 93.4837,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 74,
@@ -5587,7 +5587,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 70.6837,
-    "total_score": 273.7949
+    "total_score": 272.8994
   },
   {
     "time": 74,
@@ -5600,7 +5600,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 93.4837,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 74,
@@ -5613,7 +5613,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 87.4827,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 74,
@@ -5626,7 +5626,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 70.6837,
-    "total_score": 273.7949
+    "total_score": 272.8994
   },
   {
     "time": 74,
@@ -5639,7 +5639,7 @@
     "task_load": 20.05,
     "target_station": null,
     "total_distance": 54.6715,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 74,
@@ -5652,7 +5652,7 @@
     "task_load": 29.97,
     "target_station": null,
     "total_distance": 67.4911,
-    "total_score": 178.4027
+    "total_score": 176.999
   },
   {
     "time": 75,
@@ -5665,7 +5665,7 @@
     "task_load": 11.34,
     "target_station": null,
     "total_distance": 70.6837,
-    "total_score": 273.7949
+    "total_score": 272.8994
   },
   {
     "time": 75,
@@ -5678,7 +5678,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.9837,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 75,
@@ -5691,7 +5691,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 88.9827,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 75,
@@ -5704,7 +5704,7 @@
     "task_load": 11.34,
     "target_station": null,
     "total_distance": 72.1837,
-    "total_score": 273.7949
+    "total_score": 272.8994
   },
   {
     "time": 75,
@@ -5717,7 +5717,7 @@
     "task_load": 20.05,
     "target_station": null,
     "total_distance": 56.1715,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 75,
@@ -5730,7 +5730,7 @@
     "task_load": 29.97,
     "target_station": null,
     "total_distance": 68.9911,
-    "total_score": 178.4027
+    "total_score": 176.999
   },
   {
     "time": 76,
@@ -5743,7 +5743,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 70.0548,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 76,
@@ -5756,7 +5756,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 70.0548,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 76,
@@ -5769,7 +5769,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 96.4837,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 76,
@@ -5782,7 +5782,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 90.4827,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 76,
@@ -5795,7 +5795,7 @@
     "task_load": 11.34,
     "target_station": null,
     "total_distance": 73.6837,
-    "total_score": 273.7949
+    "total_score": 272.8994
   },
   {
     "time": 76,
@@ -5808,7 +5808,7 @@
     "task_load": 20.05,
     "target_station": null,
     "total_distance": 57.6715,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 76,
@@ -5821,7 +5821,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 70.0548,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 77,
@@ -5834,7 +5834,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 97.9837,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 77,
@@ -5847,7 +5847,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 91.9827,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 77,
@@ -5860,7 +5860,7 @@
     "task_load": 11.34,
     "target_station": null,
     "total_distance": 75.1837,
-    "total_score": 273.7949
+    "total_score": 272.8994
   },
   {
     "time": 77,
@@ -5873,7 +5873,7 @@
     "task_load": 20.05,
     "target_station": null,
     "total_distance": 59.1715,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 77,
@@ -5886,7 +5886,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 71.5548,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 78,
@@ -5899,7 +5899,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 99.4837,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 78,
@@ -5912,7 +5912,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 93.4827,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 78,
@@ -5925,7 +5925,7 @@
     "task_load": 11.34,
     "target_station": null,
     "total_distance": 76.6837,
-    "total_score": 273.7949
+    "total_score": 272.8994
   },
   {
     "time": 78,
@@ -5938,7 +5938,7 @@
     "task_load": 20.05,
     "target_station": null,
     "total_distance": 60.6715,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 78,
@@ -5951,7 +5951,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 73.0548,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 79,
@@ -5964,7 +5964,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 99.6218,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 79,
@@ -5977,7 +5977,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 99.6218,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 79,
@@ -5990,7 +5990,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 79,
@@ -6003,7 +6003,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 99.6218,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 79,
@@ -6016,7 +6016,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 79,
@@ -6029,7 +6029,7 @@
     "task_load": 11.34,
     "target_station": null,
     "total_distance": 78.1837,
-    "total_score": 273.7949
+    "total_score": 272.8994
   },
   {
     "time": 79,
@@ -6042,7 +6042,7 @@
     "task_load": 20.05,
     "target_station": null,
     "total_distance": 62.1715,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 79,
@@ -6055,7 +6055,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 74.5548,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 80,
@@ -6068,7 +6068,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 101.1218,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 80,
@@ -6081,7 +6081,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 80,
@@ -6094,7 +6094,7 @@
     "task_load": 11.34,
     "target_station": null,
     "total_distance": 79.6837,
-    "total_score": 273.7949
+    "total_score": 272.8994
   },
   {
     "time": 80,
@@ -6107,7 +6107,7 @@
     "task_load": 20.05,
     "target_station": null,
     "total_distance": 63.6715,
-    "total_score": 281.9485
+    "total_score": 280.7639
   },
   {
     "time": 80,
@@ -6120,7 +6120,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 76.0548,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 81,
@@ -6133,7 +6133,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 65.1693,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 81,
@@ -6146,7 +6146,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 65.1693,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 81,
@@ -6159,7 +6159,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 102.6218,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 81,
@@ -6172,7 +6172,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 81,
@@ -6185,7 +6185,7 @@
     "task_load": 11.34,
     "target_station": null,
     "total_distance": 81.1837,
-    "total_score": 273.7949
+    "total_score": 272.8994
   },
   {
     "time": 81,
@@ -6198,7 +6198,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 65.1693,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 81,
@@ -6211,7 +6211,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 77.5548,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 82,
@@ -6224,7 +6224,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 104.1218,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 82,
@@ -6237,7 +6237,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 82,
@@ -6250,7 +6250,7 @@
     "task_load": 11.34,
     "target_station": null,
     "total_distance": 82.6837,
-    "total_score": 273.7949
+    "total_score": 272.8994
   },
   {
     "time": 82,
@@ -6263,7 +6263,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 66.6693,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 82,
@@ -6276,7 +6276,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 79.0548,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 83,
@@ -6289,7 +6289,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 83.7408,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 83,
@@ -6302,7 +6302,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 83.7408,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 83,
@@ -6315,7 +6315,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 83,
@@ -6328,7 +6328,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 105.6218,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 83,
@@ -6341,7 +6341,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 83,
@@ -6354,7 +6354,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 83.7408,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 83,
@@ -6367,7 +6367,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 68.1693,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 83,
@@ -6380,7 +6380,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 84,
@@ -6393,7 +6393,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 107.1218,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 84,
@@ -6406,7 +6406,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 84,
@@ -6419,7 +6419,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 85.2408,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 84,
@@ -6432,7 +6432,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 69.6693,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 84,
@@ -6445,7 +6445,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 85,
@@ -6458,7 +6458,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 108.6218,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 85,
@@ -6471,7 +6471,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 85,
@@ -6484,7 +6484,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 86.7408,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 85,
@@ -6497,7 +6497,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 71.1693,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 85,
@@ -6510,7 +6510,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 86,
@@ -6523,7 +6523,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 110.1218,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 86,
@@ -6536,7 +6536,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 86,
@@ -6549,7 +6549,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 88.2408,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 86,
@@ -6562,7 +6562,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 72.6693,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 86,
@@ -6575,7 +6575,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 87,
@@ -6588,7 +6588,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.6218,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 87,
@@ -6601,7 +6601,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 87,
@@ -6614,7 +6614,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 89.7408,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 87,
@@ -6627,7 +6627,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 74.1693,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 87,
@@ -6640,7 +6640,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 88,
@@ -6653,7 +6653,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 88,
@@ -6666,7 +6666,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 88,
@@ -6679,7 +6679,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 88,
@@ -6692,7 +6692,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 88,
@@ -6705,7 +6705,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 91.2408,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 88,
@@ -6718,7 +6718,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 75.6693,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 88,
@@ -6731,7 +6731,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 89,
@@ -6744,7 +6744,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 89,
@@ -6757,7 +6757,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 89,
@@ -6770,7 +6770,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 92.7408,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 89,
@@ -6783,7 +6783,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 77.1693,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 89,
@@ -6796,7 +6796,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 90,
@@ -6809,7 +6809,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 90,
@@ -6822,7 +6822,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 90,
@@ -6835,7 +6835,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.2408,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 90,
@@ -6848,7 +6848,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 78.6693,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 90,
@@ -6861,7 +6861,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 91,
@@ -6874,7 +6874,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1671,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 91,
@@ -6887,7 +6887,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 91,
@@ -6900,7 +6900,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 91,
@@ -6913,7 +6913,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 95.7408,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 91,
@@ -6926,7 +6926,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1671,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 91,
@@ -6939,7 +6939,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 92,
@@ -6952,7 +6952,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 96.7979,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 92,
@@ -6965,7 +6965,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 96.7979,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 92,
@@ -6978,7 +6978,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 92,
@@ -6991,7 +6991,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 92,
@@ -7004,7 +7004,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 96.7979,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 92,
@@ -7017,7 +7017,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1671,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 92,
@@ -7030,7 +7030,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 93,
@@ -7043,7 +7043,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 93,
@@ -7056,7 +7056,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 93,
@@ -7069,7 +7069,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 98.2979,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 93,
@@ -7082,7 +7082,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1671,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 93,
@@ -7095,7 +7095,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 94,
@@ -7108,7 +7108,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 94,
@@ -7121,7 +7121,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 94,
@@ -7134,7 +7134,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 99.7979,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 94,
@@ -7147,7 +7147,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1671,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 94,
@@ -7160,7 +7160,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 95,
@@ -7173,7 +7173,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 95,
@@ -7186,7 +7186,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 95,
@@ -7199,7 +7199,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 101.2979,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 95,
@@ -7212,7 +7212,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1671,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 95,
@@ -7225,7 +7225,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 96,
@@ -7238,7 +7238,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 96,
@@ -7251,7 +7251,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 96,
@@ -7264,7 +7264,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 102.7979,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 96,
@@ -7277,7 +7277,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1671,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 96,
@@ -7290,7 +7290,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 97,
@@ -7303,7 +7303,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 97,
@@ -7316,7 +7316,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 97,
@@ -7329,7 +7329,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 104.2979,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 97,
@@ -7342,7 +7342,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1671,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 97,
@@ -7355,7 +7355,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 98,
@@ -7368,7 +7368,7 @@
     "task_load": 25.06,
     "target_station": null,
     "total_distance": 80.1671,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 98,
@@ -7381,7 +7381,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 98,
@@ -7394,7 +7394,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 98,
@@ -7407,7 +7407,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 105.7979,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 98,
@@ -7420,7 +7420,7 @@
     "task_load": 25.06,
     "target_station": null,
     "total_distance": 81.6671,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 98,
@@ -7433,7 +7433,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 99,
@@ -7446,7 +7446,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 99,
@@ -7459,7 +7459,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 99,
@@ -7472,7 +7472,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 107.2979,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 99,
@@ -7485,7 +7485,7 @@
     "task_load": 25.06,
     "target_station": null,
     "total_distance": 83.1671,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 99,
@@ -7498,7 +7498,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 100,
@@ -7511,7 +7511,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 100,
@@ -7524,7 +7524,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 100,
@@ -7537,7 +7537,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 108.7979,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 100,
@@ -7550,7 +7550,7 @@
     "task_load": 25.06,
     "target_station": null,
     "total_distance": 84.6671,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 100,
@@ -7563,7 +7563,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 101,
@@ -7576,7 +7576,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 108.9547,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 101,
@@ -7589,7 +7589,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 108.9547,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 101,
@@ -7602,7 +7602,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 101,
@@ -7615,7 +7615,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 101,
@@ -7628,7 +7628,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 108.9547,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 101,
@@ -7641,7 +7641,7 @@
     "task_load": 25.06,
     "target_station": null,
     "total_distance": 86.1671,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 101,
@@ -7654,7 +7654,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 102,
@@ -7667,7 +7667,7 @@
     "task_load": 1.88,
     "target_station": null,
     "total_distance": 94.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 102,
@@ -7680,7 +7680,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 102,
@@ -7693,7 +7693,7 @@
     "task_load": 1.88,
     "target_station": null,
     "total_distance": 95.5422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 102,
@@ -7706,7 +7706,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 108.9547,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 102,
@@ -7719,7 +7719,7 @@
     "task_load": 25.06,
     "target_station": null,
     "total_distance": 87.6671,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 102,
@@ -7732,7 +7732,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 80.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 103,
@@ -7745,7 +7745,7 @@
     "task_load": 15.07,
     "target_station": null,
     "total_distance": 80.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 103,
@@ -7758,7 +7758,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 103,
@@ -7771,7 +7771,7 @@
     "task_load": 1.88,
     "target_station": null,
     "total_distance": 97.0422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 103,
@@ -7784,7 +7784,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 108.9547,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 103,
@@ -7797,7 +7797,7 @@
     "task_load": 25.06,
     "target_station": null,
     "total_distance": 89.1671,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 103,
@@ -7810,7 +7810,7 @@
     "task_load": 15.07,
     "target_station": null,
     "total_distance": 81.6184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 104,
@@ -7823,7 +7823,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 104,
@@ -7836,7 +7836,7 @@
     "task_load": 1.88,
     "target_station": null,
     "total_distance": 98.5422,
-    "total_score": 265.7873
+    "total_score": 263.9436
   },
   {
     "time": 104,
@@ -7849,7 +7849,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 108.9547,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 104,
@@ -7862,7 +7862,7 @@
     "task_load": 25.06,
     "target_station": null,
     "total_distance": 90.6671,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 104,
@@ -7875,7 +7875,7 @@
     "task_load": 15.07,
     "target_station": null,
     "total_distance": 83.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 105,
@@ -7888,7 +7888,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 99.7009,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 105,
@@ -7901,7 +7901,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 99.7009,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 105,
@@ -7914,7 +7914,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 111.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 105,
@@ -7927,7 +7927,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 111.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 105,
@@ -7940,7 +7940,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 99.7009,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 105,
@@ -7953,7 +7953,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 108.9547,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 105,
@@ -7966,7 +7966,7 @@
     "task_load": 25.06,
     "target_station": null,
     "total_distance": 92.1671,
-    "total_score": 371.1499
+    "total_score": 369.2634
   },
   {
     "time": 105,
@@ -7979,7 +7979,7 @@
     "task_load": 15.07,
     "target_station": null,
     "total_distance": 84.6184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 106,
@@ -7992,7 +7992,7 @@
     "task_load": 20.07,
     "target_station": null,
     "total_distance": 111.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 106,
@@ -8005,7 +8005,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 93.429,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 106,
@@ -8018,7 +8018,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 93.429,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 106,
@@ -8031,7 +8031,7 @@
     "task_load": 20.07,
     "target_station": null,
     "total_distance": 113.2786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 106,
@@ -8044,7 +8044,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 101.2009,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 106,
@@ -8057,7 +8057,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 108.9547,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 106,
@@ -8070,7 +8070,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 93.429,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 106,
@@ -8083,7 +8083,7 @@
     "task_load": 15.07,
     "target_station": null,
     "total_distance": 86.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 107,
@@ -8096,7 +8096,7 @@
     "task_load": 20.07,
     "target_station": null,
     "total_distance": 114.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 107,
@@ -8109,7 +8109,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 102.7009,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 107,
@@ -8122,7 +8122,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 108.9547,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 107,
@@ -8135,7 +8135,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 94.929,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 107,
@@ -8148,7 +8148,7 @@
     "task_load": 15.07,
     "target_station": null,
     "total_distance": 87.6184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 108,
@@ -8161,7 +8161,7 @@
     "task_load": 20.07,
     "target_station": null,
     "total_distance": 116.2786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 108,
@@ -8174,7 +8174,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 104.2009,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 108,
@@ -8187,7 +8187,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 108.9547,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 108,
@@ -8200,7 +8200,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 96.429,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 108,
@@ -8213,7 +8213,7 @@
     "task_load": 15.07,
     "target_station": null,
     "total_distance": 89.1184,
-    "total_score": 269.7645
+    "total_score": 269.2821
   },
   {
     "time": 109,
@@ -8226,7 +8226,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 105.3597,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 109,
@@ -8239,7 +8239,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 105.3597,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 109,
@@ -8252,7 +8252,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 89.4915,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 109,
@@ -8265,7 +8265,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 89.4915,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 109,
@@ -8278,7 +8278,7 @@
     "task_load": 20.07,
     "target_station": null,
     "total_distance": 117.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 109,
@@ -8291,7 +8291,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 105.3597,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 109,
@@ -8304,7 +8304,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 108.9547,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 109,
@@ -8317,7 +8317,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 97.929,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 109,
@@ -8330,7 +8330,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 89.4915,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 110,
@@ -8343,7 +8343,7 @@
     "task_load": 20.07,
     "target_station": null,
     "total_distance": 119.2786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 110,
@@ -8356,7 +8356,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 106.8597,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 110,
@@ -8369,7 +8369,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 108.9547,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 110,
@@ -8382,7 +8382,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 99.429,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 110,
@@ -8395,7 +8395,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 90.9915,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 111,
@@ -8408,7 +8408,7 @@
     "task_load": 20.07,
     "target_station": null,
     "total_distance": 120.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 111,
@@ -8421,7 +8421,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 108.3597,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 111,
@@ -8434,7 +8434,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 108.9547,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 111,
@@ -8447,7 +8447,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 100.929,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 111,
@@ -8460,7 +8460,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 92.4915,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 112,
@@ -8473,7 +8473,7 @@
     "task_load": 20.07,
     "target_station": null,
     "total_distance": 122.2786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 112,
@@ -8486,7 +8486,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 109.8597,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 112,
@@ -8499,7 +8499,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 108.9547,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 112,
@@ -8512,7 +8512,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 102.429,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 112,
@@ -8525,7 +8525,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 93.9915,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 113,
@@ -8538,7 +8538,7 @@
     "task_load": 20.07,
     "target_station": null,
     "total_distance": 123.7786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 113,
@@ -8551,7 +8551,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.3597,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 113,
@@ -8564,7 +8564,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 108.9547,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 113,
@@ -8577,7 +8577,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 103.929,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 113,
@@ -8590,7 +8590,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 95.4915,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 114,
@@ -8603,7 +8603,7 @@
     "task_load": 20.07,
     "target_station": null,
     "total_distance": 125.2786,
-    "total_score": 360.3135
+    "total_score": 361.8043
   },
   {
     "time": 114,
@@ -8616,7 +8616,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 112.8597,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 114,
@@ -8629,7 +8629,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 108.9547,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 114,
@@ -8642,7 +8642,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 105.429,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 114,
@@ -8655,7 +8655,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 96.9915,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 115,
@@ -8668,7 +8668,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 125.8313,
-    "total_score": 450.0819
+    "total_score": 451.0286
   },
   {
     "time": 115,
@@ -8681,7 +8681,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 125.8313,
-    "total_score": 450.0819
+    "total_score": 451.0286
   },
   {
     "time": 115,
@@ -8694,7 +8694,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 106.6909,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 115,
@@ -8707,7 +8707,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 106.6909,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 115,
@@ -8720,7 +8720,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 125.8313,
-    "total_score": 450.0819
+    "total_score": 451.0286
   },
   {
     "time": 115,
@@ -8733,7 +8733,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 114.3597,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 115,
@@ -8746,7 +8746,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 108.9547,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 115,
@@ -8759,7 +8759,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 106.6909,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 115,
@@ -8772,7 +8772,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 98.4915,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 116,
@@ -8785,7 +8785,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 98.8646,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 116,
@@ -8798,7 +8798,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 98.8646,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 116,
@@ -8811,7 +8811,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 127.3313,
-    "total_score": 450.0819
+    "total_score": 451.0286
   },
   {
     "time": 116,
@@ -8824,7 +8824,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 115.8597,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 116,
@@ -8837,7 +8837,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 108.9547,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 116,
@@ -8850,7 +8850,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 108.1909,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 116,
@@ -8863,7 +8863,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 98.8646,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 117,
@@ -8876,7 +8876,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 128.8313,
-    "total_score": 450.0819
+    "total_score": 451.0286
   },
   {
     "time": 117,
@@ -8889,7 +8889,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 117.3597,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 117,
@@ -8902,7 +8902,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 108.9547,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 117,
@@ -8915,7 +8915,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 109.6909,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 117,
@@ -8928,7 +8928,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 100.3646,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 118,
@@ -8941,7 +8941,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 117.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 118,
@@ -8954,7 +8954,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 108.9547,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 118,
@@ -8967,7 +8967,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 117.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 118,
@@ -8980,7 +8980,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 130.3313,
-    "total_score": 450.0819
+    "total_score": 451.0286
   },
   {
     "time": 118,
@@ -8993,7 +8993,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 117.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 118,
@@ -9006,7 +9006,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 108.9547,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 118,
@@ -9019,7 +9019,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.1909,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 118,
@@ -9032,7 +9032,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 101.8646,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 119,
@@ -9045,7 +9045,7 @@
     "task_load": 15.35,
     "target_station": null,
     "total_distance": 108.9547,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 119,
@@ -9058,7 +9058,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 131.8313,
-    "total_score": 450.0819
+    "total_score": 451.0286
   },
   {
     "time": 119,
@@ -9071,7 +9071,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 117.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 119,
@@ -9084,7 +9084,7 @@
     "task_load": 15.35,
     "target_station": null,
     "total_distance": 110.4547,
-    "total_score": 363.9606
+    "total_score": 362.8871
   },
   {
     "time": 119,
@@ -9097,7 +9097,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 112.6909,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 119,
@@ -9110,7 +9110,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 103.3646,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 120,
@@ -9123,7 +9123,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 111.0548,
-    "total_score": 461.9006
+    "total_score": 461.2767
   },
   {
     "time": 120,
@@ -9136,7 +9136,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 111.0548,
-    "total_score": 461.9006
+    "total_score": 461.2767
   },
   {
     "time": 120,
@@ -9149,7 +9149,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 133.3313,
-    "total_score": 450.0819
+    "total_score": 451.0286
   },
   {
     "time": 120,
@@ -9162,7 +9162,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 117.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 120,
@@ -9175,7 +9175,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 111.0548,
-    "total_score": 461.9006
+    "total_score": 461.2767
   },
   {
     "time": 120,
@@ -9188,7 +9188,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 114.1909,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 120,
@@ -9201,7 +9201,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 104.8646,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 121,
@@ -9214,7 +9214,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 134.8313,
-    "total_score": 450.0819
+    "total_score": 451.0286
   },
   {
     "time": 121,
@@ -9227,7 +9227,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 117.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 121,
@@ -9240,7 +9240,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 112.5548,
-    "total_score": 461.9006
+    "total_score": 461.2767
   },
   {
     "time": 121,
@@ -9253,7 +9253,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 115.6909,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 121,
@@ -9266,7 +9266,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 106.3646,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 122,
@@ -9279,7 +9279,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 136.3313,
-    "total_score": 450.0819
+    "total_score": 451.0286
   },
   {
     "time": 122,
@@ -9292,7 +9292,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 117.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 122,
@@ -9305,7 +9305,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 114.0548,
-    "total_score": 461.9006
+    "total_score": 461.2767
   },
   {
     "time": 122,
@@ -9318,7 +9318,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 117.1909,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 122,
@@ -9331,7 +9331,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 107.8646,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 123,
@@ -9344,7 +9344,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 137.8313,
-    "total_score": 450.0819
+    "total_score": 451.0286
   },
   {
     "time": 123,
@@ -9357,7 +9357,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 117.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 123,
@@ -9370,7 +9370,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 115.5548,
-    "total_score": 461.9006
+    "total_score": 461.2767
   },
   {
     "time": 123,
@@ -9383,7 +9383,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 118.6909,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 123,
@@ -9396,7 +9396,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 109.3646,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 124,
@@ -9409,7 +9409,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 139.0932,
-    "total_score": 450.0819
+    "total_score": 451.0286
   },
   {
     "time": 124,
@@ -9422,7 +9422,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 124,
@@ -9435,7 +9435,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 124,
@@ -9448,7 +9448,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 139.0932,
-    "total_score": 450.0819
+    "total_score": 451.0286
   },
   {
     "time": 124,
@@ -9461,7 +9461,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 117.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 124,
@@ -9474,7 +9474,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 117.0548,
-    "total_score": 461.9006
+    "total_score": 461.2767
   },
   {
     "time": 124,
@@ -9487,7 +9487,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 124,
@@ -9500,7 +9500,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 110.8646,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 125,
@@ -9513,7 +9513,7 @@
     "task_load": 22.05,
     "target_station": null,
     "total_distance": 139.0932,
-    "total_score": 450.0819
+    "total_score": 451.0286
   },
   {
     "time": 125,
@@ -9526,7 +9526,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 125,
@@ -9539,7 +9539,7 @@
     "task_load": 22.05,
     "target_station": null,
     "total_distance": 140.5932,
-    "total_score": 450.0819
+    "total_score": 451.0286
   },
   {
     "time": 125,
@@ -9552,7 +9552,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 117.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 125,
@@ -9565,7 +9565,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 118.5548,
-    "total_score": 461.9006
+    "total_score": 461.2767
   },
   {
     "time": 125,
@@ -9578,7 +9578,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 125,
@@ -9591,7 +9591,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 126,
@@ -9604,7 +9604,7 @@
     "task_load": 22.05,
     "target_station": null,
     "total_distance": 142.0932,
-    "total_score": 450.0819
+    "total_score": 451.0286
   },
   {
     "time": 126,
@@ -9617,7 +9617,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 117.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 126,
@@ -9630,7 +9630,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 120.0548,
-    "total_score": 461.9006
+    "total_score": 461.2767
   },
   {
     "time": 126,
@@ -9643,7 +9643,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 126,
@@ -9656,7 +9656,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 127,
@@ -9669,7 +9669,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 121.1184,
-    "total_score": 461.9006
+    "total_score": 461.2767
   },
   {
     "time": 127,
@@ -9682,7 +9682,7 @@
     "task_load": 22.05,
     "target_station": null,
     "total_distance": 143.5932,
-    "total_score": 450.0819
+    "total_score": 451.0286
   },
   {
     "time": 127,
@@ -9695,7 +9695,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 117.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 127,
@@ -9708,7 +9708,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 121.1184,
-    "total_score": 461.9006
+    "total_score": 461.2767
   },
   {
     "time": 127,
@@ -9721,7 +9721,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 127,
@@ -9734,7 +9734,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 128,
@@ -9747,7 +9747,7 @@
     "task_load": 17.95,
     "target_station": null,
     "total_distance": 121.1184,
-    "total_score": 461.9006
+    "total_score": 461.2767
   },
   {
     "time": 128,
@@ -9760,7 +9760,7 @@
     "task_load": 22.05,
     "target_station": null,
     "total_distance": 145.0932,
-    "total_score": 450.0819
+    "total_score": 451.0286
   },
   {
     "time": 128,
@@ -9773,7 +9773,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 117.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 128,
@@ -9786,7 +9786,7 @@
     "task_load": 17.95,
     "target_station": null,
     "total_distance": 122.6184,
-    "total_score": 461.9006
+    "total_score": 461.2767
   },
   {
     "time": 128,
@@ -9799,7 +9799,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 128,
@@ -9812,7 +9812,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 129,
@@ -9825,7 +9825,7 @@
     "task_load": 22.05,
     "target_station": null,
     "total_distance": 146.5932,
-    "total_score": 450.0819
+    "total_score": 451.0286
   },
   {
     "time": 129,
@@ -9838,7 +9838,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 117.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 129,
@@ -9851,7 +9851,7 @@
     "task_load": 17.95,
     "target_station": null,
     "total_distance": 124.1184,
-    "total_score": 461.9006
+    "total_score": 461.2767
   },
   {
     "time": 129,
@@ -9864,7 +9864,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 129,
@@ -9877,7 +9877,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 130,
@@ -9890,7 +9890,7 @@
     "task_load": 22.05,
     "target_station": null,
     "total_distance": 148.0932,
-    "total_score": 450.0819
+    "total_score": 451.0286
   },
   {
     "time": 130,
@@ -9903,7 +9903,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 117.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 130,
@@ -9916,7 +9916,7 @@
     "task_load": 17.95,
     "target_station": null,
     "total_distance": 125.6184,
-    "total_score": 461.9006
+    "total_score": 461.2767
   },
   {
     "time": 130,
@@ -9929,7 +9929,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 130,
@@ -9942,7 +9942,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 131,
@@ -9955,7 +9955,7 @@
     "task_load": 22.05,
     "target_station": null,
     "total_distance": 149.5932,
-    "total_score": 450.0819
+    "total_score": 451.0286
   },
   {
     "time": 131,
@@ -9968,7 +9968,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 117.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 131,
@@ -9981,7 +9981,7 @@
     "task_load": 17.95,
     "target_station": null,
     "total_distance": 127.1184,
-    "total_score": 461.9006
+    "total_score": 461.2767
   },
   {
     "time": 131,
@@ -9994,7 +9994,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 131,
@@ -10007,7 +10007,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 132,
@@ -10020,7 +10020,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 149.753,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 132,
@@ -10033,7 +10033,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 149.753,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 132,
@@ -10046,7 +10046,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 149.753,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 132,
@@ -10059,7 +10059,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 117.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 132,
@@ -10072,7 +10072,7 @@
     "task_load": 17.95,
     "target_station": null,
     "total_distance": 128.6184,
-    "total_score": 461.9006
+    "total_score": 461.2767
   },
   {
     "time": 132,
@@ -10085,7 +10085,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 132,
@@ -10098,7 +10098,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 133,
@@ -10111,7 +10111,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 151.253,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 133,
@@ -10124,7 +10124,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 117.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 133,
@@ -10137,7 +10137,7 @@
     "task_load": 17.95,
     "target_station": null,
     "total_distance": 130.1184,
-    "total_score": 461.9006
+    "total_score": 461.2767
   },
   {
     "time": 133,
@@ -10150,7 +10150,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 133,
@@ -10163,7 +10163,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 134,
@@ -10176,7 +10176,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 131.2609,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 134,
@@ -10189,7 +10189,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 131.2609,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 134,
@@ -10202,7 +10202,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 152.753,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 134,
@@ -10215,7 +10215,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 117.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 134,
@@ -10228,7 +10228,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 131.2609,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 134,
@@ -10241,7 +10241,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 134,
@@ -10254,7 +10254,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 135,
@@ -10267,7 +10267,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 154.253,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 135,
@@ -10280,7 +10280,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 117.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 135,
@@ -10293,7 +10293,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 132.7609,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 135,
@@ -10306,7 +10306,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 135,
@@ -10319,7 +10319,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 136,
@@ -10332,7 +10332,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 117.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 136,
@@ -10345,7 +10345,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 136,
@@ -10358,7 +10358,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 155.753,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 136,
@@ -10371,7 +10371,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 117.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 136,
@@ -10384,7 +10384,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 134.2609,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 136,
@@ -10397,7 +10397,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 136,
@@ -10410,7 +10410,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 137,
@@ -10423,7 +10423,7 @@
     "task_load": 10.1,
     "target_station": null,
     "total_distance": 117.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 137,
@@ -10436,7 +10436,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 157.253,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 137,
@@ -10449,7 +10449,7 @@
     "task_load": 10.1,
     "target_station": null,
     "total_distance": 119.0165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 137,
@@ -10462,7 +10462,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 135.7609,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 137,
@@ -10475,7 +10475,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 137,
@@ -10488,7 +10488,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 138,
@@ -10501,7 +10501,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 158.753,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 138,
@@ -10514,7 +10514,7 @@
     "task_load": 10.1,
     "target_station": null,
     "total_distance": 120.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 138,
@@ -10527,7 +10527,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 137.2609,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 138,
@@ -10540,7 +10540,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 138,
@@ -10553,7 +10553,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 139,
@@ -10566,7 +10566,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.253,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 139,
@@ -10579,7 +10579,7 @@
     "task_load": 10.1,
     "target_station": null,
     "total_distance": 122.0165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 139,
@@ -10592,7 +10592,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 138.7609,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 139,
@@ -10605,7 +10605,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 139,
@@ -10618,7 +10618,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 140,
@@ -10631,7 +10631,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 140,
@@ -10644,7 +10644,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 140,
@@ -10657,7 +10657,7 @@
     "task_load": 10.1,
     "target_station": null,
     "total_distance": 123.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 140,
@@ -10670,7 +10670,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 140.2609,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 140,
@@ -10683,7 +10683,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 140,
@@ -10696,7 +10696,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 141,
@@ -10709,7 +10709,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 141,
@@ -10722,7 +10722,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 141,
@@ -10735,7 +10735,7 @@
     "task_load": 10.1,
     "target_station": null,
     "total_distance": 125.0165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 141,
@@ -10748,7 +10748,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 141,
@@ -10761,7 +10761,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 141,
@@ -10774,7 +10774,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 142,
@@ -10787,7 +10787,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 142,
@@ -10800,7 +10800,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 142,
@@ -10813,7 +10813,7 @@
     "task_load": 10.1,
     "target_station": null,
     "total_distance": 126.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 142,
@@ -10826,7 +10826,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 142,
@@ -10839,7 +10839,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 142,
@@ -10852,7 +10852,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 143,
@@ -10865,7 +10865,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 143,
@@ -10878,7 +10878,7 @@
     "task_load": 10.1,
     "target_station": null,
     "total_distance": 128.0165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 143,
@@ -10891,7 +10891,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 143,
@@ -10904,7 +10904,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 143,
@@ -10917,7 +10917,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 144,
@@ -10930,7 +10930,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 144,
@@ -10943,7 +10943,7 @@
     "task_load": 10.1,
     "target_station": null,
     "total_distance": 129.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 144,
@@ -10956,7 +10956,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 144,
@@ -10969,7 +10969,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 144,
@@ -10982,7 +10982,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 145,
@@ -10995,7 +10995,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 145,
@@ -11008,7 +11008,7 @@
     "task_load": 10.1,
     "target_station": null,
     "total_distance": 131.0165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 145,
@@ -11021,7 +11021,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 145,
@@ -11034,7 +11034,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 145,
@@ -11047,7 +11047,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 146,
@@ -11060,7 +11060,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 146,
@@ -11073,7 +11073,7 @@
     "task_load": 10.1,
     "target_station": null,
     "total_distance": 132.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 146,
@@ -11086,7 +11086,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 146,
@@ -11099,7 +11099,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 146,
@@ -11112,7 +11112,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 147,
@@ -11125,7 +11125,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 147,
@@ -11138,7 +11138,7 @@
     "task_load": 10.1,
     "target_station": null,
     "total_distance": 134.0165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 147,
@@ -11151,7 +11151,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 147,
@@ -11164,7 +11164,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 147,
@@ -11177,7 +11177,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 148,
@@ -11190,7 +11190,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 148,
@@ -11203,7 +11203,7 @@
     "task_load": 10.1,
     "target_station": null,
     "total_distance": 135.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 148,
@@ -11216,7 +11216,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 148,
@@ -11229,7 +11229,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 148,
@@ -11242,7 +11242,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 149,
@@ -11255,7 +11255,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 149,
@@ -11268,7 +11268,7 @@
     "task_load": 10.1,
     "target_station": null,
     "total_distance": 137.0165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 149,
@@ -11281,7 +11281,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 149,
@@ -11294,7 +11294,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 149,
@@ -11307,7 +11307,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 150,
@@ -11320,7 +11320,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 150,
@@ -11333,7 +11333,7 @@
     "task_load": 10.1,
     "target_station": null,
     "total_distance": 138.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 150,
@@ -11346,7 +11346,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 150,
@@ -11359,7 +11359,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 150,
@@ -11372,7 +11372,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 151,
@@ -11385,7 +11385,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 151,
@@ -11398,7 +11398,7 @@
     "task_load": 10.1,
     "target_station": null,
     "total_distance": 140.0165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 151,
@@ -11411,7 +11411,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 151,
@@ -11424,7 +11424,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 151,
@@ -11437,7 +11437,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 152,
@@ -11450,7 +11450,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 152,
@@ -11463,7 +11463,7 @@
     "task_load": 10.1,
     "target_station": null,
     "total_distance": 141.5165,
-    "total_score": 361.7921
+    "total_score": 359.6044
   },
   {
     "time": 152,
@@ -11476,7 +11476,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 152,
@@ -11489,7 +11489,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 152,
@@ -11502,7 +11502,7 @@
     "task_load": 0.0,
     "target_station": 1,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 153,
@@ -11515,7 +11515,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 142.2631,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 153,
@@ -11528,7 +11528,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 142.2631,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 153,
@@ -11541,7 +11541,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 153,
@@ -11554,7 +11554,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 153,
@@ -11567,7 +11567,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 142.2631,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 153,
@@ -11580,7 +11580,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 153,
@@ -11593,7 +11593,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 153,
@@ -11606,7 +11606,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 154,
@@ -11619,7 +11619,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 154,
@@ -11632,7 +11632,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 143.7631,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 154,
@@ -11645,7 +11645,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 154,
@@ -11658,7 +11658,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 154,
@@ -11671,7 +11671,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 155,
@@ -11684,7 +11684,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 155,
@@ -11697,7 +11697,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 145.2631,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 155,
@@ -11710,7 +11710,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 155,
@@ -11723,7 +11723,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 155,
@@ -11736,7 +11736,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 156,
@@ -11749,7 +11749,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 156,
@@ -11762,7 +11762,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 146.7631,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 156,
@@ -11775,7 +11775,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 156,
@@ -11788,7 +11788,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 156,
@@ -11801,7 +11801,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 157,
@@ -11814,7 +11814,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 157,
@@ -11827,7 +11827,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 148.2631,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 157,
@@ -11840,7 +11840,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 157,
@@ -11853,7 +11853,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 157,
@@ -11866,7 +11866,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 158,
@@ -11879,7 +11879,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 158,
@@ -11892,7 +11892,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 149.7631,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 158,
@@ -11905,7 +11905,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 158,
@@ -11918,7 +11918,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 158,
@@ -11931,7 +11931,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 159,
@@ -11944,7 +11944,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 159,
@@ -11957,7 +11957,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 151.2631,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 159,
@@ -11970,7 +11970,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 159,
@@ -11983,7 +11983,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 159,
@@ -11996,7 +11996,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 160,
@@ -12009,7 +12009,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 160,
@@ -12022,7 +12022,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 152.7631,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 160,
@@ -12035,7 +12035,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 160,
@@ -12048,7 +12048,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 160,
@@ -12061,7 +12061,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 161,
@@ -12074,7 +12074,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 161,
@@ -12087,7 +12087,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 154.2631,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 161,
@@ -12100,7 +12100,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 161,
@@ -12113,7 +12113,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 161,
@@ -12126,7 +12126,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 162,
@@ -12139,7 +12139,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 154.853,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 162,
@@ -12152,7 +12152,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 162,
@@ -12165,7 +12165,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 154.853,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 162,
@@ -12178,7 +12178,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 162,
@@ -12191,7 +12191,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 162,
@@ -12204,7 +12204,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 163,
@@ -12217,7 +12217,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 163,
@@ -12230,7 +12230,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 154.853,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 163,
@@ -12243,7 +12243,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 163,
@@ -12256,7 +12256,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 163,
@@ -12269,7 +12269,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 164,
@@ -12282,7 +12282,7 @@
     "task_load": 15.34,
     "target_station": null,
     "total_distance": 118.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 164,
@@ -12295,7 +12295,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 164,
@@ -12308,7 +12308,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 154.853,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 164,
@@ -12321,7 +12321,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 164,
@@ -12334,7 +12334,7 @@
     "task_load": 15.34,
     "target_station": null,
     "total_distance": 120.3477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 164,
@@ -12347,7 +12347,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 165,
@@ -12360,7 +12360,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 165,
@@ -12373,7 +12373,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 154.853,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 165,
@@ -12386,7 +12386,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 165,
@@ -12399,7 +12399,7 @@
     "task_load": 15.34,
     "target_station": null,
     "total_distance": 121.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 165,
@@ -12412,7 +12412,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 166,
@@ -12425,7 +12425,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 166,
@@ -12438,7 +12438,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 154.853,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 166,
@@ -12451,7 +12451,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 166,
@@ -12464,7 +12464,7 @@
     "task_load": 15.34,
     "target_station": null,
     "total_distance": 123.3477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 166,
@@ -12477,7 +12477,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 167,
@@ -12490,7 +12490,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 167,
@@ -12503,7 +12503,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 154.853,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 167,
@@ -12516,7 +12516,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 167,
@@ -12529,7 +12529,7 @@
     "task_load": 15.34,
     "target_station": null,
     "total_distance": 124.8477,
-    "total_score": 461.5927
+    "total_score": 459.094
   },
   {
     "time": 167,
@@ -12542,7 +12542,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 168,
@@ -12555,7 +12555,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 124.8665,
-    "total_score": 557.1815
+    "total_score": 554.4787
   },
   {
     "time": 168,
@@ -12568,7 +12568,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 124.8665,
-    "total_score": 557.1815
+    "total_score": 554.4787
   },
   {
     "time": 168,
@@ -12581,7 +12581,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 168,
@@ -12594,7 +12594,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 154.853,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 168,
@@ -12607,7 +12607,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 168,
@@ -12620,7 +12620,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 124.8665,
-    "total_score": 557.1815
+    "total_score": 554.4787
   },
   {
     "time": 168,
@@ -12633,7 +12633,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 169,
@@ -12646,7 +12646,7 @@
     "task_load": 10.81,
     "target_station": null,
     "total_distance": 111.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 169,
@@ -12659,7 +12659,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 169,
@@ -12672,7 +12672,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 154.853,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 169,
@@ -12685,7 +12685,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 169,
@@ -12698,7 +12698,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 126.3665,
-    "total_score": 557.1815
+    "total_score": 554.4787
   },
   {
     "time": 169,
@@ -12711,7 +12711,7 @@
     "task_load": 10.81,
     "target_station": null,
     "total_distance": 112.5214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 170,
@@ -12724,7 +12724,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 170,
@@ -12737,7 +12737,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 154.853,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 170,
@@ -12750,7 +12750,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 170,
@@ -12763,7 +12763,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 127.8665,
-    "total_score": 557.1815
+    "total_score": 554.4787
   },
   {
     "time": 170,
@@ -12776,7 +12776,7 @@
     "task_load": 10.81,
     "target_station": null,
     "total_distance": 114.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 171,
@@ -12789,7 +12789,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 171,
@@ -12802,7 +12802,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 154.853,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 171,
@@ -12815,7 +12815,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 171,
@@ -12828,7 +12828,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 129.3665,
-    "total_score": 557.1815
+    "total_score": 554.4787
   },
   {
     "time": 171,
@@ -12841,7 +12841,7 @@
     "task_load": 10.81,
     "target_station": null,
     "total_distance": 115.5214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 172,
@@ -12854,7 +12854,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 172,
@@ -12867,7 +12867,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 154.853,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 172,
@@ -12880,7 +12880,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 172,
@@ -12893,7 +12893,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 130.8665,
-    "total_score": 557.1815
+    "total_score": 554.4787
   },
   {
     "time": 172,
@@ -12906,7 +12906,7 @@
     "task_load": 10.81,
     "target_station": null,
     "total_distance": 117.0214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 173,
@@ -12919,7 +12919,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 131.0045,
-    "total_score": 557.1815
+    "total_score": 554.4787
   },
   {
     "time": 173,
@@ -12932,7 +12932,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 173,
@@ -12945,7 +12945,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 154.853,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 173,
@@ -12958,7 +12958,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 173,
@@ -12971,7 +12971,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 131.0045,
-    "total_score": 557.1815
+    "total_score": 554.4787
   },
   {
     "time": 173,
@@ -12984,7 +12984,7 @@
     "task_load": 10.81,
     "target_station": null,
     "total_distance": 118.5214,
-    "total_score": 362.9406
+    "total_score": 362.0946
   },
   {
     "time": 174,
@@ -12997,7 +12997,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 119.1681,
-    "total_score": 457.0526
+    "total_score": 455.8477
   },
   {
     "time": 174,
@@ -13010,7 +13010,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 119.1681,
-    "total_score": 457.0526
+    "total_score": 455.8477
   },
   {
     "time": 174,
@@ -13023,7 +13023,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 174,
@@ -13036,7 +13036,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 154.853,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 174,
@@ -13049,7 +13049,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 174,
@@ -13062,7 +13062,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 131.0045,
-    "total_score": 557.1815
+    "total_score": 554.4787
   },
   {
     "time": 174,
@@ -13075,7 +13075,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 119.1681,
-    "total_score": 457.0526
+    "total_score": 455.8477
   },
   {
     "time": 175,
@@ -13088,7 +13088,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 175,
@@ -13101,7 +13101,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 154.853,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 175,
@@ -13114,7 +13114,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 175,
@@ -13127,7 +13127,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 131.0045,
-    "total_score": 557.1815
+    "total_score": 554.4787
   },
   {
     "time": 175,
@@ -13140,7 +13140,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 120.6681,
-    "total_score": 457.0526
+    "total_score": 455.8477
   },
   {
     "time": 176,
@@ -13153,7 +13153,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 176,
@@ -13166,7 +13166,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 154.853,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 176,
@@ -13179,7 +13179,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 176,
@@ -13192,7 +13192,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 131.0045,
-    "total_score": 557.1815
+    "total_score": 554.4787
   },
   {
     "time": 176,
@@ -13205,7 +13205,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 122.1681,
-    "total_score": 457.0526
+    "total_score": 455.8477
   },
   {
     "time": 177,
@@ -13218,7 +13218,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 177,
@@ -13231,7 +13231,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 154.853,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 177,
@@ -13244,7 +13244,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 177,
@@ -13257,7 +13257,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 131.0045,
-    "total_score": 557.1815
+    "total_score": 554.4787
   },
   {
     "time": 177,
@@ -13270,7 +13270,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 123.6681,
-    "total_score": 457.0526
+    "total_score": 455.8477
   },
   {
     "time": 178,
@@ -13283,7 +13283,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 178,
@@ -13296,7 +13296,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 154.853,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 178,
@@ -13309,7 +13309,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 178,
@@ -13322,7 +13322,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 131.0045,
-    "total_score": 557.1815
+    "total_score": 554.4787
   },
   {
     "time": 178,
@@ -13335,7 +13335,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 125.1681,
-    "total_score": 457.0526
+    "total_score": 455.8477
   },
   {
     "time": 179,
@@ -13348,7 +13348,7 @@
     "task_load": 5.3,
     "target_station": null,
     "total_distance": 160.4129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 179,
@@ -13361,7 +13361,7 @@
     "task_load": 7.38,
     "target_station": null,
     "total_distance": 154.853,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 179,
@@ -13374,7 +13374,7 @@
     "task_load": 5.3,
     "target_station": null,
     "total_distance": 161.9129,
-    "total_score": 541.486
+    "total_score": 542.8545
   },
   {
     "time": 179,
@@ -13387,7 +13387,7 @@
     "task_load": 7.38,
     "target_station": null,
     "total_distance": 156.353,
-    "total_score": 443.5441
+    "total_score": 440.6283
   },
   {
     "time": 179,
@@ -13400,7 +13400,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 141.4034,
-    "total_score": 552.2151
+    "total_score": 553.4993
   },
   {
     "time": 179,
@@ -13413,7 +13413,7 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 131.0045,
-    "total_score": 557.1815
+    "total_score": 554.4787
   },
   {
     "time": 179,
@@ -13426,6 +13426,6 @@
     "task_load": 0.0,
     "target_station": null,
     "total_distance": 126.6681,
-    "total_score": 457.0526
+    "total_score": 455.8477
   }
 ]

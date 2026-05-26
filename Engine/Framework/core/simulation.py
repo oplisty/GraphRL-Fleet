@@ -470,7 +470,7 @@ class Environment:
             )
             self.total_score += partial_reward
 
-        self.total_score -= self.config.overdue_penalty
+        self.total_score -= self.config.failed_task_penalty
 
         if was_assigned:
             for vehicle in self.vehicles.values():
@@ -633,13 +633,28 @@ class Environment:
 
     def _compute_task_score(self, task: Task) -> float:
         travel_dist = task.service_distance
-        wait_time = max(0, self.current_time - task.release_time)
-        overdue = max(0, self.current_time - task.deadline)
-        score = self.config.reward_base - travel_dist * self.config.distance_penalty
-        score -= wait_time * self.config.wait_time_penalty
-        if overdue > 0:
-            score -= self.config.overdue_penalty
-        return score
+        distance_reference = self._distance_reference()
+        distance_ratio = min(travel_dist / distance_reference, 1.0) if distance_reference > 1e-9 else 0.0
+        overdue = self.current_time > task.deadline
+        score = self.config.reward_base
+        score -= self.config.distance_cost_weight * distance_ratio
+        if overdue:
+            score -= self.config.late_penalty
+        return max(0.0, score)
+
+    def _distance_reference(self) -> float:
+        if self.config.distance_reference is not None:
+            return max(0.0, self.config.distance_reference)
+        if not self.graph.nodes:
+            return 1.0
+
+        nodes = list(self.graph.nodes.values())
+        min_x = min(node.x for node in nodes)
+        max_x = max(node.x for node in nodes)
+        min_y = min(node.y for node in nodes)
+        max_y = max(node.y for node in nodes)
+        map_diagonal = math.hypot(max_x - min_x, max_y - min_y)
+        return max(1.0, map_diagonal)
 
     def _on_reach_station(self, vehicle: Vehicle) -> None:
         station_id = vehicle.target_station
