@@ -3,6 +3,7 @@
 # 使用方法：./run_all_experiments.sh
 
 set -e
+set -o pipefail
 
 # 获取脚本所在目录（项目根目录）
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -84,6 +85,7 @@ for scale in "${SCALES[@]}"; do
             if python -m Framework.examples.run_baseline \
                 --scale "$scale" \
                 --scheduler "$scheduler" \
+                --seed "$seed" \
                 --charging-strategy optimal_station \
                 --out "$OUT_DIR" 2>&1 | grep -E "(Simulation Summary|total_score|completed|expired)"; then
                 
@@ -191,6 +193,7 @@ for strategy in "${CHARGING_STRATEGIES[@]}"; do
         if python -m Framework.examples.run_baseline \
             --scale medium \
             --scheduler nearest \
+            --seed "$seed" \
             --charging-strategy "$strategy" \
             --out "$OUT_DIR" 2>&1 | grep -E "(total_score|completed|expired)"; then
             
@@ -211,11 +214,17 @@ for strategy in "${CHARGING_STRATEGIES[@]}"; do
     TOTAL_EXPERIMENTS=$((TOTAL_EXPERIMENTS + 1))
     
     print_info "实验 [$TOTAL_EXPERIMENTS]: Q-learning Charging=$strategy"
+    if [[ "$strategy" == "optimal_station" ]]; then
+        ACTION_MODE="best_charge"
+    else
+        ACTION_MODE="nearest_charge"
+    fi
     
     if python -m policy.gymnasium_qlearning.train_q_learning \
         --scale medium \
         --episodes 200 \
         --charging-strategy "$strategy" \
+        --charging-action-mode "$ACTION_MODE" \
         --seed 7 \
         --out-dir "experiments/ablation/qlearning_charging/${strategy}" 2>&1 | tail -15; then
         

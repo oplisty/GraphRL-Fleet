@@ -8285,19 +8285,6 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
-    "waiting_vehicles": [],
-    "charging_slots": [
-      5,
-      null,
-      null
-    ]
-  },
-  {
-    "time": 79,
-    "station_id": 6,
-    "node_id": 127,
-    "queue_length": 0,
     "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
@@ -8308,6 +8295,19 @@
   },
   {
     "time": 79,
+    "station_id": 6,
+    "node_id": 127,
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
+    "charging_slots": [
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "time": 79,
     "station_id": 7,
     "node_id": 128,
     "queue_length": 0,
@@ -8389,10 +8389,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
+      null,
       null,
       null
     ]
@@ -8493,19 +8493,6 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
-    "waiting_vehicles": [],
-    "charging_slots": [
-      5,
-      null,
-      null
-    ]
-  },
-  {
-    "time": 81,
-    "station_id": 6,
-    "node_id": 127,
-    "queue_length": 0,
     "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
@@ -8516,6 +8503,19 @@
   },
   {
     "time": 81,
+    "station_id": 6,
+    "node_id": 127,
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
+    "charging_slots": [
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "time": 81,
     "station_id": 7,
     "node_id": 128,
     "queue_length": 0,
@@ -8597,10 +8597,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
+      null,
       null,
       null
     ]
@@ -8701,19 +8701,6 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
-    "waiting_vehicles": [],
-    "charging_slots": [
-      5,
-      null,
-      null
-    ]
-  },
-  {
-    "time": 83,
-    "station_id": 6,
-    "node_id": 127,
-    "queue_length": 0,
     "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
@@ -8724,6 +8711,19 @@
   },
   {
     "time": 83,
+    "station_id": 6,
+    "node_id": 127,
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
+    "charging_slots": [
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "time": 83,
     "station_id": 7,
     "node_id": 128,
     "queue_length": 0,
@@ -8805,10 +8805,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
+      null,
       null,
       null
     ]
@@ -8909,10 +8909,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
+      null,
       null,
       null
     ]
@@ -9013,10 +9013,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
+      null,
       null,
       null
     ]
@@ -9117,11 +9117,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
-      1,
+      null,
+      null,
       null
     ]
   },
@@ -9221,11 +9221,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
-      1,
+      null,
+      null,
       null
     ]
   },
@@ -9325,12 +9325,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
-      1,
-      4
+      null,
+      null,
+      null
     ]
   },
   {
@@ -9428,15 +9428,13 @@
     "time": 90,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 1,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      6
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      5,
-      1,
-      4
+      null,
+      null,
+      null
     ]
   },
   {
@@ -9534,15 +9532,13 @@
     "time": 91,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 1,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      6
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      5,
-      1,
-      4
+      null,
+      null,
+      null
     ]
   },
   {
@@ -9640,16 +9636,13 @@
     "time": 92,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 2,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      6,
-      9
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      5,
-      1,
-      4
+      null,
+      null,
+      null
     ]
   },
   {
@@ -9747,16 +9740,13 @@
     "time": 93,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 2,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      6,
-      9
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      5,
-      1,
-      4
+      null,
+      null,
+      null
     ]
   },
   {
@@ -9854,16 +9844,13 @@
     "time": 94,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 2,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      6,
-      9
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      5,
-      1,
-      4
+      null,
+      null,
+      null
     ]
   },
   {
@@ -9961,15 +9948,13 @@
     "time": 95,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 1,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      9
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      6,
-      1,
-      4
+      null,
+      null,
+      null
     ]
   },
   {
@@ -10067,15 +10052,13 @@
     "time": 96,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 1,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      9
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      6,
-      1,
-      4
+      null,
+      null,
+      null
     ]
   },
   {
@@ -10173,15 +10156,13 @@
     "time": 97,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 1,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      9
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      6,
-      1,
-      4
+      null,
+      null,
+      null
     ]
   },
   {
@@ -10279,15 +10260,13 @@
     "time": 98,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 1,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      9
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      6,
-      1,
-      4
+      null,
+      null,
+      null
     ]
   },
   {
@@ -10385,17 +10364,13 @@
     "time": 99,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 3,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      9,
-      3,
-      15
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      6,
-      1,
-      4
+      null,
+      null,
+      null
     ]
   },
   {
@@ -10493,17 +10468,13 @@
     "time": 100,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 3,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      9,
-      3,
-      15
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      6,
-      1,
-      4
+      null,
+      null,
+      null
     ]
   },
   {
@@ -10601,17 +10572,13 @@
     "time": 101,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 3,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      9,
-      3,
-      15
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      6,
-      1,
-      4
+      null,
+      null,
+      null
     ]
   },
   {
@@ -10709,17 +10676,13 @@
     "time": 102,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 3,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      9,
-      3,
-      15
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      6,
-      1,
-      4
+      null,
+      null,
+      null
     ]
   },
   {
@@ -10817,17 +10780,13 @@
     "time": 103,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 3,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      9,
-      3,
-      15
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      6,
-      1,
-      4
+      null,
+      null,
+      null
     ]
   },
   {
@@ -10925,18 +10884,13 @@
     "time": 104,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 4,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      9,
-      3,
-      15,
-      11
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      6,
-      1,
-      4
+      null,
+      null,
+      null
     ]
   },
   {
@@ -11034,17 +10988,13 @@
     "time": 105,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 3,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      3,
-      15,
-      11
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      6,
-      9,
-      4
+      null,
+      null,
+      null
     ]
   },
   {
@@ -11142,18 +11092,13 @@
     "time": 106,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 4,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      3,
-      15,
-      11,
-      13
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      6,
-      9,
-      4
+      null,
+      null,
+      null
     ]
   },
   {
@@ -11251,17 +11196,13 @@
     "time": 107,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 3,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      15,
-      11,
-      13
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      6,
-      9,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -11359,17 +11300,13 @@
     "time": 108,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 3,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      15,
-      11,
-      13
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      6,
-      9,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -11467,17 +11404,13 @@
     "time": 109,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 3,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      15,
-      11,
-      13
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      6,
-      9,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -11575,17 +11508,13 @@
     "time": 110,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 3,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      15,
-      11,
-      13
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      6,
-      9,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -11683,17 +11612,13 @@
     "time": 111,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 3,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      15,
-      11,
-      13
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      6,
-      9,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -11791,17 +11716,13 @@
     "time": 112,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 3,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      15,
-      11,
-      13
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      6,
-      9,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -11899,16 +11820,13 @@
     "time": 113,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 2,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      11,
-      13
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      15,
-      9,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -12006,16 +11924,13 @@
     "time": 114,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 2,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      11,
-      13
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      15,
-      9,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -12113,17 +12028,13 @@
     "time": 115,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 3,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      11,
-      13,
-      2
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      15,
-      9,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -12221,18 +12132,13 @@
     "time": 116,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 4,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      11,
-      13,
-      2,
-      14
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      15,
-      9,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -12330,19 +12236,13 @@
     "time": 117,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 5,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      11,
-      13,
-      2,
-      14,
-      18
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      15,
-      9,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -12440,19 +12340,13 @@
     "time": 118,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 5,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      11,
-      13,
-      2,
-      14,
-      18
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      15,
-      9,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -12550,19 +12444,13 @@
     "time": 119,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 5,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      11,
-      13,
-      2,
-      14,
-      18
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      15,
-      9,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -12660,19 +12548,13 @@
     "time": 120,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 5,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      11,
-      13,
-      2,
-      14,
-      18
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      15,
-      9,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -12770,18 +12652,13 @@
     "time": 121,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 4,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      13,
-      2,
-      14,
-      18
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      15,
-      11,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -12879,18 +12756,13 @@
     "time": 122,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 4,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      13,
-      2,
-      14,
-      18
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      15,
-      11,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -12988,18 +12860,13 @@
     "time": 123,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 4,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      13,
-      2,
-      14,
-      18
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      15,
-      11,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -13097,18 +12964,13 @@
     "time": 124,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 4,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      13,
-      2,
-      14,
-      18
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      15,
-      11,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -13206,17 +13068,13 @@
     "time": 125,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 3,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      2,
-      14,
-      18
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      15,
-      11,
-      13
+      null,
+      null,
+      null
     ]
   },
   {
@@ -13314,17 +13172,13 @@
     "time": 126,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 3,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      2,
-      14,
-      18
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      15,
-      11,
-      13
+      null,
+      null,
+      null
     ]
   },
   {
@@ -13422,17 +13276,13 @@
     "time": 127,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 3,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      2,
-      14,
-      18
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      15,
-      11,
-      13
+      null,
+      null,
+      null
     ]
   },
   {
@@ -13530,16 +13380,13 @@
     "time": 128,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 2,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      14,
-      18
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      2,
-      11,
-      13
+      null,
+      null,
+      null
     ]
   },
   {
@@ -13637,16 +13484,13 @@
     "time": 129,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 2,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      14,
-      18
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      2,
-      11,
-      13
+      null,
+      null,
+      null
     ]
   },
   {
@@ -13744,16 +13588,13 @@
     "time": 130,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 2,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      14,
-      18
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      2,
-      11,
-      13
+      null,
+      null,
+      null
     ]
   },
   {
@@ -13851,16 +13692,13 @@
     "time": 131,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 2,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      14,
-      18
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      2,
-      11,
-      13
+      null,
+      null,
+      null
     ]
   },
   {
@@ -13958,16 +13796,13 @@
     "time": 132,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 2,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      14,
-      18
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      2,
-      11,
-      13
+      null,
+      null,
+      null
     ]
   },
   {
@@ -14065,16 +13900,13 @@
     "time": 133,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 2,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      14,
-      18
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      2,
-      11,
-      13
+      null,
+      null,
+      null
     ]
   },
   {
@@ -14134,10 +13966,10 @@
     "station_id": 2,
     "node_id": 123,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -14172,16 +14004,13 @@
     "time": 134,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 2,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      14,
-      18
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      2,
-      11,
-      13
+      null,
+      null,
+      null
     ]
   },
   {
@@ -14241,10 +14070,10 @@
     "station_id": 2,
     "node_id": 123,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -14279,16 +14108,13 @@
     "time": 135,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 2,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      14,
-      18
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      2,
-      11,
-      13
+      null,
+      null,
+      null
     ]
   },
   {
@@ -14348,10 +14174,10 @@
     "station_id": 2,
     "node_id": 123,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -14386,16 +14212,13 @@
     "time": 136,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 2,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      14,
-      18
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      2,
-      11,
-      13
+      null,
+      null,
+      null
     ]
   },
   {
@@ -14455,10 +14278,10 @@
     "station_id": 2,
     "node_id": 123,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -14493,16 +14316,13 @@
     "time": 137,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 2,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      14,
-      18
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      2,
-      11,
-      13
+      null,
+      null,
+      null
     ]
   },
   {
@@ -14562,10 +14382,10 @@
     "station_id": 2,
     "node_id": 123,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -14600,15 +14420,13 @@
     "time": 138,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 1,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      18
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      2,
-      14,
-      13
+      null,
+      null,
+      null
     ]
   },
   {
@@ -14668,10 +14486,10 @@
     "station_id": 2,
     "node_id": 123,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -14706,15 +14524,13 @@
     "time": 139,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 1,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      18
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      2,
-      14,
-      13
+      null,
+      null,
+      null
     ]
   },
   {
@@ -14774,10 +14590,10 @@
     "station_id": 2,
     "node_id": 123,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -14812,16 +14628,13 @@
     "time": 140,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 2,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      18,
-      17
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      2,
-      14,
-      13
+      null,
+      null,
+      null
     ]
   },
   {
@@ -14881,10 +14694,10 @@
     "station_id": 2,
     "node_id": 123,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -14919,16 +14732,13 @@
     "time": 141,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 2,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      18,
-      17
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      2,
-      14,
-      13
+      null,
+      null,
+      null
     ]
   },
   {
@@ -14988,10 +14798,10 @@
     "station_id": 2,
     "node_id": 123,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -15026,15 +14836,13 @@
     "time": 142,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 1,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      17
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      2,
-      14,
-      18
+      null,
+      null,
+      null
     ]
   },
   {
@@ -15094,10 +14902,10 @@
     "station_id": 2,
     "node_id": 123,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -15132,15 +14940,13 @@
     "time": 143,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 1,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      17
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      2,
-      14,
-      18
+      null,
+      null,
+      null
     ]
   },
   {
@@ -15200,10 +15006,10 @@
     "station_id": 2,
     "node_id": 123,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -15238,15 +15044,13 @@
     "time": 144,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 1,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      17
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      2,
-      14,
-      18
+      null,
+      null,
+      null
     ]
   },
   {
@@ -15306,10 +15110,10 @@
     "station_id": 2,
     "node_id": 123,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -15344,15 +15148,13 @@
     "time": 145,
     "station_id": 5,
     "node_id": 126,
-    "queue_length": 1,
-    "occupied_piles": 3,
-    "waiting_vehicles": [
-      17
-    ],
+    "queue_length": 0,
+    "occupied_piles": 0,
+    "waiting_vehicles": [],
     "charging_slots": [
-      2,
-      14,
-      18
+      null,
+      null,
+      null
     ]
   },
   {
@@ -15412,10 +15214,10 @@
     "station_id": 2,
     "node_id": 123,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -15451,12 +15253,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      17,
-      14,
-      18
+      null,
+      null,
+      null
     ]
   },
   {
@@ -15516,10 +15318,10 @@
     "station_id": 2,
     "node_id": 123,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -15555,12 +15357,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      17,
-      14,
-      18
+      null,
+      null,
+      null
     ]
   },
   {
@@ -15620,10 +15422,10 @@
     "station_id": 2,
     "node_id": 123,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -15659,12 +15461,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      17,
-      14,
-      18
+      null,
+      null,
+      null
     ]
   },
   {
@@ -15724,10 +15526,10 @@
     "station_id": 2,
     "node_id": 123,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -15763,12 +15565,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      17,
-      14,
-      18
+      null,
+      null,
+      null
     ]
   },
   {
@@ -15828,10 +15630,10 @@
     "station_id": 2,
     "node_id": 123,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -15867,12 +15669,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      17,
-      14,
-      18
+      null,
+      null,
+      null
     ]
   },
   {
@@ -15932,10 +15734,10 @@
     "station_id": 2,
     "node_id": 123,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -15971,12 +15773,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      17,
-      14,
-      18
+      null,
+      null,
+      null
     ]
   },
   {
@@ -16075,12 +15877,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      17,
-      14,
-      18
+      null,
+      null,
+      null
     ]
   },
   {
@@ -16179,12 +15981,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      17,
-      14,
-      18
+      null,
+      null,
+      null
     ]
   },
   {
@@ -16283,12 +16085,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      17,
       null,
-      18
+      null,
+      null
     ]
   },
   {
@@ -16387,12 +16189,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      17,
       null,
-      18
+      null,
+      null
     ]
   },
   {
@@ -16491,12 +16293,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      17,
       null,
-      18
+      null,
+      null
     ]
   },
   {
@@ -16595,12 +16397,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      17,
       null,
-      18
+      null,
+      null
     ]
   },
   {
@@ -16699,12 +16501,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      17,
       null,
-      18
+      null,
+      null
     ]
   },
   {
@@ -16803,10 +16605,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      17,
+      null,
       null,
       null
     ]
@@ -16907,10 +16709,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      17,
+      null,
       null,
       null
     ]
@@ -17011,10 +16813,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      17,
+      null,
       null,
       null
     ]
@@ -17115,10 +16917,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      17,
+      null,
       null,
       null
     ]
@@ -17843,10 +17645,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      1,
+      null,
       null,
       null
     ]
@@ -17947,11 +17749,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      1,
-      5,
+      null,
+      null,
       null
     ]
   },
@@ -18051,11 +17853,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      1,
-      5,
+      null,
+      null,
       null
     ]
   },
@@ -18155,11 +17957,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      1,
-      5,
+      null,
+      null,
       null
     ]
   },
@@ -18259,11 +18061,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      1,
-      5,
+      null,
+      null,
       null
     ]
   },
@@ -18363,11 +18165,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      1,
-      5,
+      null,
+      null,
       null
     ]
   },
@@ -18467,11 +18269,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      1,
-      5,
+      null,
+      null,
       null
     ]
   },
@@ -18571,11 +18373,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      1,
-      5,
+      null,
+      null,
       null
     ]
   },
@@ -18675,11 +18477,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      1,
-      5,
+      null,
+      null,
       null
     ]
   },
@@ -18779,11 +18581,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      1,
-      5,
+      null,
+      null,
       null
     ]
   },
@@ -18883,11 +18685,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      1,
-      5,
+      null,
+      null,
       null
     ]
   },
@@ -18987,11 +18789,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      1,
-      5,
+      null,
+      null,
       null
     ]
   },
@@ -19091,11 +18893,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      1,
-      5,
+      null,
+      null,
       null
     ]
   },
@@ -19195,11 +18997,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      1,
-      5,
+      null,
+      null,
       null
     ]
   },
@@ -19299,11 +19101,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      1,
-      5,
+      null,
+      null,
       null
     ]
   },
@@ -19403,11 +19205,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      1,
-      5,
+      null,
+      null,
       null
     ]
   },
@@ -19507,11 +19309,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      5,
+      null,
       null
     ]
   },
@@ -19611,11 +19413,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      5,
+      null,
       null
     ]
   },
@@ -19715,11 +19517,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      5,
+      null,
       null
     ]
   },
@@ -19923,10 +19725,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -20027,10 +19829,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -20131,10 +19933,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -20235,10 +20037,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -20339,10 +20141,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -20443,10 +20245,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -20547,10 +20349,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -20651,10 +20453,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -20755,11 +20557,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
-      4,
+      null,
+      null,
       null
     ]
   },
@@ -20859,11 +20661,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
-      4,
+      null,
+      null,
       null
     ]
   },
@@ -20963,11 +20765,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
-      4,
+      null,
+      null,
       null
     ]
   },
@@ -21067,11 +20869,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
-      4,
+      null,
+      null,
       null
     ]
   },
@@ -21171,11 +20973,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
-      4,
+      null,
+      null,
       null
     ]
   },
@@ -21275,11 +21077,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
-      4,
+      null,
+      null,
       null
     ]
   },
@@ -21379,12 +21181,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
-      4,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -21483,12 +21285,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      4,
-      3
+      null,
+      null
     ]
   },
   {
@@ -21587,12 +21389,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      4,
-      3
+      null,
+      null
     ]
   },
   {
@@ -21691,12 +21493,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      4,
-      3
+      null,
+      null
     ]
   },
   {
@@ -21795,12 +21597,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      4,
-      3
+      null,
+      null
     ]
   },
   {
@@ -21899,12 +21701,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      4,
-      3
+      null,
+      null
     ]
   },
   {
@@ -22003,12 +21805,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      4,
-      3
+      null,
+      null
     ]
   },
   {
@@ -22107,12 +21909,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      4,
-      3
+      null,
+      null
     ]
   },
   {
@@ -22211,12 +22013,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      11,
-      4,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -22315,12 +22117,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      11,
-      4,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -22419,12 +22221,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      11,
-      4,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -22523,12 +22325,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      11,
       null,
-      3
+      null,
+      null
     ]
   },
   {
@@ -22627,12 +22429,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      11,
       null,
-      3
+      null,
+      null
     ]
   },
   {
@@ -22731,12 +22533,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      11,
-      13,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -22835,12 +22637,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      11,
-      13,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -22939,12 +22741,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      11,
-      13,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -23043,12 +22845,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      11,
-      13,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -23147,12 +22949,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      11,
-      13,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -23251,11 +23053,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      11,
-      13,
+      null,
+      null,
       null
     ]
   },
@@ -23355,11 +23157,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      11,
-      13,
+      null,
+      null,
       null
     ]
   },
@@ -23459,12 +23261,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      11,
-      13,
-      14
+      null,
+      null,
+      null
     ]
   },
   {
@@ -23563,12 +23365,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      11,
-      13,
-      14
+      null,
+      null,
+      null
     ]
   },
   {
@@ -23667,12 +23469,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      11,
-      13,
-      14
+      null,
+      null,
+      null
     ]
   },
   {
@@ -23771,12 +23573,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      11,
-      13,
-      14
+      null,
+      null,
+      null
     ]
   },
   {
@@ -23875,12 +23677,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      11,
-      13,
-      14
+      null,
+      null,
+      null
     ]
   },
   {
@@ -23979,12 +23781,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      11,
-      13,
-      14
+      null,
+      null,
+      null
     ]
   },
   {
@@ -24083,12 +23885,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      13,
-      14
+      null,
+      null
     ]
   },
   {
@@ -24187,12 +23989,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      13,
-      14
+      null,
+      null
     ]
   },
   {
@@ -24291,12 +24093,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      13,
-      14
+      null,
+      null
     ]
   },
   {
@@ -24395,12 +24197,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      13,
-      14
+      null,
+      null
     ]
   },
   {
@@ -24499,12 +24301,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      13,
-      14
+      null,
+      null
     ]
   },
   {
@@ -24603,12 +24405,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
       null,
-      14
+      null
     ]
   },
   {
@@ -24707,12 +24509,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
       null,
-      14
+      null
     ]
   },
   {
@@ -24811,12 +24613,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
       null,
-      14
+      null
     ]
   },
   {
@@ -24915,12 +24717,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
       null,
-      14
+      null
     ]
   },
   {
@@ -25019,12 +24821,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
       null,
-      14
+      null
     ]
   },
   {
@@ -25123,12 +24925,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
       null,
-      14
+      null
     ]
   },
   {
@@ -26995,10 +26797,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
+      null,
       null,
       null
     ]
@@ -27099,10 +26901,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
+      null,
       null,
       null
     ]
@@ -27203,10 +27005,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
+      null,
       null,
       null
     ]
@@ -27307,10 +27109,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
+      null,
       null,
       null
     ]
@@ -27411,10 +27213,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
+      null,
       null,
       null
     ]
@@ -27515,10 +27317,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
+      null,
       null,
       null
     ]
@@ -27619,10 +27421,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
+      null,
       null,
       null
     ]
@@ -27723,10 +27525,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
+      null,
       null,
       null
     ]
@@ -27827,10 +27629,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
+      null,
       null,
       null
     ]
@@ -27931,10 +27733,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
+      null,
       null,
       null
     ]
@@ -28035,10 +27837,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
+      null,
       null,
       null
     ]
@@ -28139,10 +27941,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
+      null,
       null,
       null
     ]
@@ -28243,10 +28045,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
+      null,
       null,
       null
     ]
@@ -28347,10 +28149,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
+      null,
       null,
       null
     ]
@@ -28451,10 +28253,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
+      null,
       null,
       null
     ]
@@ -28555,11 +28357,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
-      15,
+      null,
+      null,
       null
     ]
   },
@@ -28659,11 +28461,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      5,
-      15,
+      null,
+      null,
       null
     ]
   },
@@ -28763,11 +28565,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      15,
+      null,
       null
     ]
   },
@@ -28867,11 +28669,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      15,
+      null,
       null
     ]
   },
@@ -28971,11 +28773,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      15,
+      null,
       null
     ]
   },
@@ -29075,11 +28877,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      15,
+      null,
       null
     ]
   },
@@ -29179,11 +28981,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      15,
+      null,
       null
     ]
   },
@@ -29283,11 +29085,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      15,
+      null,
       null
     ]
   },
@@ -29387,11 +29189,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      15,
+      null,
       null
     ]
   },
@@ -29491,11 +29293,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      15,
+      null,
       null
     ]
   },
@@ -29595,11 +29397,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      15,
+      null,
       null
     ]
   },
@@ -29699,11 +29501,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      15,
+      null,
       null
     ]
   },
@@ -29803,11 +29605,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      15,
+      null,
       null
     ]
   },
@@ -29907,11 +29709,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      15,
+      null,
       null
     ]
   },
@@ -30011,11 +29813,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      15,
+      null,
       null
     ]
   },
@@ -30115,11 +29917,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      15,
+      null,
       null
     ]
   },
@@ -30219,11 +30021,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      15,
+      null,
       null
     ]
   },
@@ -31051,10 +30853,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      13,
+      null,
       null,
       null
     ]
@@ -31155,10 +30957,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      13,
+      null,
       null,
       null
     ]
@@ -31259,10 +31061,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      13,
+      null,
       null,
       null
     ]
@@ -31363,10 +31165,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      13,
+      null,
       null,
       null
     ]
@@ -31467,10 +31269,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      13,
+      null,
       null,
       null
     ]
@@ -31571,10 +31373,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      13,
+      null,
       null,
       null
     ]
@@ -31675,10 +31477,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      13,
+      null,
       null,
       null
     ]
@@ -31779,10 +31581,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      13,
+      null,
       null,
       null
     ]
@@ -31883,10 +31685,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      13,
+      null,
       null,
       null
     ]
@@ -31987,10 +31789,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      13,
+      null,
       null,
       null
     ]
@@ -32091,11 +31893,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      13,
-      2,
+      null,
+      null,
       null
     ]
   },
@@ -32195,11 +31997,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      13,
-      2,
+      null,
+      null,
       null
     ]
   },
@@ -32299,11 +32101,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      13,
-      2,
+      null,
+      null,
       null
     ]
   },
@@ -32403,11 +32205,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      13,
-      2,
+      null,
+      null,
       null
     ]
   },
@@ -32507,11 +32309,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      13,
-      2,
+      null,
+      null,
       null
     ]
   },
@@ -32611,11 +32413,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      2,
+      null,
       null
     ]
   },
@@ -32715,11 +32517,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      2,
+      null,
       null
     ]
   },
@@ -32819,11 +32621,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      2,
+      null,
       null
     ]
   },
@@ -32923,11 +32725,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      2,
+      null,
       null
     ]
   },
@@ -33027,11 +32829,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      2,
+      null,
       null
     ]
   },
@@ -33131,11 +32933,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      4,
-      2,
+      null,
+      null,
       null
     ]
   },
@@ -33235,11 +33037,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      4,
-      2,
+      null,
+      null,
       null
     ]
   },
@@ -33339,11 +33141,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      4,
-      2,
+      null,
+      null,
       null
     ]
   },
@@ -33443,11 +33245,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      4,
-      2,
+      null,
+      null,
       null
     ]
   },
@@ -33547,11 +33349,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      4,
-      2,
+      null,
+      null,
       null
     ]
   },
@@ -33651,12 +33453,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      4,
-      2,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -33755,12 +33557,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      4,
       null,
-      3
+      null,
+      null
     ]
   },
   {
@@ -33859,12 +33661,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      4,
       null,
-      3
+      null,
+      null
     ]
   },
   {
@@ -33963,12 +33765,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      4,
       null,
-      3
+      null,
+      null
     ]
   },
   {
@@ -34067,12 +33869,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      4,
       null,
-      3
+      null,
+      null
     ]
   },
   {
@@ -34171,12 +33973,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      4,
       null,
-      3
+      null,
+      null
     ]
   },
   {
@@ -34275,12 +34077,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      4,
       null,
-      3
+      null,
+      null
     ]
   },
   {
@@ -34379,12 +34181,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      4,
-      8,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -34483,12 +34285,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      4,
-      8,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -34587,12 +34389,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      4,
-      8,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -34691,12 +34493,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      8,
-      3
+      null,
+      null
     ]
   },
   {
@@ -34795,12 +34597,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      8,
-      3
+      null,
+      null
     ]
   },
   {
@@ -34899,12 +34701,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      9,
-      8,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -35003,12 +34805,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      9,
-      8,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -35107,12 +34909,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      9,
-      8,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -35211,12 +35013,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      9,
-      8,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -35315,12 +35117,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      9,
-      8,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -35419,12 +35221,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      9,
-      8,
-      3
+      null,
+      null,
+      null
     ]
   },
   {
@@ -35523,11 +35325,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      9,
-      8,
+      null,
+      null,
       null
     ]
   },
@@ -35627,11 +35429,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      9,
-      8,
+      null,
+      null,
       null
     ]
   },
@@ -35731,11 +35533,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      9,
-      8,
+      null,
+      null,
       null
     ]
   },
@@ -35835,11 +35637,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      9,
-      8,
+      null,
+      null,
       null
     ]
   },
@@ -35939,11 +35741,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      9,
-      8,
+      null,
+      null,
       null
     ]
   },
@@ -36043,10 +35845,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      9,
+      null,
       null,
       null
     ]
@@ -36147,10 +35949,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      9,
+      null,
       null,
       null
     ]
@@ -36251,10 +36053,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      9,
+      null,
       null,
       null
     ]
@@ -36355,11 +36157,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      9,
-      5,
+      null,
+      null,
       null
     ]
   },
@@ -36459,11 +36261,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      9,
-      5,
+      null,
+      null,
       null
     ]
   },
@@ -36563,11 +36365,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      9,
-      5,
+      null,
+      null,
       null
     ]
   },
@@ -36667,11 +36469,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      9,
-      5,
+      null,
+      null,
       null
     ]
   },
@@ -36771,11 +36573,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      5,
+      null,
       null
     ]
   },
@@ -36875,11 +36677,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      5,
+      null,
       null
     ]
   },
@@ -36979,11 +36781,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      5,
+      null,
       null
     ]
   },
@@ -37083,11 +36885,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      5,
+      null,
       null
     ]
   },
@@ -37187,11 +36989,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      5,
+      null,
       null
     ]
   },
@@ -37291,11 +37093,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      5,
+      null,
       null
     ]
   },
@@ -37395,11 +37197,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      5,
+      null,
       null
     ]
   },
@@ -37499,11 +37301,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      5,
+      null,
       null
     ]
   },
@@ -37603,11 +37405,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      5,
+      null,
       null
     ]
   },
@@ -37707,11 +37509,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      5,
+      null,
       null
     ]
   },
@@ -37811,11 +37613,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      5,
+      null,
       null
     ]
   },
@@ -37915,11 +37717,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      5,
+      null,
       null
     ]
   },
@@ -38019,11 +37821,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      5,
+      null,
       null
     ]
   },
@@ -38123,11 +37925,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      5,
+      null,
       null
     ]
   },
@@ -38331,10 +38133,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -38435,10 +38237,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -38539,10 +38341,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -38643,10 +38445,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -38747,10 +38549,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -38851,10 +38653,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -38955,10 +38757,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -39059,10 +38861,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -39163,10 +38965,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -39267,10 +39069,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -39371,10 +39173,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -39475,10 +39277,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -39579,10 +39381,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -39683,10 +39485,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -39787,10 +39589,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -39891,10 +39693,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -39995,10 +39797,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -40099,10 +39901,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -41347,10 +41149,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      2,
+      null,
       null,
       null
     ]
@@ -41451,10 +41253,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      2,
+      null,
       null,
       null
     ]
@@ -41555,10 +41357,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      2,
+      null,
       null,
       null
     ]
@@ -41659,10 +41461,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      2,
+      null,
       null,
       null
     ]
@@ -41763,10 +41565,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      2,
+      null,
       null,
       null
     ]
@@ -41867,10 +41669,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      2,
+      null,
       null,
       null
     ]
@@ -41971,10 +41773,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      2,
+      null,
       null,
       null
     ]
@@ -42075,10 +41877,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      2,
+      null,
       null,
       null
     ]
@@ -42179,10 +41981,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      2,
+      null,
       null,
       null
     ]
@@ -42283,10 +42085,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      2,
+      null,
       null,
       null
     ]
@@ -42387,10 +42189,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      2,
+      null,
       null,
       null
     ]
@@ -42491,10 +42293,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      2,
+      null,
       null,
       null
     ]
@@ -42595,10 +42397,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      2,
+      null,
       null,
       null
     ]
@@ -42699,10 +42501,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      2,
+      null,
       null,
       null
     ]
@@ -42803,10 +42605,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      2,
+      null,
       null,
       null
     ]
@@ -42907,10 +42709,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      2,
+      null,
       null,
       null
     ]
@@ -43011,10 +42813,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      2,
+      null,
       null,
       null
     ]
@@ -43115,10 +42917,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      2,
+      null,
       null,
       null
     ]
@@ -43947,10 +43749,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -44051,10 +43853,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -44155,10 +43957,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -44259,10 +44061,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -44363,10 +44165,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -44467,10 +44269,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -44571,10 +44373,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -44675,10 +44477,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -44779,10 +44581,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -44883,10 +44685,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
+      null,
       null,
       null
     ]
@@ -44987,11 +44789,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
-      4,
+      null,
+      null,
       null
     ]
   },
@@ -45091,11 +44893,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
-      4,
+      null,
+      null,
       null
     ]
   },
@@ -45195,11 +44997,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
-      4,
+      null,
+      null,
       null
     ]
   },
@@ -45299,11 +45101,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
-      4,
+      null,
+      null,
       null
     ]
   },
@@ -45403,11 +45205,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
-      4,
+      null,
+      null,
       null
     ]
   },
@@ -45507,11 +45309,11 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
-      4,
+      null,
+      null,
       null
     ]
   },
@@ -45611,12 +45413,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
-      4,
-      5
+      null,
+      null,
+      null
     ]
   },
   {
@@ -45715,12 +45517,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 3,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      8,
-      4,
-      5
+      null,
+      null,
+      null
     ]
   },
   {
@@ -45819,12 +45621,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      4,
-      5
+      null,
+      null
     ]
   },
   {
@@ -45923,12 +45725,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      4,
-      5
+      null,
+      null
     ]
   },
   {
@@ -46027,12 +45829,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      4,
-      5
+      null,
+      null
     ]
   },
   {
@@ -46131,12 +45933,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      4,
-      5
+      null,
+      null
     ]
   },
   {
@@ -46235,12 +46037,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      4,
-      5
+      null,
+      null
     ]
   },
   {
@@ -46339,12 +46141,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      4,
-      5
+      null,
+      null
     ]
   },
   {
@@ -46443,12 +46245,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      4,
-      5
+      null,
+      null
     ]
   },
   {
@@ -46547,12 +46349,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      4,
-      5
+      null,
+      null
     ]
   },
   {
@@ -46651,12 +46453,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      4,
-      5
+      null,
+      null
     ]
   },
   {
@@ -46755,12 +46557,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 2,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
-      4,
-      5
+      null,
+      null
     ]
   },
   {
@@ -46859,12 +46661,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
       null,
-      5
+      null
     ]
   },
   {
@@ -46963,12 +46765,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
       null,
-      5
+      null
     ]
   },
   {
@@ -47067,12 +46869,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
       null,
-      5
+      null
     ]
   },
   {
@@ -47171,12 +46973,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
       null,
-      5
+      null
     ]
   },
   {
@@ -47275,12 +47077,12 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
       null,
       null,
-      5
+      null
     ]
   },
   {
@@ -47379,10 +47181,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -47483,10 +47285,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -47587,10 +47389,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -47691,10 +47493,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -47795,10 +47597,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -47899,10 +47701,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -48003,10 +47805,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -48107,10 +47909,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -48211,10 +48013,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -48315,10 +48117,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -48419,10 +48221,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -48523,10 +48325,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -48627,10 +48429,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -48731,10 +48533,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -48835,10 +48637,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -48939,10 +48741,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -49043,10 +48845,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      15,
+      null,
       null,
       null
     ]
@@ -49667,10 +49469,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      2,
+      null,
       null,
       null
     ]
@@ -49771,10 +49573,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      2,
+      null,
       null,
       null
     ]
@@ -49875,10 +49677,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      2,
+      null,
       null,
       null
     ]
@@ -49979,10 +49781,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      2,
+      null,
       null,
       null
     ]
@@ -50083,10 +49885,10 @@
     "station_id": 5,
     "node_id": 126,
     "queue_length": 0,
-    "occupied_piles": 1,
+    "occupied_piles": 0,
     "waiting_vehicles": [],
     "charging_slots": [
-      2,
+      null,
       null,
       null
     ]

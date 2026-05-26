@@ -25,12 +25,12 @@ SCHEDULER_LABELS = {
 
 # User-requested palette.
 PALETTE = {
-    "nearest": "#C5E4E7",
-    "earliest_deadline": "#FBF065",
-    "heaviest": "#88C6E2",
-    "accent_1": "#B58581",
-    "accent_2": "#8182BA",
-    "accent_3": "#BD4DA3",
+    "nearest": "#95E1D3",
+    "earliest_deadline": "#FCE38A",
+    "heaviest": "#EAFFD0",
+    "accent_1": "#F38181",
+    "accent_2": "#F38181",
+    "accent_3": "#F38181",
 }
 
 METRICS = [
@@ -148,23 +148,28 @@ def _beautify_axis(ax: plt.Axes) -> None:
 def plot_figure(summary: dict[str, dict[str, dict[str, tuple[float, float]]]]) -> Path:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    fig, axes = plt.subplots(2, 2, figsize=(7.6, 5.8))
-    axes = axes.flatten()
+    fig = plt.figure(figsize=(7.6, 5.8))
+    grid = fig.add_gridspec(2, 2)
+    axes: dict[str, plt.Axes | tuple[plt.Axes, plt.Axes]] = {
+        "final_score": fig.add_subplot(grid[0, 0]),
+        "completed_tasks": fig.add_subplot(grid[0, 1]),
+        "total_distance": fig.add_subplot(grid[1, 1]),
+    }
+    expired_grid = grid[1, 0].subgridspec(2, 1, height_ratios=[3.0, 1.25], hspace=0.06)
+    expired_top = fig.add_subplot(expired_grid[0])
+    expired_bottom = fig.add_subplot(expired_grid[1], sharex=expired_top)
+    axes["expired_tasks"] = (expired_top, expired_bottom)
 
     x = np.arange(len(SCALES))
     width = 0.21
     offsets = [-width, 0.0, width]
 
-    for ax, (metric_name, metric_label, lower_is_better) in zip(axes, METRICS):
+    for metric_name, metric_label, lower_is_better in METRICS:
         values_by_scheduler: list[list[float]] = []
-        errors_by_scheduler: list[list[float]] = []
         for scheduler in SCHEDULERS:
             means = [summary[scale][scheduler][metric_name][0] for scale in SCALES]
-            stds = [summary[scale][scheduler][metric_name][1] for scale in SCALES]
             values_by_scheduler.append(means)
-            errors_by_scheduler.append(stds)
 
-        # Highlight best bar in each scale with requested accent colors.
         best_scheduler_per_scale: list[str] = []
         for scale in SCALES:
             scores = {
@@ -175,68 +180,92 @@ def plot_figure(summary: dict[str, dict[str, dict[str, tuple[float, float]]]]) -
             else:
                 best_scheduler_per_scale.append(max(scores, key=scores.get))
 
-        for idx, scheduler in enumerate(SCHEDULERS):
-            means = values_by_scheduler[idx]
-            stds = errors_by_scheduler[idx]
-            colors = []
-            edgecolors = []
-            linewidths = []
-            for scale_idx, _ in enumerate(SCALES):
-                if best_scheduler_per_scale[scale_idx] == scheduler:
-                    if scheduler == "nearest":
+        metric_axes = axes[metric_name]
+        draw_axes = metric_axes if isinstance(metric_axes, tuple) else (metric_axes,)
+        for ax in draw_axes:
+            for idx, scheduler in enumerate(SCHEDULERS):
+                means = values_by_scheduler[idx]
+                colors = []
+                for scale_idx, _ in enumerate(SCALES):
+                    if best_scheduler_per_scale[scale_idx] == scheduler:
                         colors.append(PALETTE["accent_1"])
-                    elif scheduler == "earliest_deadline":
-                        colors.append(PALETTE["accent_2"])
                     else:
-                        colors.append(PALETTE["accent_3"])
-                    edgecolors.append("#4A4A4A")
-                    linewidths.append(1.1)
-                else:
-                    colors.append(PALETTE[scheduler])
-                    edgecolors.append("white")
-                    linewidths.append(0.8)
+                        colors.append(PALETTE[scheduler])
 
-            ax.bar(
-                x + offsets[idx],
-                means,
-                width,
-                label=SCHEDULER_LABELS[scheduler],
-                color=colors,
-                edgecolor=edgecolors,
-                linewidth=linewidths,
-                yerr=stds,
-                ecolor="#555555",
-                capsize=2.5,
-                error_kw={"elinewidth": 0.8, "capthick": 0.8},
-                zorder=3,
+                ax.bar(
+                    x + offsets[idx],
+                    means,
+                    width,
+                    label=SCHEDULER_LABELS[scheduler],
+                    color=colors,
+                    edgecolor="none",
+                    linewidth=0,
+                    zorder=3,
+                )
+
+            ax.set_xticks(x)
+            ax.set_xticklabels(["Small", "Medium", "Large"])
+            ax.set_ylabel(metric_label)
+            _beautify_axis(ax)
+
+        if metric_name == "expired_tasks":
+            all_values = [value for scheduler_values in values_by_scheduler for value in scheduler_values]
+            upper_max = max(all_values) * 1.08
+            expired_top.set_ylim(25, upper_max)
+            expired_bottom.set_ylim(0, 3)
+            expired_top.spines["bottom"].set_visible(False)
+            expired_bottom.spines["top"].set_visible(False)
+            expired_top.tick_params(axis="x", which="both", bottom=False, labelbottom=False)
+            expired_bottom.set_xlabel("Scale")
+            expired_bottom.set_ylabel("")
+            expired_top.set_yticks([50, 100, 150, 200])
+            expired_bottom.set_yticks([0, 1, 2, 3])
+
+            break_size = 0.012
+            break_kwargs = dict(color="#555555", clip_on=False, linewidth=0.9)
+            expired_top.plot(
+                (-break_size, +break_size),
+                (-break_size, +break_size),
+                transform=expired_top.transAxes,
+                **break_kwargs,
             )
+            expired_top.plot(
+                (1 - break_size, 1 + break_size),
+                (-break_size, +break_size),
+                transform=expired_top.transAxes,
+                **break_kwargs,
+            )
+            expired_bottom.plot(
+                (-break_size, +break_size),
+                (1 - break_size, 1 + break_size),
+                transform=expired_bottom.transAxes,
+                **break_kwargs,
+            )
+            expired_bottom.plot(
+                (1 - break_size, 1 + break_size),
+                (1 - break_size, 1 + break_size),
+                transform=expired_bottom.transAxes,
+                **break_kwargs,
+            )
+        else:
+            draw_axes[0].set_xlabel("Scale")
 
-        ax.set_title(metric_label, pad=5)
-        ax.set_xticks(x)
-        ax.set_xticklabels(["Small", "Medium", "Large"])
-        ax.set_xlabel("Scale")
-        ax.set_ylabel(metric_label)
-        _beautify_axis(ax)
-
-    axes[0].text(0.02, 1.01, "(a)", transform=axes[0].transAxes, fontsize=10, fontweight="bold")
-    axes[1].text(0.02, 1.01, "(b)", transform=axes[1].transAxes, fontsize=10, fontweight="bold")
-    axes[2].text(0.02, 1.01, "(c)", transform=axes[2].transAxes, fontsize=10, fontweight="bold")
-    axes[3].text(0.02, 1.01, "(d)", transform=axes[3].transAxes, fontsize=10, fontweight="bold")
-
-    handles, labels = axes[0].get_legend_handles_labels()
+    legend_axis = axes["final_score"]
+    assert not isinstance(legend_axis, tuple)
+    handles, labels = legend_axis.get_legend_handles_labels()
     fig.legend(
         handles,
         labels,
         loc="upper center",
         ncol=3,
         frameon=False,
-        bbox_to_anchor=(0.5, 1.01),
+        bbox_to_anchor=(0.5, 0.985),
         columnspacing=1.8,
         handlelength=1.8,
         handletextpad=0.6,
         borderaxespad=0.2,
     )
-    fig.subplots_adjust(left=0.1, right=0.995, bottom=0.12, top=0.82, wspace=0.34, hspace=0.42)
+    fig.subplots_adjust(left=0.1, right=0.995, bottom=0.12, top=0.90, wspace=0.34, hspace=0.34)
 
     fig.savefig(OUTPUT_PATH, bbox_inches="tight", pad_inches=0.02)
     return OUTPUT_PATH

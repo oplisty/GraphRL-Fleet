@@ -5,10 +5,13 @@
     "max_weight_with_best_charge",
     "best_score_with_best_charge",
     "nearest_task_with_nearest_charge",
+    "earliest_deadline_with_nearest_charge",
+    "max_weight_with_nearest_charge",
     "best_score_with_nearest_charge"
   ],
   "train_scales": [
     "small"
   ],
-  "selected_eval_scale": "small"
+  "selected_eval_scale": "small",
+  "charging_action_mode": "all"
 }

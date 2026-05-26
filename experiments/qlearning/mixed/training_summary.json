@@ -1,6 +1,6 @@
 {
-  "best_eval_score": 4230.419634190519,
-  "best_episode": 143,
+  "best_eval_score": 4455.954212577373,
+  "best_episode": 237,
   "final_epsilon": 0.05,
   "episodes_ran": 300,
   "stop_reason": "max_episodes"

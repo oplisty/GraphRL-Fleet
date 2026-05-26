@@ -12,12 +12,15 @@ from Framework.scheduler import EarliestDeadlineScheduler, HeaviestTaskScheduler
 def build_environment(
     scale: str,
     scheduler_name: str,
+    seed: int | None = None,
     collaborative_task_ratio: float = 0.0,
     enable_collaborative_tasks: bool = True,
     auto_collaborative_dispatch: bool = True,
     charging_strategy: str = "optimal_station",
 ) -> Environment:
     scenario = preset_scenario(scale)
+    if seed is not None:
+        scenario.random_seed = seed
     scenario.collaborative_task_ratio = collaborative_task_ratio
     map_bundle = generate_random_map(scenario)
     tasks = generate_dynamic_tasks(scenario, map_bundle.task_candidate_nodes)
@@ -66,6 +69,7 @@ def main() -> None:
     parser.add_argument("--config", default=None, help="YAML config path")
     parser.add_argument("--scale", choices=["small", "medium", "large"], default="small")
     parser.add_argument("--scheduler", choices=["nearest", "heaviest", "earliest_deadline"], default="nearest")
+    parser.add_argument("--seed", type=int, default=7)
     parser.add_argument("--charging-strategy", choices=["optimal_station", "nearest_station"], default="optimal_station")
     parser.add_argument("--collaborative-task-ratio", type=float, default=0.0)
     parser.add_argument("--disable-collaborative-tasks", action="store_true")
@@ -76,6 +80,7 @@ def main() -> None:
     env = build_environment(
         scale=args.scale,
         scheduler_name=args.scheduler,
+        seed=args.seed,
         collaborative_task_ratio=args.collaborative_task_ratio,
         enable_collaborative_tasks=not args.disable_collaborative_tasks,
         auto_collaborative_dispatch=not args.disable_auto_collaborative_dispatch,

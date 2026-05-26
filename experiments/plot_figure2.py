@@ -24,23 +24,22 @@ BASELINE_LABELS = {
 }
 QLEARNING_MODELS = ["small", "medium", "mixed"]
 MODEL_LABELS = {
-    "small": "Q-HH-Small",
-    "medium": "Q-HH-Medium",
-    "mixed": "Q-HH-Mixed",
+    "small": "Train: Small",
+    "medium": "Train: Medium",
+    "mixed": "Train: Mixed",
 }
-MODEL_TARGET_SCALE = {
-    "small": "small",
-    "medium": "medium",
-    "mixed": "small",
+METHODS_BY_SCALE = {
+    "small": ["baseline", "small", "mixed"],
+    "medium": ["baseline", "medium"],
 }
 
 PALETTE = {
-    "baseline": "#88C6E2",
-    "baseline_highlight": "#B58581",
-    "small": "#C5E4E7",
-    "medium": "#FBF065",
-    "mixed": "#BD4DA3",
-    "mixed_highlight": "#8182BA",
+    "baseline": "#F38181",
+    "baseline_highlight": "#F38181",
+    "small": "#95E1D3",
+    "medium": "#FCE38A",
+    "mixed": "#EAFFD0",
+    "mixed_highlight": "#EAFFD0",
 }
 
 METRICS = [
@@ -152,11 +151,11 @@ def collect_qlearning_summary() -> dict[str, dict[str, tuple[float, float]]]:
 
 def _beautify_axis(ax: plt.Axes) -> None:
     ax.set_axisbelow(True)
-    ax.grid(axis="y", linestyle="--", linewidth=0.8, alpha=0.28)
+    ax.grid(axis="y", linestyle="-", linewidth=0.7, alpha=0.18)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
-    ax.spines["left"].set_alpha(0.35)
-    ax.spines["bottom"].set_alpha(0.35)
+    ax.spines["left"].set_alpha(0.22)
+    ax.spines["bottom"].set_alpha(0.22)
 
 
 def plot_figure(
@@ -165,101 +164,66 @@ def plot_figure(
 ) -> Path:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    fig, axes = plt.subplots(1, 3, figsize=(15, 5.2), constrained_layout=True)
+    fig, axes = plt.subplots(1, 3, figsize=(12.4, 4.6), constrained_layout=True)
 
     x = np.arange(len(SCALES))
-    width = 0.18
-    method_order = ["baseline", "small", "medium", "mixed"]
-    offsets = [-1.5 * width, -0.5 * width, 0.5 * width, 1.5 * width]
+    width = 0.22
+    legend_seen: set[str] = set()
 
     for ax, (metric_name, metric_label, _) in zip(axes, METRICS):
-        for idx, method in enumerate(method_order):
-            means: list[float] = []
-            stds: list[float] = []
-            for scale in SCALES:
+        for scale_idx, scale in enumerate(SCALES):
+            methods = METHODS_BY_SCALE[scale]
+            offsets = (np.arange(len(methods)) - (len(methods) - 1) / 2.0) * width * 1.12
+
+            for offset, method in zip(offsets, methods):
                 if method == "baseline":
-                    best_scheduler, best_mean, best_std = baseline_best[scale][metric_name]
-                    means.append(best_mean)
-                    stds.append(best_std)
+                    _, best_mean, best_std = baseline_best[scale][metric_name]
+                    mean_value = best_mean
+                    std_value = best_std
                 else:
-                    target_scale = MODEL_TARGET_SCALE[method]
-                    if target_scale != scale:
-                        means.append(np.nan)
-                        stds.append(0.0)
-                    else:
-                        model_mean, model_std = qlearning_summary[method][metric_name]
-                        means.append(model_mean)
-                        stds.append(model_std)
+                    model_mean, model_std = qlearning_summary[method][metric_name]
+                    mean_value = model_mean
+                    std_value = model_std
 
-            color = PALETTE[method if method != "baseline" else "baseline"]
-            edgecolor = "white"
-            linewidth = 0.9
-            if method == "baseline":
-                color = PALETTE["baseline_highlight"]
-                edgecolor = "#4A4A4A"
-                linewidth = 1.0
-            if method == "mixed":
-                edgecolor = "#4A4A4A"
-                linewidth = 1.0
+                color = PALETTE[method if method != "baseline" else "baseline"]
+                if method == "baseline":
+                    color = PALETTE["baseline_highlight"]
 
-            bars = ax.bar(
-                x + offsets[idx],
-                means,
-                width,
-                label="Best Baseline" if method == "baseline" else MODEL_LABELS[method],
-                color=color,
-                edgecolor=edgecolor,
-                linewidth=linewidth,
-                yerr=stds,
-                ecolor="#555555",
-                capsize=4,
-                error_kw={"elinewidth": 1.0, "capthick": 1.0},
-                zorder=3,
-            )
+                legend_key = method
+                label = "Best Baseline" if method == "baseline" else MODEL_LABELS[method]
+                if legend_key in legend_seen:
+                    label = "_nolegend_"
+                legend_seen.add(legend_key)
 
-            for scale_idx, bar in enumerate(bars):
-                if np.isnan(means[scale_idx]):
-                    bar.set_facecolor((0, 0, 0, 0))
-                    bar.set_edgecolor((0, 0, 0, 0))
-                    bar.set_hatch("//")
+                ax.bar(
+                    x[scale_idx] + offset,
+                    mean_value,
+                    width,
+                    label=label,
+                    color=color,
+                    edgecolor="none",
+                    linewidth=0,
+                    yerr=std_value,
+                    ecolor="#555555",
+                    capsize=4,
+                    error_kw={"elinewidth": 1.0, "capthick": 1.0},
+                    zorder=3,
+                )
 
-        ax.set_title(metric_label)
         ax.set_xticks(x)
         ax.set_xticklabels([s.capitalize() for s in SCALES])
-        ax.set_xlabel("Evaluation Scale")
+        ax.set_xlabel("Test Scale")
         ax.set_ylabel(metric_label)
         _beautify_axis(ax)
 
-        if metric_name == "expired_tasks":
-            ax.text(
-                1.0,
-                1.02,
-                "Large-scale Q-learning not available",
-                transform=ax.transAxes,
-                ha="right",
-                va="bottom",
-                fontsize=9,
-                color="#666666",
-            )
-
-    axes[0].text(0.02, 1.02, "(a)", transform=axes[0].transAxes, fontsize=12, fontweight="bold")
-    axes[1].text(0.02, 1.02, "(b)", transform=axes[1].transAxes, fontsize=12, fontweight="bold")
-    axes[2].text(0.02, 1.02, "(c)", transform=axes[2].transAxes, fontsize=12, fontweight="bold")
-
     handles = [
-        plt.Rectangle((0, 0), 1, 1, facecolor=PALETTE["baseline_highlight"], edgecolor="#4A4A4A"),
-        plt.Rectangle((0, 0), 1, 1, facecolor=PALETTE["small"], edgecolor="white"),
-        plt.Rectangle((0, 0), 1, 1, facecolor=PALETTE["medium"], edgecolor="white"),
-        plt.Rectangle((0, 0), 1, 1, facecolor=PALETTE["mixed"], edgecolor="#4A4A4A"),
+        plt.Rectangle((0, 0), 1, 1, facecolor=PALETTE["baseline_highlight"], edgecolor="none"),
+        plt.Rectangle((0, 0), 1, 1, facecolor=PALETTE["small"], edgecolor="none"),
+        plt.Rectangle((0, 0), 1, 1, facecolor=PALETTE["medium"], edgecolor="none"),
+        plt.Rectangle((0, 0), 1, 1, facecolor=PALETTE["mixed"], edgecolor="none"),
     ]
-    labels = ["Best Baseline", "Q-HH-Small", "Q-HH-Medium", "Q-HH-Mixed"]
+    labels = ["Best Baseline", "Train: Small", "Train: Medium", "Train: Mixed"]
     fig.legend(handles, labels, loc="upper center", ncol=4, frameon=False, bbox_to_anchor=(0.5, 1.04))
-    fig.suptitle(
-        "Figure 2. Q-learning hyper-heuristic versus the best heuristic baseline",
-        fontsize=14,
-        fontweight="bold",
-        y=1.08,
-    )
 
     fig.savefig(OUTPUT_PATH, bbox_inches="tight")
     return OUTPUT_PATH

@@ -22,26 +22,21 @@ METHOD_LABELS = {
     "qlearning": "Q-learning",
 }
 STRATEGY_LABELS = {
-    "optimal_station": "Optimal station",
-    "nearest_station": "Nearest station",
+    "optimal_station": "Full: optimal station",
+    "nearest_station": "Ablated: nearest station",
 }
 SEEDS = [7, 8, 9, 10, 11]
 
 PALETTE = {
-    "baseline_optimal": "#88C6E2",
-    "baseline_nearest": "#C5E4E7",
-    "qlearning_optimal": "#B58581",
-    "qlearning_nearest": "#FBF065",
+    "positive": "#95E1D3",
+    "negative": "#F38181",
+    "zero": "#FCE38A",
+    "guide": "#777777",
 }
-HATCHES = {
-    "optimal_station": "",
-    "nearest_station": "//",
-}
-
 METRICS = [
-    ("completed_tasks", "Completed Tasks"),
-    ("avg_charge_wait", "Avg Charge Wait"),
-    ("expired_tasks", "Expired Tasks"),
+    ("final_score", "Delta Final Score", "higher"),
+    ("completed_tasks", "Delta Completed Tasks", "higher"),
+    ("expired_tasks", "Expired Reduction", "lower"),
 ]
 
 plt.rcParams.update(
@@ -74,18 +69,10 @@ def _read_baseline_step_summary(path: Path) -> dict[str, float]:
         raise ValueError(f"Empty step log: {path}")
     last = rows[-1]
     return {
+        "final_score": float(last["total_score"]),
         "completed_tasks": float(last["completed_tasks"]),
         "expired_tasks": float(last["expired_tasks"]),
     }
-
-
-def _read_avg_charge_wait(station_csv: Path) -> float:
-    with station_csv.open("r", encoding="utf-8") as f:
-        rows = list(csv.DictReader(f))
-    if not rows:
-        raise ValueError(f"Empty station log: {station_csv}")
-    queue_lengths = [float(row["queue_length"]) for row in rows]
-    return mean(queue_lengths) if queue_lengths else 0.0
 
 
 def collect_baseline_ablation() -> dict[str, dict[str, tuple[float, float]]]:
@@ -95,20 +82,18 @@ def collect_baseline_ablation() -> dict[str, dict[str, tuple[float, float]]]:
         for seed in SEEDS:
             run_dir = ABLATION_BASELINE_DIR / f"{strategy}_seed{seed}" / "medium_nearest"
             step_csv = run_dir / "step_log.csv"
-            station_csv = run_dir / "station_log.csv"
-            if not step_csv.exists() or not station_csv.exists():
+            if not step_csv.exists():
                 raise FileNotFoundError(f"Missing ablation baseline files in {run_dir}")
 
             summary = _read_baseline_step_summary(step_csv)
-            summary["avg_charge_wait"] = _read_avg_charge_wait(station_csv)
 
-            for metric_name, _ in METRICS:
+            for metric_name, _, _ in METRICS:
                 values[strategy][metric_name].append(summary[metric_name])
 
     summary: dict[str, dict[str, tuple[float, float]]] = {}
     for strategy in STRATEGIES:
         summary[strategy] = {}
-        for metric_name, _ in METRICS:
+        for metric_name, _, _ in METRICS:
             metric_values = values[strategy][metric_name]
             summary[strategy][metric_name] = (mean(metric_values), _safe_stdev(metric_values))
     return summary
@@ -125,24 +110,61 @@ def collect_qlearning_ablation() -> dict[str, dict[str, tuple[float, float]]]:
         with eval_csv.open("r", encoding="utf-8") as f:
             reader = csv.DictReader(f)
             for row in reader:
+                values["final_score"].append(float(row["final_score"]))
                 values["completed_tasks"].append(float(row["completed_tasks"]))
                 values["expired_tasks"].append(float(row["expired_tasks"]))
-                values["avg_charge_wait"].append(float(row["steps"]))
 
         summary[strategy] = {}
-        for metric_name, _ in METRICS:
+        for metric_name, _, _ in METRICS:
             metric_values = values[metric_name]
             summary[strategy][metric_name] = (mean(metric_values), _safe_stdev(metric_values))
     return summary
 
 
+def _effect_value(
+    full_value: float,
+    ablated_value: float,
+    direction: str,
+) -> float:
+    if direction == "higher":
+        return full_value - ablated_value
+    if direction == "lower":
+        return ablated_value - full_value
+    raise ValueError(f"Unknown metric direction: {direction}")
+
+
+def compute_ablation_effects(
+    baseline_summary: dict[str, dict[str, tuple[float, float]]],
+    qlearning_summary: dict[str, dict[str, tuple[float, float]]],
+) -> dict[str, dict[str, float]]:
+    method_to_summary = {
+        "baseline": baseline_summary,
+        "qlearning": qlearning_summary,
+    }
+    effects: dict[str, dict[str, float]] = defaultdict(dict)
+    for method in METHODS:
+        for metric_name, _, direction in METRICS:
+            full_value = method_to_summary[method]["optimal_station"][metric_name][0]
+            ablated_value = method_to_summary[method]["nearest_station"][metric_name][0]
+            effects[method][metric_name] = _effect_value(full_value, ablated_value, direction)
+    return effects
+
+
+def _format_effect(metric_name: str, value: float) -> str:
+    if abs(value) < 0.05:
+        return "0"
+    if metric_name == "final_score":
+        return f"{value:+.1f}"
+    return f"{value:+.1f}"
+
+
 def _beautify_axis(ax: plt.Axes) -> None:
     ax.set_axisbelow(True)
-    ax.grid(axis="y", linestyle="--", linewidth=0.8, alpha=0.28)
+    ax.grid(axis="x", linestyle="-", linewidth=0.7, alpha=0.18)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
-    ax.spines["left"].set_alpha(0.35)
-    ax.spines["bottom"].set_alpha(0.35)
+    ax.spines["left"].set_alpha(0.22)
+    ax.spines["bottom"].set_alpha(0.22)
 
 
 def plot_figure(
@@ -151,82 +173,49 @@ def plot_figure(
 ) -> Path:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    fig, axes = plt.subplots(1, 3, figsize=(16.2, 6.2), constrained_layout=True)
+    effects = compute_ablation_effects(baseline_summary, qlearning_summary)
+    fig, axes = plt.subplots(1, 3, figsize=(10.8, 3.35), constrained_layout=True, sharey=True)
+    y_positions = np.arange(len(METHODS))[::-1]
+    y_labels = [METHOD_LABELS[method] for method in METHODS]
 
-    x = np.arange(len(METHODS))
-    width = 0.28
-    strategy_offsets = {
-        "optimal_station": -width / 2,
-        "nearest_station": width / 2,
-    }
+    for ax, (metric_name, metric_label, _) in zip(axes, METRICS):
+        values = [effects[method][metric_name] for method in METHODS]
+        max_abs = max(max(abs(value) for value in values), 1.0)
+        pad = max_abs * 0.25
+        ax.axvline(0, color=PALETTE["guide"], linewidth=1.0, alpha=0.72, zorder=2)
 
-    method_to_summary = {
-        "baseline": baseline_summary,
-        "qlearning": qlearning_summary,
-    }
-
-    for ax, (metric_name, metric_label) in zip(axes, METRICS):
-        for strategy in STRATEGIES:
-            means = [method_to_summary[method][strategy][metric_name][0] for method in METHODS]
-            stds = [method_to_summary[method][strategy][metric_name][1] for method in METHODS]
-            bar_positions = x + strategy_offsets[strategy]
-
-            if strategy == "optimal_station":
-                colors = [PALETTE["baseline_optimal"], PALETTE["qlearning_optimal"]]
+        for y, method, value in zip(y_positions, METHODS, values):
+            if value > 0:
+                color = PALETTE["positive"]
+            elif value < 0:
+                color = PALETTE["negative"]
             else:
-                colors = [PALETTE["baseline_nearest"], PALETTE["qlearning_nearest"]]
+                color = PALETTE["zero"]
 
-            bars = ax.bar(
-                bar_positions,
-                means,
-                width,
-                color=colors,
-                edgecolor="#4A4A4A",
-                linewidth=0.9,
-                hatch=HATCHES[strategy],
-                yerr=stds,
-                ecolor="#555555",
-                capsize=4,
-                error_kw={"elinewidth": 1.0, "capthick": 1.0},
+            ax.barh(
+                y,
+                value,
+                height=0.34,
+                color=color,
+                edgecolor="none",
                 zorder=3,
             )
-            for bar in bars:
-                bar.set_alpha(0.95)
+            label_x = value + (max_abs * 0.05 if value >= 0 else -max_abs * 0.05)
+            ax.text(
+                label_x,
+                y,
+                _format_effect(metric_name, value),
+                va="center",
+                ha="left" if value >= 0 else "right",
+                fontsize=10,
+                color="#333333",
+            )
 
-        ax.set_title(metric_label, pad=6)
-        ax.set_xticks(x)
-        ax.set_xticklabels([METHOD_LABELS[m] for m in METHODS])
-        ax.set_xlabel("Method")
-        ax.set_ylabel(metric_label)
+        ax.set_xlim(-max_abs - pad, max_abs + pad)
+        ax.set_yticks(y_positions)
+        ax.set_yticklabels(y_labels)
+        ax.set_xlabel(metric_label)
         _beautify_axis(ax)
-
-    axes[0].text(0.02, 1.02, "(a)", transform=axes[0].transAxes, fontsize=12.5, fontweight="bold")
-    axes[1].text(0.02, 1.02, "(b)", transform=axes[1].transAxes, fontsize=12.5, fontweight="bold")
-    axes[2].text(0.02, 1.02, "(c)", transform=axes[2].transAxes, fontsize=12.5, fontweight="bold")
-
-    handles = [
-        plt.Rectangle((0, 0), 1, 1, facecolor="#D9D9D9", edgecolor="#4A4A4A", hatch=""),
-        plt.Rectangle((0, 0), 1, 1, facecolor="#D9D9D9", edgecolor="#4A4A4A", hatch="//"),
-    ]
-    labels = [STRATEGY_LABELS["optimal_station"], STRATEGY_LABELS["nearest_station"]]
-    fig.legend(
-        handles,
-        labels,
-        loc="upper center",
-        ncol=2,
-        frameon=False,
-        bbox_to_anchor=(0.5, 1.04),
-        columnspacing=2.0,
-        handlelength=1.8,
-        handletextpad=0.8,
-        borderaxespad=0.3,
-    )
-    fig.suptitle(
-        "Figure 4. Charging-strategy ablation under the medium-scale scenario",
-        fontsize=14,
-        fontweight="bold",
-        y=1.08,
-    )
 
     fig.savefig(OUTPUT_PATH, bbox_inches="tight")
     return OUTPUT_PATH

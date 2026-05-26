@@ -7,6 +7,7 @@ from dataclasses import asdict
 from pathlib import Path
 
 from policy.gymnasium_qlearning import (
+    GymLogisticsEnv,
     GymLogisticsEnvConfig,
     RULE_LIBRARY,
     TrainingConfig,
@@ -37,6 +38,7 @@ def main() -> None:
     parser.add_argument("--episodes", type=int, default=100)
     parser.add_argument("--max-steps", type=int, default=180)
     parser.add_argument("--charging-strategy", choices=["optimal_station", "nearest_station"], default="optimal_station")
+    parser.add_argument("--charging-action-mode", choices=["all", "best_charge", "nearest_charge"], default="all")
     parser.add_argument("--seed", type=int, default=7)
     parser.add_argument("--seed-stride", type=int, default=1)
     parser.add_argument("--alpha", type=float, default=0.1)
@@ -57,6 +59,7 @@ def main() -> None:
         scale=args.scale,
         max_steps=args.max_steps,
         charging_strategy=args.charging_strategy,
+        charging_action_mode=args.charging_action_mode,
         random_seed=args.seed,
     )
     train_cfg = TrainingConfig(
@@ -85,7 +88,16 @@ def main() -> None:
     _write_json(eval_rows, out_dir / "eval_summary.json")
     _write_json(asdict(summary), out_dir / "training_summary.json")
     _write_json(asdict(train_cfg), out_dir / "training_config.json")
-    _write_json({"action_names": [rule.name for rule in RULE_LIBRARY], "train_scales": list(train_scales), "selected_eval_scale": env_cfg.scale}, out_dir / "run_meta.json")
+    action_names = list(GymLogisticsEnv(env_cfg).action_names)
+    _write_json(
+        {
+            "action_names": action_names,
+            "train_scales": list(train_scales),
+            "selected_eval_scale": env_cfg.scale,
+            "charging_action_mode": env_cfg.charging_action_mode,
+        },
+        out_dir / "run_meta.json",
+    )
     _write_csv(history, out_dir / "train_history.csv")
     _write_csv(eval_rows, out_dir / "eval_summary.csv")
 

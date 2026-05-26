@@ -28,6 +28,7 @@ class GymLogisticsEnvConfig:
     scale: str = "small"
     max_steps: int = 180
     charging_strategy: str = "optimal_station"
+    charging_action_mode: str = "all"
     random_seed: int = 7
     collaborative_task_ratio: float = 0.0
     enable_collaborative_tasks: bool = False
@@ -44,13 +45,23 @@ class GymLogisticsEnv(gym.Env[np.ndarray, np.int64]):
     def __init__(self, config: GymLogisticsEnvConfig | None = None):
         super().__init__()
         self.config = config or GymLogisticsEnvConfig()
+        self.rule_library = self._select_rule_library()
+        self.action_names = tuple(rule.name for rule in self.rule_library)
         self.encoder = StateEncoder()
-        self.action_space = spaces.Discrete(len(self.ACTION_NAMES))
+        self.action_space = spaces.Discrete(len(self.action_names))
         self.observation_space = spaces.MultiDiscrete(np.array([3, 3, 3, 3, 3], dtype=np.int64))
         self.env: Environment | None = None
         self.last_metrics: dict[str, float] = {}
         self._last_decision_event: str = "reset"
         self._reset_environment()
+
+    def _select_rule_library(self):
+        mode = self.config.charging_action_mode
+        if mode == "best_charge":
+            return tuple(rule for rule in RULE_LIBRARY if rule.charging_strategy == "optimal_station")
+        if mode == "nearest_charge":
+            return tuple(rule for rule in RULE_LIBRARY if rule.charging_strategy == "nearest_station")
+        return RULE_LIBRARY
 
     def reset(self, *, seed: int | None = None, options: dict[str, Any] | None = None):
         super().reset(seed=seed)
@@ -63,7 +74,7 @@ class GymLogisticsEnv(gym.Env[np.ndarray, np.int64]):
 
     def step(self, action: int):
         assert self.env is not None
-        rule = RULE_LIBRARY[action]
+        rule = self.rule_library[action]
 
         prev_score = self.env.total_score
         prev_distance = sum(vehicle.total_distance for vehicle in self.env.vehicles.values())
@@ -104,6 +115,7 @@ class GymLogisticsEnv(gym.Env[np.ndarray, np.int64]):
         self.env = build_environment(
             scale=self.config.scale,
             scheduler_name="nearest",
+            seed=self.config.random_seed,
             collaborative_task_ratio=self.config.collaborative_task_ratio,
             enable_collaborative_tasks=self.config.enable_collaborative_tasks,
             auto_collaborative_dispatch=self.config.auto_collaborative_dispatch,
@@ -188,7 +200,7 @@ class GymLogisticsEnv(gym.Env[np.ndarray, np.int64]):
             "charging_strategy": self.env.config.charging_strategy,
         }
         if action is not None:
-            info["action"] = self.ACTION_NAMES[action]
+            info["action"] = self.action_names[action]
         if reward is not None:
             info["reward"] = reward
         return info

@@ -105,6 +105,16 @@ RULE_LIBRARY: tuple[UnifiedRule, ...] = (
         charging_strategy="nearest_station",
     ),
     UnifiedRule(
+        name="earliest_deadline_with_nearest_charge",
+        scheduler_factory=EarliestDeadlineScheduler,
+        charging_strategy="nearest_station",
+    ),
+    UnifiedRule(
+        name="max_weight_with_nearest_charge",
+        scheduler_factory=HeaviestTaskScheduler,
+        charging_strategy="nearest_station",
+    ),
+    UnifiedRule(
         name="best_score_with_nearest_charge",
         scheduler_factory=BestScoreScheduler,
         charging_strategy="nearest_station",
