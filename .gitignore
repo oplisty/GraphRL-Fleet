@@ -18,12 +18,20 @@ env/
 Engine/Framework/output/
 Engine/backend_fixed.log
 backend_fixed.log
+experiments/baselines/
+experiments/qlearning/
+experiments/ablation/
+experiments/milp/
+experiments/figures/
 
 # Offline solver outputs
 policy/offline/output/
 
 # Q-learning outputs
 policy/gymnasium_qlearning/output/
+
+# Removed delivery-only materials
+paper/
 
 # Local UI env
 UI/logistics-ui/.env.local

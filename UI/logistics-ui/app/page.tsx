@@ -261,7 +261,17 @@ export default function Home() {
 
     const simulationId = started.data.simulationId;
     setRemoteSimulationId(simulationId);
+    try {
+      await realtimeConnection.connect();
+    } catch (e) {
+      console.error('WebSocket connect failed before subscribe:', e);
+      return;
+    }
     realtimeConnection.send('subscribe', { simulationId });
+    const snapshot = await apiClient.getSimulationState(simulationId);
+    if (snapshot.success && snapshot.data) {
+      setState((prev) => normalizeRemoteState(snapshot.data, prev ?? buildDefaultState()));
+    }
   }, [remoteSimulationId, state]);
 
   const handlePause = useCallback(async () => {
@@ -428,7 +438,17 @@ export default function Home() {
 
       const simulationId = solved.data.simulationId;
       setRemoteSimulationId(simulationId);
+      try {
+        await realtimeConnection.connect();
+      } catch (e) {
+        console.error('WebSocket connect failed before subscribe:', e);
+        return;
+      }
       realtimeConnection.send('subscribe', { simulationId });
+      const snapshot = await apiClient.getSimulationState(simulationId);
+      if (snapshot.success && snapshot.data) {
+        setState((prev) => normalizeRemoteState(snapshot.data, prev ?? buildDefaultState()));
+      }
       await apiClient.resumeSimulation(simulationId);
     } finally {
       setOfflineSolving(false);

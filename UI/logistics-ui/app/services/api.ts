@@ -314,6 +314,9 @@ export const apiClient = new ApiClient();
 
 export class RealtimeConnection {
   private ws: WebSocket | null = null;
+  /** 进行中的建连 Promise，避免 CONNECTING 时误返回已连接、以及并发 connect 重复建连 */
+  private connectPromise: Promise<void> | null = null;
+  private inFlightHandshakeReject: ((reason?: unknown) => void) | null = null;
   private reconnectAttempts = 0;
   private maxReconnectAttempts = 5;
   private listeners: Map<string, ((data: unknown) => void)[]> = new Map();
@@ -330,37 +333,33 @@ export class RealtimeConnection {
       return Promise.resolve();
     }
 
-    if (this.ws && this.ws.readyState === WebSocket.CONNECTING) {
-      return Promise.resolve();
+    if (this.connectPromise) {
+      return this.connectPromise;
     }
 
     this.intentionalClose = false;
 
-    return new Promise((resolve, reject) => {
+    this.connectPromise = new Promise((resolve, reject) => {
       const wsUrl = this.buildWsUrl();
       let settled = false;
+      this.inFlightHandshakeReject = reject;
 
-      const safeResolve = () => {
+      const finish = (fn: () => void) => {
         if (!settled) {
           settled = true;
-          resolve();
+          this.connectPromise = null;
+          this.inFlightHandshakeReject = null;
+          fn();
         }
       };
 
-      const safeReject = (error: unknown) => {
-        if (!settled) {
-          settled = true;
-          reject(error);
-        }
-      };
-      
       try {
         this.ws = new WebSocket(wsUrl);
 
         this.ws.onopen = () => {
           console.log('WebSocket connected');
           this.reconnectAttempts = 0;
-          safeResolve();
+          finish(() => resolve());
         };
 
         this.ws.onmessage = (event) => {
@@ -385,12 +384,16 @@ export class RealtimeConnection {
 
         this.ws.onerror = (error) => {
           console.warn('WebSocket error:', error);
-          safeReject(new Error(`WebSocket connection failed: ${wsUrl}`));
+          finish(() => reject(new Error(`WebSocket connection failed: ${wsUrl}`)));
         };
       } catch (error) {
-        safeReject(error);
+        this.connectPromise = null;
+        this.inFlightHandshakeReject = null;
+        reject(error);
       }
     });
+
+    return this.connectPromise;
   }
 
   private attemptReconnect() {
@@ -429,8 +432,13 @@ export class RealtimeConnection {
 
   // 断开连接
   disconnect() {
+    this.intentionalClose = true;
+    if (this.inFlightHandshakeReject) {
+      this.inFlightHandshakeReject(new Error('WebSocket disconnected'));
+      this.inFlightHandshakeReject = null;
+    }
+    this.connectPromise = null;
     if (this.ws) {
-      this.intentionalClose = true;
       this.ws.close();
       this.ws = null;
     }

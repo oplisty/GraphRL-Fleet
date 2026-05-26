@@ -304,7 +304,7 @@ echo ""
 echo -e "${YELLOW}2.${NC} 汇总实验数据（需要实现 summarize_results.py）:"
 echo -e "   python experiments/summarize_results.py"
 echo ""
-echo -e "${YELLOW}3.${NC} 生成论文图表"
+echo -e "${YELLOW}3.${NC} 生成实验图表"
 echo ""
 
 print_separator

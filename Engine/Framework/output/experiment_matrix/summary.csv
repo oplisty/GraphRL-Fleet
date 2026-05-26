@@ -1,7 +1,0 @@
-scenario,scheduler,log_dir,time,total_score,completed,expired,pending,assigned,run_steps,total_distance,avg_vehicle_utilization,avg_station_queue_length,avg_task_completion_time,avg_charge_waiting_time,charge_sessions
-random_small,nearest,,180,2360.7116,26,0,4,0,180,616.7661,0.4711,0.0,10.9615,0.0,1
-random_small,heaviest,,180,2461.4116,27,0,3,0,180,654.9939,0.5011,0.0,8.9259,0.0,1
-random_medium,nearest,,300,2006.5884,48,35,17,0,300,1896.5985,0.469,0.0,17.0,0.0,8
-random_medium,heaviest,,300,690.6462,38,41,20,1,300,1775.9547,0.4373,0.0,19.8158,0.0,7
-random_large,nearest,,480,-5612.1117,78,197,22,3,480,4703.9786,0.3887,0.038,20.3846,5.6154,26
-random_large,heaviest,,480,-5451.3499,80,193,24,3,480,5745.5055,0.4811,0.037,24.7375,3.7368,38

@@ -1,6 +1,8 @@
 # Dynamic Collaborative Scheduling System for New Energy Logistics Fleets Based on Graph Algorithms and Reinforcement Learning
 
-A research-oriented repository for dynamic scheduling of new energy logistics fleets, featuring a graph-based simulation engine, online heuristic and Q-learning policies, an offline MILP baseline, a FastAPI backend, and a web visualization frontend.
+A research-oriented repository for dynamic scheduling of new energy logistics fleets, featuring a graph-based simulation engine, Guangzhou Panyu district real road-network data, online heuristic and Q-learning policies, an offline MILP baseline, a FastAPI backend, and a web visualization frontend.
+
+Chinese documentation: [README.zh-CN.md](README.zh-CN.md)
 
 ---
 
@@ -10,13 +12,14 @@ With the rapid growth of urban instant delivery, scheduling for new energy logis
 
 For path planning and reachability analysis, the system supports graph-based search and shortest-path utilities, while at the scheduling level it implements several heuristic strategies, including nearest-task-first, maximum-weight-first, earliest-deadline-first, and a Q-learning-based hyper-heuristic. In addition, an offline MILP module under full-information settings is developed for small-scale cases to generate near-optimal solutions and provide a baseline for comparison with online scheduling strategies.
 
-The whole project follows a **simulation engine + backend + visualization frontend** architecture. It can be used for course demonstrations, algorithm experiments, ablation studies, and paper reproduction. The repository is especially suitable for studying how dynamic tasks, battery constraints, charging queues, and online decision rules interact in new energy urban delivery scenarios.
+The whole project follows a **simulation engine + backend + visualization frontend** architecture. It can be used for course demonstrations, algorithm experiments, ablation studies, real-map Panyu experiments, and reproducible scheduling comparisons. The repository is especially suitable for studying how dynamic tasks, battery constraints, charging queues, and online decision rules interact in new energy urban delivery scenarios.
 
 ---
 
 ## Repository Highlights
 
 - Graph-based urban logistics simulation engine
+- Guangzhou Panyu district OSM/PBF and processed real road-network data
 - Dynamic task release and deadline-aware scheduling
 - Vehicle battery, load, return-to-depot, and charging constraints
 - Charging-station queue and occupancy modeling
@@ -24,7 +27,7 @@ The whole project follows a **simulation engine + backend + visualization fronte
 - Offline MILP small-scale exact/near-optimal baseline
 - FastAPI realtime backend for simulation serving
 - Next.js frontend for map-based visualization and demonstrations
-- Experiment scripts for baselines, ablations, and paper figures
+- Experiment scripts for baselines, ablations, and result visualization
 
 ---
 
@@ -39,21 +42,16 @@ Data-Structure-HW/
 │   │   ├── core/                    # Graph, entities, logger, pathfinder, simulation kernel
 │   │   ├── examples/                # Runnable experiment/baseline entrypoints
 │   │   ├── generator/               # Random/real map and task generation
-│   │   ├── scheduler/               # Heuristic and offline replay schedulers
-│   │   └── output/                  # Built-in sample outputs
-│   ├── Map Resource/                # Panyu map data and preprocessing assets
-│   └── docs/                        # Engine-side documentation
+│   │   └── scheduler/               # Heuristic and offline replay schedulers
+│   ├── Map Resource/                # Guangzhou Panyu real map data and preprocessing assets
 ├── UI/
 │   └── logistics-ui/                # Next.js visualization frontend
 ├── policy/
 │   ├── gymnasium_qlearning/         # Event-driven Gymnasium + tabular Q-learning
 │   └── offline/                     # Offline MILP baseline
-├── experiments/                     # Experiment outputs
-├── paper/                           # Paper source files
-├── Experiment.md                    # Experiment design plan
-├── README_GitHub.md                 # This repository README
+├── experiments/                     # Plotting scripts and generated experiment outputs
+├── README.zh-CN.md                  # Chinese documentation
 ├── requirements.txt                 # Root Python dependencies
-├── run_experiment.sh                # Single-experiment launcher
 └── run_all_experiments.sh           # Batch experiment launcher
 ```
 
@@ -89,17 +87,19 @@ cd ../..
 ### 3. Run a quick baseline simulation
 
 ```bash
-./run_experiment.sh baseline \
+cd Engine
+python -m Framework.examples.run_baseline \
   --scale small \
   --scheduler nearest \
   --charging-strategy optimal_station \
-  --out experiments/test/small_nearest
+  --out ../experiments/test/small_nearest
+cd ..
 ```
 
 ### 4. Train a quick Q-learning model
 
 ```bash
-./run_experiment.sh qlearning \
+PYTHONPATH="$PWD/Engine:$PWD" python -m policy.gymnasium_qlearning.train_q_learning \
   --scale small \
   --episodes 50 \
   --max-steps 180 \
@@ -149,6 +149,191 @@ If AMap keys are not available, the frontend can still fall back to a local canv
 
 ---
 
+## Full Run Guide
+
+### 1. Prepare Python and frontend dependencies
+
+From the repository root:
+
+```bash
+conda create -n datastructure python=3.10 -y
+conda activate datastructure
+pip install -r requirements.txt
+```
+
+Install frontend dependencies:
+
+```bash
+cd UI/logistics-ui
+npm install
+cd ../..
+```
+
+For direct Python module commands from the repository root, set:
+
+```bash
+export PYTHONPATH="$PWD/Engine:$PWD"
+```
+
+The batch script already sets `PYTHONPATH` internally.
+
+### 2. Run the backend service
+
+Open terminal 1:
+
+```bash
+cd Engine
+python -m uvicorn Framework.api.server:app --host 127.0.0.1 --port 8000
+```
+
+Health check:
+
+```bash
+curl http://127.0.0.1:8000/api/v1/health
+```
+
+The backend prefers the processed Guangzhou Panyu real map if `Engine/Map Resource/processed/panyu/` exists, and falls back to a random map otherwise.
+
+### 3. Run the frontend visualization
+
+Open terminal 2:
+
+```bash
+cd UI/logistics-ui
+npm run dev
+```
+
+Open:
+
+```text
+http://localhost:3000
+```
+
+For backend-connected visualization, create `UI/logistics-ui/.env.local`:
+
+```bash
+NEXT_PUBLIC_USE_ENGINE_BACKEND=1
+NEXT_PUBLIC_API_URL=http://127.0.0.1:8000
+NEXT_PUBLIC_AMAP_KEY=your_amap_key
+NEXT_PUBLIC_AMAP_SECURITY_CODE=your_amap_security_code
+```
+
+If no AMap key is provided, the UI can still use the local canvas fallback for demonstration.
+
+### 4. Run a random-map baseline
+
+```bash
+cd Engine
+python -m Framework.examples.run_baseline \
+  --scale small \
+  --scheduler nearest \
+  --charging-strategy optimal_station \
+  --out ../experiments/test/small_nearest
+cd ..
+```
+
+Supported schedulers:
+
+- `nearest`
+- `earliest_deadline`
+- `heaviest`
+
+Supported charging strategies:
+
+- `optimal_station`
+- `nearest_station`
+
+### 5. Run the Guangzhou Panyu real-map baseline
+
+The repository includes processed Guangzhou Panyu road-network data:
+
+- `Engine/Map Resource/panyu.osm.pbf`
+- `Engine/Map Resource/processed/panyu/nodes.parquet`
+- `Engine/Map Resource/processed/panyu/edges.parquet`
+- `Engine/Map Resource/processed/panyu/stations.parquet`
+- `Engine/Map Resource/processed/panyu/meta.json`
+
+The processed Panyu dataset contains 131276 road nodes, 142593 edges, and 57 charging stations.
+
+Run:
+
+```bash
+cd Engine
+python -m Framework.examples.run_panyu_processed_baseline \
+  --config "Framework/configs/panyu_processed_baseline.yaml"
+cd ..
+```
+
+You can override the YAML settings from the command line, for example:
+
+```bash
+cd Engine
+python -m Framework.examples.run_panyu_processed_baseline \
+  --config "Framework/configs/panyu_processed_baseline.yaml" \
+  --scheduler heaviest \
+  --vehicles 10 \
+  --tasks 120 \
+  --horizon 360
+cd ..
+```
+
+### 6. Run Q-learning training
+
+```bash
+PYTHONPATH="$PWD/Engine:$PWD" python -m policy.gymnasium_qlearning.train_q_learning \
+  --scale small \
+  --episodes 200 \
+  --max-steps 180 \
+  --seed 7 \
+  --out-dir experiments/qlearning/small
+```
+
+Mixed-scale training:
+
+```bash
+PYTHONPATH="$PWD/Engine:$PWD" python -m policy.gymnasium_qlearning.train_q_learning \
+  --scale small \
+  --train-scales small medium \
+  --episodes 300 \
+  --max-steps 300 \
+  --seed 7 \
+  --out-dir experiments/qlearning/mixed
+```
+
+### 7. Run the offline MILP baseline
+
+```bash
+PYTHONPATH="$PWD/Engine:$PWD" python -m policy.offline.god_view_milp \
+  --scale small \
+  --solver gurobi \
+  --time-limit 120 \
+  --out experiments/milp/small_gurobi
+```
+
+If Gurobi is unavailable, install and use the supported open-source fallback where applicable:
+
+```bash
+pip install pulp
+```
+
+### 8. Run the full experiment batch
+
+```bash
+chmod +x run_all_experiments.sh
+./run_all_experiments.sh
+```
+
+This runs:
+
+- multi-scale heuristic baselines
+- Q-learning training
+- charging-strategy ablations
+- optional MILP baseline
+
+Generated outputs are written under `experiments/`.
+
+---
+
 ## Core Functionalities and How to Run Them
 
 ## 1. Simulation engine baselines
@@ -169,21 +354,13 @@ The engine supports multiple online heuristic schedulers under unified logistics
 ### Run one baseline
 
 ```bash
-./run_experiment.sh baseline \
+cd Engine
+python -m Framework.examples.run_baseline \
   --scale medium \
   --scheduler earliest_deadline \
   --charging-strategy optimal_station \
-  --out experiments/baselines/medium_edf
-```
-
-### Direct module form
-
-```bash
-python -m Framework.examples.run_baseline \
-  --scale medium \
-  --scheduler nearest \
-  --charging-strategy optimal_station \
-  --out experiments/baselines/medium_nearest
+  --out ../experiments/baselines/medium_edf
+cd ..
 ```
 
 This writes structured logs such as:
@@ -235,7 +412,7 @@ The Q-learning module selects from a unified rule library rather than hard-codin
 ### Run Q-learning training
 
 ```bash
-./run_experiment.sh qlearning \
+PYTHONPATH="$PWD/Engine:$PWD" python -m policy.gymnasium_qlearning.train_q_learning \
   --scale small \
   --episodes 200 \
   --max-steps 180 \
@@ -246,7 +423,7 @@ The Q-learning module selects from a unified rule library rather than hard-codin
 ### Mixed-scale training
 
 ```bash
-python -m policy.gymnasium_qlearning.train_q_learning \
+PYTHONPATH="$PWD/Engine:$PWD" python -m policy.gymnasium_qlearning.train_q_learning \
   --scale small \
   --train-scales small medium \
   --episodes 300 \
@@ -275,7 +452,7 @@ The offline solver provides a full-information small-scale baseline for comparis
 ### Run offline MILP
 
 ```bash
-./run_experiment.sh milp \
+PYTHONPATH="$PWD/Engine:$PWD" python -m policy.offline.god_view_milp \
   --scale small \
   --solver gurobi \
   --time-limit 120 \
@@ -288,7 +465,7 @@ This baseline is intended primarily for:
 
 - small-scale near-optimal comparison
 - validating the online scheduler gap
-- paper experiments and oracle-style references
+- oracle-style references for experiment comparison
 
 ---
 
@@ -327,6 +504,7 @@ The web UI provides:
 
 ```bash
 cd UI/logistics-ui
+npm install
 npm run dev
 ```
 
@@ -342,7 +520,7 @@ For backend-connected mode, ensure the backend is already running and `.env.loca
 
 ## 7. Batch experiment execution
 
-The repository includes a batch runner for reproducing the main experiment plan in `Experiment.md`.
+The repository includes a batch runner for reproducing the main baseline, Q-learning, charging-ablation, and optional MILP experiments.
 
 ### Run all experiments
 
@@ -362,22 +540,6 @@ It also prints colored progress information between experiments for easier termi
 
 ---
 
-## Experiment Design Reference
-
-The full comparison and ablation plan is documented in:
-
-- `Experiment.md`
-
-It includes:
-
-- comparative experiments
-- ablation studies
-- evaluation metrics
-- runtime estimates
-- suggested output organization
-
----
-
 ## Output and Reproducibility
 
 Typical experiment outputs are stored under:
@@ -390,7 +552,7 @@ experiments/
 └── milp/
 ```
 
-For paper-style reporting, the most useful files are:
+For result reporting, the most useful generated files are:
 
 - final summaries from baseline runs
 - RL training/evaluation curves
@@ -403,16 +565,16 @@ For paper-style reporting, the most useful files are:
 
 ### 1. `No module named Framework`
 
-Run scripts from the repository root using the provided shell wrappers, or ensure `PYTHONPATH` contains:
+Run engine modules from the `Engine/` directory, use `run_all_experiments.sh`, or ensure `PYTHONPATH` contains:
 
 - project root
 - `Engine/`
 
-The helper scripts already handle this.
+The batch script already handles this.
 
 ### 2. `No module named policy`
 
-This usually happens when running from the wrong working directory. Use the repository root and the provided shell scripts.
+This usually happens when running from the wrong working directory. Use the repository root and set `PYTHONPATH="$PWD/Engine:$PWD"` when running policy modules directly.
 
 ### 3. MILP solver import errors
 
