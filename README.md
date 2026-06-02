@@ -1,7 +1,7 @@
 # Dynamic Collaborative Scheduling System for New Energy Logistics Fleets
 
 <p align="center">
-  <img src="Figure/图片 1.png" alt="System Framework" width="85%">
+  <img src="Figure/图片 1.png" alt="System Framework" width="95%">
 </p>
 
 > **Graph-based simulation engine + Heuristic & RL scheduling + MILP offline baseline** — for dynamic new energy logistics fleet scheduling in urban road networks.
@@ -103,15 +103,26 @@ Three scoring-based schedulers operate under the same framework. At each decisio
       <td align="center"><b>Maximum Weight First</b></td>
     </tr>
     <tr>
-      <td>
-        <video src="Figure/Nearest Task First.mp4" width="100%" controls muted autoplay loop></video>
+      <td align="center">
+        <a href="Figure/Nearest%20Task%20First.mp4">
+          <img src="Figure/NTF_thumb.jpg" alt="NTF Demo" width="95%">
+        </a>
       </td>
-      <td>
-        <video src="Figure/Earliest-Deadline-First .mp4" width="100%" controls muted autoplay loop></video>
+      <td align="center">
+        <a href="Figure/Earliest-Deadline-First%20.mp4">
+          <img src="Figure/EDF_thumb.jpg" alt="EDF Demo" width="95%">
+        </a>
       </td>
-      <td>
-        <video src="Figure/Maximum-Weight-First.mp4" width="100%" controls muted autoplay loop></video>
+      <td align="center">
+        <a href="Figure/Maximum-Weight-First.mp4">
+          <img src="Figure/MWF_thumb.jpg" alt="MWF Demo" width="95%">
+        </a>
       </td>
+    </tr>
+    <tr>
+      <td align="center"><sub>Click to view video ▶</sub></td>
+      <td align="center"><sub>Click to view video ▶</sub></td>
+      <td align="center"><sub>Click to view video ▶</sub></td>
     </tr>
   </table>
 </p>
@@ -132,7 +143,7 @@ An event-driven Gymnasium environment where the agent selects from a unified rul
 **Action space**: select from {NTF, EDF, MWF, Charge-Nearest, Charge-Optimal}
 
 <p align="center">
-  <img src="Figure/Converge_curve.png" alt="Q-learning Convergence" width="55%">
+  <img src="Figure/Converge_curve.png" alt="Q-learning Convergence" width="75%">
 </p>
 
 ### Offline MILP Baseline
@@ -162,11 +173,11 @@ Solved via Gurobi (recommended) or PuLP (open-source fallback). Serves as an **o
 ### Results
 
 <p align="center">
-  <img src="Figure/Comparison.png" alt="Strategy Comparison" width="80%">
+  <img src="Figure/Comparison.png" alt="Strategy Comparison" width="95%">
 </p>
 
 <p align="center">
-  <img src="Figure/Comparison2.png" alt="Ablation Results" width="80%">
+  <img src="Figure/Comparison2.png" alt="Ablation Results" width="95%">
 </p>
 
 ### Key Findings
