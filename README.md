@@ -1,8 +1,12 @@
-# Dynamic Collaborative Scheduling System for New Energy Logistics Fleets Based on Graph Algorithms and Reinforcement Learning
+# Dynamic Collaborative Scheduling System for New Energy Logistics Fleets
 
-A research-oriented repository for dynamic scheduling of new energy logistics fleets, featuring a graph-based simulation engine, Guangzhou Panyu district real road-network data, online heuristic and Q-learning policies, an offline MILP baseline, a FastAPI backend, and a web visualization frontend.
+<p align="center">
+  <img src="Figure/图片 1.png" alt="System Framework" width="85%">
+</p>
 
-Chinese documentation: [README.zh-CN.md](README.zh-CN.md)
+> **Graph-based simulation engine + Heuristic & RL scheduling + MILP offline baseline** — for dynamic new energy logistics fleet scheduling in urban road networks.
+
+[中文文档](README.zh-CN.md)
 
 ---
 
@@ -10,65 +14,199 @@ Chinese documentation: [README.zh-CN.md](README.zh-CN.md)
 
 With the rapid growth of urban instant delivery, scheduling for new energy logistics fleets faces increasing challenges from dynamic task arrivals, limited vehicle resources, and complex charging constraints. This repository implements a dynamic collaborative scheduling system based on graph modeling and intelligent decision methods. The urban road network is represented as a weighted graph, and a discrete-time simulation framework is built by considering battery limits, load capacity, task deadlines, and charging-station congestion.
 
-For path planning and reachability analysis, the system supports graph-based search and shortest-path utilities, while at the scheduling level it implements several heuristic strategies, including nearest-task-first, maximum-weight-first, earliest-deadline-first, and a Q-learning-based hyper-heuristic. In addition, an offline MILP module under full-information settings is developed for small-scale cases to generate near-optimal solutions and provide a baseline for comparison with online scheduling strategies.
-
-The whole project follows a **simulation engine + backend + visualization frontend** architecture. It can be used for course demonstrations, algorithm experiments, ablation studies, real-map Panyu experiments, and reproducible scheduling comparisons. The repository is especially suitable for studying how dynamic tasks, battery constraints, charging queues, and online decision rules interact in new energy urban delivery scenarios.
+The project follows a **simulation engine + backend + visualization frontend** architecture, supporting course demonstrations, algorithm experiments, ablation studies, and reproducible scheduling comparisons.
 
 ---
 
-## Repository Highlights
+## Problem Setting
 
-- Graph-based urban logistics simulation engine
-- Guangzhou Panyu district OSM/PBF and processed real road-network data
-- Dynamic task release and deadline-aware scheduling
-- Vehicle battery, load, return-to-depot, and charging constraints
-- Charging-station queue and occupancy modeling
-- Online heuristic baselines and Q-learning hyper-heuristic
-- Offline MILP small-scale exact/near-optimal baseline
-- FastAPI realtime backend for simulation serving
-- Next.js frontend for map-based visualization and demonstrations
-- Experiment scripts for baselines, ablations, and result visualization
+### Dynamic Task Model
+
+Tasks arrive stochastically during the simulation horizon. Each task is defined by:
+
+- **Release time** — the earliest time the task becomes available
+- **Task node** — the delivery location on the road network
+- **Cargo weight** — affects vehicle load capacity and energy consumption
+- **Deadline** — tasks not completed before their deadline are counted as expired
+
+### EV Fleet Model
+
+Each new energy vehicle is modeled with realistic constraints:
+
+- **Battery capacity** and unit-distance energy consumption
+- **Load capacity** limiting how many tasks can be carried simultaneously
+- **Charging time** proportional to the energy deficit
+- **Return-to-depot** requirement
+
+### Road Network
+
+The urban road network is modeled as a weighted graph $G = (V, E)$:
+
+| Node Type | Description |
+|-----------|-------------|
+| Task points | Delivery destinations with dynamic task arrivals |
+| Charging stations | Recharging nodes with limited piles, occupancy, and queue status |
+| Depot | Vehicle origin and return point |
+
+Edge weights encode both **travel distance** and **energy cost**.
+
+**Real map data**: Guangzhou Panyu district — 131,276 road nodes, 142,593 edges, and 57 charging stations extracted from OpenStreetMap.
+
+---
+
+## Framework
+
+<p align="center">
+  <img src="Figure/图片 1.png" alt="Architecture" width="90%">
+</p>
+
+The system follows a layered architecture:
+
+| Layer | Components | Technology |
+|-------|-----------|------------|
+| **Engine** | Graph, entities, simulation kernel, pathfinder, logger | Python |
+| **Policy** | Heuristic schedulers, Q-learning, offline MILP | Gymnasium, Gurobi/PuLP |
+| **Service** | REST API + WebSocket realtime backend | FastAPI, Uvicorn |
+| **UI** | Map visualization, vehicle/task/station panels, strategy controls | Next.js |
+
+---
+
+## Core Methods
+
+### Path Planning
+
+Find the feasible minimum-cost path under **energy feasibility** — a path is only executable if the vehicle has enough remaining battery.
+
+| Algorithm | Type | Strength |
+|-----------|------|----------|
+| **Dijkstra** | Exact shortest path | Stable baseline for general graphs |
+| **A\*** | Heuristic-accelerated | Fast searching for large-scale road networks |
+| **RRT** | Sampling-based | Continuous space obstacle avoidance |
+
+### Heuristic Scheduling Strategies
+
+Three scoring-based schedulers operate under the same framework. At each decision point, the scheduler scores all pending tasks and assigns the top-ranked one.
+
+| Strategy | Scoring Criterion | Strength | Weakness |
+|----------|-------------------|----------|----------|
+| **Nearest Task First (NTF)** | min travel distance | Fast response, low energy consumption | Ignores deadlines — distant urgent tasks risk expiration |
+| **Earliest Deadline First (EDF)** | min slack time | Fewer expired tasks in small-scale | Ignores distance and battery — long trips cause cascading delays |
+| **Maximum Weight First (MWF)** | max cargo weight | High value per trip, good for heavy-load scenarios | Ignores both distance and deadlines — weakest urgency response |
+
+#### Simulation Demos
+
+<p align="center">
+  <table>
+    <tr>
+      <td align="center"><b>Nearest Task First</b></td>
+      <td align="center"><b>Earliest Deadline First</b></td>
+      <td align="center"><b>Maximum Weight First</b></td>
+    </tr>
+    <tr>
+      <td>
+        <video src="Figure/Nearest Task First.mp4" width="100%" controls muted autoplay loop></video>
+      </td>
+      <td>
+        <video src="Figure/Earliest-Deadline-First .mp4" width="100%" controls muted autoplay loop></video>
+      </td>
+      <td>
+        <video src="Figure/Maximum-Weight-First.mp4" width="100%" controls muted autoplay loop></video>
+      </td>
+    </tr>
+  </table>
+</p>
+
+### Q-Learning Hyper-Heuristic
+
+An event-driven Gymnasium environment where the agent selects from a unified rule library at each logistics event (task release, task completion, charging finish, vehicle idle, etc.).
+
+**State representation** — four feature dimensions:
+
+| State Feature | Description |
+|---------------|-------------|
+| Backlog | Accumulation level of unassigned tasks |
+| Urgency | Time pressure of current task deadlines |
+| Battery | Overall battery level of the fleet |
+| Queue | Queuing and congestion status at charging stations |
+
+**Action space**: select from {NTF, EDF, MWF, Charge-Nearest, Charge-Optimal}
+
+<p align="center">
+  <img src="Figure/Converge_curve.png" alt="Q-learning Convergence" width="55%">
+</p>
+
+### Offline MILP Baseline
+
+Under full-information settings (all tasks known in advance), the problem is formulated as a mixed-integer linear program:
+
+- **Task assignment**: each task served exactly once by one vehicle
+- **Flow conservation**: vehicle routes must be continuous
+- **Battery / SOC**: energy decreases with driving, increases with charging, never negative
+- **Deadline**: lateness = arrival time − deadline
+- **Capacity**: load along route ≤ vehicle capacity
+
+Solved via Gurobi (recommended) or PuLP (open-source fallback). Serves as an **oracle baseline** for small-scale cases.
+
+---
+
+## Experiments
+
+### Experiment Scales
+
+| Scale | Vehicles | Tasks | Stations | Road Nodes | Map Size | Horizon |
+|-------|----------|-------|----------|------------|----------|---------|
+| Small | 5 | 30 | 2 | 25 | 30×30 | 180 |
+| Medium | 10 | 100 | 4 | 60 | 50×50 | 300 |
+| Large | 20 | 300 | 8 | 120 | 80×80 | 480 |
+
+### Results
+
+<p align="center">
+  <img src="Figure/Comparison.png" alt="Strategy Comparison" width="80%">
+</p>
+
+<p align="center">
+  <img src="Figure/Comparison2.png" alt="Ablation Results" width="80%">
+</p>
+
+### Key Findings
+
+1. **Nearest Task First is the most robust** across all scales — simple distance-based dispatch generalizes well
+2. **Q-learning outperforms individual heuristics in small-scale scenarios** — learned rule selection beats any single fixed strategy
+3. **Charging strategies are more critical for learning-based methods** — the interaction between charging decisions and task scheduling is non-trivial
 
 ---
 
 ## Repository Structure
 
 ```text
-Data-Structure-HW/
+GraphRL-Fleet/
 ├── Engine/                          # Core simulation engine, backend, maps, experiment scripts
 │   ├── Framework/
-│   │   ├── api/                     # FastAPI + websocket backend
+│   │   ├── api/                     # FastAPI + WebSocket backend
 │   │   ├── configs/                 # YAML experiment and baseline configs
 │   │   ├── core/                    # Graph, entities, logger, pathfinder, simulation kernel
 │   │   ├── examples/                # Runnable experiment/baseline entrypoints
 │   │   ├── generator/               # Random/real map and task generation
 │   │   └── scheduler/               # Heuristic and offline replay schedulers
-│   ├── Map Resource/                # Guangzhou Panyu real map data and preprocessing assets
+│   └── Map Resource/                # Guangzhou Panyu real map data and preprocessing assets
 ├── UI/
 │   └── logistics-ui/                # Next.js visualization frontend
 ├── policy/
 │   ├── gymnasium_qlearning/         # Event-driven Gymnasium + tabular Q-learning
 │   └── offline/                     # Offline MILP baseline
 ├── experiments/                     # Plotting scripts and generated experiment outputs
+├── Figure/                          # Figures, charts, and demo videos
 ├── README.zh-CN.md                  # Chinese documentation
-├── requirements.txt                 # Root Python dependencies
+├── requirements.txt                 # Python dependencies
 └── run_all_experiments.sh           # Batch experiment launcher
 ```
 
 ---
 
-## Quickstart
+## Quick Start
 
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/oplisty/Data-Structure-HW.git
-cd Data-Structure-HW
-```
-
-### 2. Create the Python environment
-
-Recommended: Python 3.10 with Conda.
+### 1. Environment Setup
 
 ```bash
 conda create -n datastructure python=3.10 -y
@@ -76,15 +214,14 @@ conda activate datastructure
 pip install -r requirements.txt
 ```
 
-If you want to run the frontend:
+Optional: install frontend dependencies and MILP solver
 
 ```bash
-cd UI/logistics-ui
-npm install
-cd ../..
+cd UI/logistics-ui && npm install && cd ../..
+pip install pulp
 ```
 
-### 3. Run a quick baseline simulation
+### 2. Run a Baseline Simulation
 
 ```bash
 cd Engine
@@ -96,166 +233,10 @@ python -m Framework.examples.run_baseline \
 cd ..
 ```
 
-### 4. Train a quick Q-learning model
+Supported schedulers: `nearest`, `earliest_deadline`, `heaviest`
+Supported charging strategies: `optimal_station`, `nearest_station`
 
-```bash
-PYTHONPATH="$PWD/Engine:$PWD" python -m policy.gymnasium_qlearning.train_q_learning \
-  --scale small \
-  --episodes 50 \
-  --max-steps 180 \
-  --out-dir experiments/qlearning/quickstart
-```
-
----
-
-## Environment Setup
-
-### Python dependencies
-
-The root `requirements.txt` covers the current integrated workflow:
-
-- `gymnasium`, `numpy` for RL training
-- `fastapi`, `uvicorn`, `websockets` for backend serving
-- `pyyaml` for configuration loading
-- `pandas`, `pyarrow`, `fastparquet` for data processing
-- `geopandas`, `shapely`, `pyproj`, `osmium` for map processing
-
-Install them with:
-
-```bash
-pip install -r requirements.txt
-```
-
-### Optional solver dependency for MILP
-
-The offline MILP baseline depends on `pulp`, and if you want Gurobi-based solving you also need a valid Gurobi installation/license.
-
-```bash
-pip install pulp
-```
-
-### Frontend environment variables
-
-Create `UI/logistics-ui/.env.local` if you want backend-connected visualization:
-
-```bash
-NEXT_PUBLIC_USE_ENGINE_BACKEND=1
-NEXT_PUBLIC_API_URL=http://127.0.0.1:8000
-NEXT_PUBLIC_AMAP_KEY=your_amap_key
-NEXT_PUBLIC_AMAP_SECURITY_CODE=your_amap_security_code
-```
-
-If AMap keys are not available, the frontend can still fall back to a local canvas view for development and demonstration.
-
----
-
-## Full Run Guide
-
-### 1. Prepare Python and frontend dependencies
-
-From the repository root:
-
-```bash
-conda create -n datastructure python=3.10 -y
-conda activate datastructure
-pip install -r requirements.txt
-```
-
-Install frontend dependencies:
-
-```bash
-cd UI/logistics-ui
-npm install
-cd ../..
-```
-
-For direct Python module commands from the repository root, set:
-
-```bash
-export PYTHONPATH="$PWD/Engine:$PWD"
-```
-
-The batch script already sets `PYTHONPATH` internally.
-
-### 2. Run the backend service
-
-Open terminal 1:
-
-```bash
-cd Engine
-python -m uvicorn Framework.api.server:app --host 127.0.0.1 --port 8000
-```
-
-Health check:
-
-```bash
-curl http://127.0.0.1:8000/api/v1/health
-```
-
-The backend prefers the processed Guangzhou Panyu real map if `Engine/Map Resource/processed/panyu/` exists, and falls back to a random map otherwise.
-
-### 3. Run the frontend visualization
-
-Open terminal 2:
-
-```bash
-cd UI/logistics-ui
-npm run dev
-```
-
-Open:
-
-```text
-http://localhost:3000
-```
-
-For backend-connected visualization, create `UI/logistics-ui/.env.local`:
-
-```bash
-NEXT_PUBLIC_USE_ENGINE_BACKEND=1
-NEXT_PUBLIC_API_URL=http://127.0.0.1:8000
-NEXT_PUBLIC_AMAP_KEY=your_amap_key
-NEXT_PUBLIC_AMAP_SECURITY_CODE=your_amap_security_code
-```
-
-If no AMap key is provided, the UI can still use the local canvas fallback for demonstration.
-
-### 4. Run a random-map baseline
-
-```bash
-cd Engine
-python -m Framework.examples.run_baseline \
-  --scale small \
-  --scheduler nearest \
-  --charging-strategy optimal_station \
-  --out ../experiments/test/small_nearest
-cd ..
-```
-
-Supported schedulers:
-
-- `nearest`
-- `earliest_deadline`
-- `heaviest`
-
-Supported charging strategies:
-
-- `optimal_station`
-- `nearest_station`
-
-### 5. Run the Guangzhou Panyu real-map baseline
-
-The repository includes processed Guangzhou Panyu road-network data:
-
-- `Engine/Map Resource/panyu.osm.pbf`
-- `Engine/Map Resource/processed/panyu/nodes.parquet`
-- `Engine/Map Resource/processed/panyu/edges.parquet`
-- `Engine/Map Resource/processed/panyu/stations.parquet`
-- `Engine/Map Resource/processed/panyu/meta.json`
-
-The processed Panyu dataset contains 131276 road nodes, 142593 edges, and 57 charging stations.
-
-Run:
+### 3. Run Panyu Real-Map Baseline
 
 ```bash
 cd Engine
@@ -264,20 +245,7 @@ python -m Framework.examples.run_panyu_processed_baseline \
 cd ..
 ```
 
-You can override the YAML settings from the command line, for example:
-
-```bash
-cd Engine
-python -m Framework.examples.run_panyu_processed_baseline \
-  --config "Framework/configs/panyu_processed_baseline.yaml" \
-  --scheduler heaviest \
-  --vehicles 10 \
-  --tasks 120 \
-  --horizon 360
-cd ..
-```
-
-### 6. Run Q-learning training
+### 4. Train Q-Learning
 
 ```bash
 PYTHONPATH="$PWD/Engine:$PWD" python -m policy.gymnasium_qlearning.train_q_learning \
@@ -288,19 +256,7 @@ PYTHONPATH="$PWD/Engine:$PWD" python -m policy.gymnasium_qlearning.train_q_learn
   --out-dir experiments/qlearning/small
 ```
 
-Mixed-scale training:
-
-```bash
-PYTHONPATH="$PWD/Engine:$PWD" python -m policy.gymnasium_qlearning.train_q_learning \
-  --scale small \
-  --train-scales small medium \
-  --episodes 300 \
-  --max-steps 300 \
-  --seed 7 \
-  --out-dir experiments/qlearning/mixed
-```
-
-### 7. Run the offline MILP baseline
+### 5. Run Offline MILP
 
 ```bash
 PYTHONPATH="$PWD/Engine:$PWD" python -m policy.offline.god_view_milp \
@@ -310,285 +266,49 @@ PYTHONPATH="$PWD/Engine:$PWD" python -m policy.offline.god_view_milp \
   --out experiments/milp/small_gurobi
 ```
 
-If Gurobi is unavailable, install and use the supported open-source fallback where applicable:
+### 6. Launch Visualization
 
-```bash
-pip install pulp
-```
-
-### 8. Run the full experiment batch
-
-```bash
-chmod +x run_all_experiments.sh
-./run_all_experiments.sh
-```
-
-This runs:
-
-- multi-scale heuristic baselines
-- Q-learning training
-- charging-strategy ablations
-- optional MILP baseline
-
-Generated outputs are written under `experiments/`.
-
----
-
-## Core Functionalities and How to Run Them
-
-## 1. Simulation engine baselines
-
-The engine supports multiple online heuristic schedulers under unified logistics constraints.
-
-### Supported baseline schedulers
-
-- `nearest` — nearest-task-first
-- `earliest_deadline` — earliest-deadline-first
-- `heaviest` — maximum-weight-first
-
-### Supported charging strategies
-
-- `optimal_station`
-- `nearest_station`
-
-### Run one baseline
-
-```bash
-cd Engine
-python -m Framework.examples.run_baseline \
-  --scale medium \
-  --scheduler earliest_deadline \
-  --charging-strategy optimal_station \
-  --out ../experiments/baselines/medium_edf
-cd ..
-```
-
-This writes structured logs such as:
-
-- `events.json/csv`
-- `vehicle_log.json/csv`
-- `task_log.json/csv`
-- `station_log.json/csv`
-- `step_log.json/csv`
-
----
-
-## 2. Real-map and processed-map baselines
-
-The repository includes Panyu map resources and processed data for more realistic experiments.
-
-### Run processed Panyu baseline
-
-```bash
-cd Engine
-python -m Framework.examples.run_panyu_processed_baseline \
-  --config "Framework/configs/panyu_processed_baseline.yaml"
-```
-
-### Run experiment matrix
-
-```bash
-cd Engine
-python -m Framework.examples.run_experiment_matrix \
-  --config "Framework/configs/experiment_matrix.yaml"
-```
-
-This is useful for generating multi-scenario comparisons across random maps and real processed maps.
-
----
-
-## 3. Q-learning hyper-heuristic training
-
-The repository provides an event-driven Gymnasium environment where decisions are triggered at key logistics events such as:
-
-- task release
-- task completion
-- arrival at charging station
-- charging finish
-- vehicle becoming idle
-
-The Q-learning module selects from a unified rule library rather than hard-coding one fixed scheduler.
-
-### Run Q-learning training
-
-```bash
-PYTHONPATH="$PWD/Engine:$PWD" python -m policy.gymnasium_qlearning.train_q_learning \
-  --scale small \
-  --episodes 200 \
-  --max-steps 180 \
-  --seed 7 \
-  --out-dir experiments/qlearning/small
-```
-
-### Mixed-scale training
-
-```bash
-PYTHONPATH="$PWD/Engine:$PWD" python -m policy.gymnasium_qlearning.train_q_learning \
-  --scale small \
-  --train-scales small medium \
-  --episodes 300 \
-  --max-steps 300 \
-  --seed 7 \
-  --out-dir experiments/qlearning/mixed
-```
-
-### Q-learning outputs
-
-Typical outputs include:
-
-- `q_table.json`
-- `train_history.json/csv`
-- `eval_summary.json/csv`
-- `training_summary.json`
-- `training_config.json`
-- `checkpoints/`
-
----
-
-## 4. Offline MILP baseline
-
-The offline solver provides a full-information small-scale baseline for comparison against online heuristics and learned policies.
-
-### Run offline MILP
-
-```bash
-PYTHONPATH="$PWD/Engine:$PWD" python -m policy.offline.god_view_milp \
-  --scale small \
-  --solver gurobi \
-  --time-limit 120 \
-  --out experiments/milp/small_gurobi
-```
-
-If `gurobi` is unavailable, you may need to adapt the solver path or install the solver backend described in `policy/offline/god_view_milp.py`.
-
-This baseline is intended primarily for:
-
-- small-scale near-optimal comparison
-- validating the online scheduler gap
-- oracle-style references for experiment comparison
-
----
-
-## 5. Backend serving
-
-The backend exposes the engine through FastAPI and realtime updates.
-
-### Start backend
+Terminal 1 — backend:
 
 ```bash
 cd Engine
 python -m uvicorn Framework.api.server:app --host 127.0.0.1 --port 8000
 ```
 
-### Health check
-
-```bash
-curl http://127.0.0.1:8000/api/v1/health
-```
-
-The backend is used by the frontend for visualization and by interactive demos during presentation.
-
----
-
-## 6. Frontend visualization
-
-The web UI provides:
-
-- map rendering
-- vehicle/task/station panels
-- statistics and event logs
-- strategy controls
-- realtime backend connection
-
-### Start frontend
+Terminal 2 — frontend:
 
 ```bash
 cd UI/logistics-ui
-npm install
 npm run dev
 ```
 
-Open:
+Open `http://localhost:3000`. For backend-connected mode, configure `UI/logistics-ui/.env.local`:
 
-```text
-http://localhost:3000
+```bash
+NEXT_PUBLIC_USE_ENGINE_BACKEND=1
+NEXT_PUBLIC_API_URL=http://127.0.0.1:8000
+NEXT_PUBLIC_AMAP_KEY=your_amap_key
+NEXT_PUBLIC_AMAP_SECURITY_CODE=your_amap_security_code
 ```
 
-For backend-connected mode, ensure the backend is already running and `.env.local` is configured.
-
----
-
-## 7. Batch experiment execution
-
-The repository includes a batch runner for reproducing the main baseline, Q-learning, charging-ablation, and optional MILP experiments.
-
-### Run all experiments
+### 7. Batch Experiments
 
 ```bash
 chmod +x run_all_experiments.sh
 ./run_all_experiments.sh
 ```
-
-The batch script includes:
-
-- multi-scale heuristic baseline runs
-- Q-learning training runs
-- charging-strategy ablations
-- optional MILP execution
-
-It also prints colored progress information between experiments for easier terminal monitoring.
-
----
-
-## Output and Reproducibility
-
-Typical experiment outputs are stored under:
-
-```text
-experiments/
-├── baselines/
-├── qlearning/
-├── ablation/
-└── milp/
-```
-
-For result reporting, the most useful generated files are:
-
-- final summaries from baseline runs
-- RL training/evaluation curves
-- MILP result summaries
-- exported JSON/CSV logs
 
 ---
 
 ## Common Issues
 
-### 1. `No module named Framework`
-
-Run engine modules from the `Engine/` directory, use `run_all_experiments.sh`, or ensure `PYTHONPATH` contains:
-
-- project root
-- `Engine/`
-
-The batch script already handles this.
-
-### 2. `No module named policy`
-
-This usually happens when running from the wrong working directory. Use the repository root and set `PYTHONPATH="$PWD/Engine:$PWD"` when running policy modules directly.
-
-### 3. MILP solver import errors
-
-Install:
-
-```bash
-pip install pulp
-```
-
-If Gurobi is still unavailable, the issue is likely solver installation or license related.
-
-### 4. Frontend map not loading
-
-Check `.env.local` and verify your AMap key / security code configuration.
+| Problem | Solution |
+|---------|----------|
+| `No module named Framework` | Run from `Engine/` directory or set `PYTHONPATH` |
+| `No module named policy` | Set `PYTHONPATH="$PWD/Engine:$PWD"` |
+| MILP solver import error | `pip install pulp` (or install Gurobi) |
+| Frontend map not loading | Check `.env.local` AMap key configuration |
+| `PYTHONPATH` not set | The batch script `run_all_experiments.sh` sets it automatically |
 
 ---
 
@@ -596,10 +316,10 @@ Check `.env.local` and verify your AMap key / security code configuration.
 
 This repository is designed for:
 
-- course project demonstrations
-- scheduling strategy comparison
-- graph-based logistics simulation
-- reinforcement-learning-based heuristic selection
-- small-scale exact optimization comparison
+- Course project demonstrations and algorithm experiments
+- Scheduling strategy comparison under unified constraints
+- Graph-based logistics simulation with real road-network data
+- Reinforcement-learning-based heuristic selection
+- Small-scale exact optimization comparison (MILP oracle)
 
-It is not a production dispatch system, but it is structured to support future extensions in multi-agent coordination, richer map integration, and stronger RL baselines.
+It is not a production dispatch system, but is structured to support future extensions in multi-agent coordination, richer map integration, and stronger RL baselines.
